@@ -1,5 +1,5 @@
-# HSPV-Projekt
+# HSPV-Projekt Mensaprogamm
 
-ein Projekt von Julia Lampe, Felix Lodde und Olaf Werning
+Dieses Programm wurde von Julia Lampe, Felix Lodde und Olaf Werning entwickelt.
 
-In dem Projekt geht es um einen Plan für die Mensa, das ausgibt welche Gerichte es an welchen Tagen gibt.
+Es geht hierbei um ein Programm zur Darstellung des Essensplanes und dem vorherigen Bestellen von Essen mithilfe von Kundenkonten.
