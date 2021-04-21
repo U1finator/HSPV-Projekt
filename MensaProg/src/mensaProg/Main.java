@@ -19,7 +19,7 @@ public class Main
 		 */
 		
 		try {
-			conn.close();
+			conn.close();	//die Verbindung soll geschlossen werden
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
