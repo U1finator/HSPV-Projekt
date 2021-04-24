@@ -10,7 +10,7 @@ public class Customer
 {	
 	public String vorname;
 	public String nachname;
-	public Customer(String vorname, String nachname)
+	public Customer(String vorname, String nachname)	//ein Konstruktor der bals die Namen vom Login bekommen soll
 	{
 		this.vorname = vorname;
 		this.nachname = nachname;
