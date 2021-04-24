@@ -24,5 +24,9 @@ public class Main
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		Customer cust = new Customer("Tom", "Kasanova");	//MUSS NOCH GEMACHT WERDEN
+		cust.deposit(12);
+		
 	}
 }
