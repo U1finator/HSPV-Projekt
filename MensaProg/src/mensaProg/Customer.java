@@ -23,7 +23,7 @@ public class Customer
 		
 		try {
 			Statement	stmt = conn.createStatement();	//erstelle ein neues SQLite Statement
-			stmt.execute("UPDATE Kunden SET Kontostand= Kontostand+'" + einzahlung + "' WHERE vorname='" + getVorname() + "' AND nachname='" + getNachname()+"'");	//
+			stmt.execute("UPDATE Kunden SET Kontostand= Kontostand+'" + einzahlung + "' WHERE vorname='" + getVorname() + "' AND nachname='" + getNachname()+"'");	//ein SQL Statement wird durchgeführt um den Kontostand zu erhöhen
 		
 		}
 		catch(SQLException e)
@@ -48,8 +48,8 @@ public class Customer
 		
 		
 		try {
-			Statement	stmt = conn.createStatement();
-			stmt.execute("UPDATE Kunden SET Kontostand=Kontostand-'" + auszahlung + "' WHERE vorname='" + getVorname() + "' AND nachname='" + getNachname()+"'");
+			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
+			stmt.execute("UPDATE Kunden SET Kontostand=Kontostand-'" + auszahlung + "' WHERE vorname='" + getVorname() + "' AND nachname='" + getNachname()+"'");	//ein SQL Statement wird durchgeführt um den Kontostand zu verringern
 		
 		}
 		catch(SQLException e)
