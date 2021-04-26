@@ -74,7 +74,6 @@ public class Customer
 	}
 
 	public String getVorname() {
-		// TODO Auto-generated method stub
 		return this.vorname;
 	}
 }
