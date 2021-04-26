@@ -25,7 +25,7 @@ public class Main
 			e.printStackTrace();
 		}
 		
-		Customer cust = new Customer("Tom", "Kasanova");	//MUSS NOCH GEMACHT WERDEN
+		Customer cust = new Customer("Angela", "Merkel");	//MUSS NOCH GEMACHT WERDEN
 		cust.deposit(12);
 		
 	}
