@@ -1,5 +1,6 @@
 package mensaProg;
 
+import java.awt.EventQueue;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -25,8 +26,20 @@ public class Main
 			e.printStackTrace();
 		}
 		
-		Customer cust = new Customer("Angela", "Merkel");	//MUSS NOCH GEMACHT WERDEN
+		Customer cust = new Customer("Tom", "Kasanova");	//MUSS NOCH GEMACHT WERDEN
 		cust.deposit(12);
 		
+		IDandPW idandpw = new IDandPW();
+		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo());
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainGUI window = new MainGUI();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 }
