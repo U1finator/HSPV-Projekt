@@ -80,7 +80,7 @@ public class MainGUI {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 652, 555);
+		frame.setBounds(100, 100, 903, 596);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0};
@@ -397,10 +397,6 @@ public class MainGUI {
 		frame.getContentPane().add(panel_3, gbc_panel_3);
 		panel_3.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel_6 = new JLabel("Gericht 3");
-		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_3.add(lblNewLabel_6, BorderLayout.NORTH);
-		
 		JLabel lblNewLabel_45 = new JLabel("New label");
 		lblNewLabel_45.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_45, BorderLayout.CENTER);
@@ -408,6 +404,10 @@ public class MainGUI {
 		JLabel lblNewLabel_48 = new JLabel("New label");
 		lblNewLabel_48.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_48, BorderLayout.SOUTH);
+		
+		JLabel lblNewLabel_6 = new JLabel("Gericht 1");
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_3.add(lblNewLabel_6, BorderLayout.NORTH);
 		
 		JPanel panel_6 = new JPanel();
 		panel_6.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
