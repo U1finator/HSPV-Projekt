@@ -1,6 +1,7 @@
 package mensaProg;
 
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -81,6 +82,16 @@ public class LoginPage implements ActionListener{
 					messageLabel.setText("Login erfolgreich");
 					frame.dispose(); //Schlieﬂen des Login Fensters
 					WelcomePage welcomePage = new WelcomePage(userID);
+					
+					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
+						public void run() {
+							try {
+								MainGUI window = new MainGUI();
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}
+					});
 				}
 				else {
 					messageLabel.setForeground(Color.red);
@@ -97,5 +108,3 @@ public class LoginPage implements ActionListener{
 	}
 	
 }
-
-

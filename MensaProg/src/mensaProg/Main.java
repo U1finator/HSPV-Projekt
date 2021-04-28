@@ -15,31 +15,14 @@ public class Main
 		// TODO Auto-generated method stub
 		Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
 		
-		/*
-		 * hier kommt der restliche Code hinein
-		 */
+		IDandPW idandpw = new IDandPW();
+		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo());
 		
 		try {
 			conn.close();	//die Verbindung soll geschlossen werden
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		Customer cust = new Customer("Tom", "Kasanova");	//MUSS NOCH GEMACHT WERDEN
-		cust.deposit(12);
-		
-		IDandPW idandpw = new IDandPW();
-		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo());
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainGUI window = new MainGUI();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		}	
 	}
 }
