@@ -11,7 +11,9 @@ public class Wochenplan {
 		Statement stmt;
 		try {
 			stmt = conn.createStatement();
-			stmt.execute("Select * From Gerichte");
+			int random = (int) (Math.random()*stmt.getMaxRows()+1);
+			System.out.println(random);
+			//System.out.println(stmt.executeQuery("Select Name From Gerichte").getString(random));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
