@@ -9,10 +9,6 @@ import java.awt.GridBagConstraints;
 import javax.swing.JTabbedPane;
 import java.awt.BorderLayout;
 import javax.swing.JToolBar;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Insets;
@@ -22,15 +18,9 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
-
-import javax.swing.JTextArea;
-import javax.swing.JTable;
-import javax.swing.JSeparator;
-import javax.swing.JList;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 import javax.swing.SwingConstants;
-import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
@@ -43,6 +33,7 @@ import javax.swing.BoxLayout;
 import java.awt.GridLayout;
 import javax.swing.ImageIcon;
 import javax.swing.border.CompoundBorder;
+import javax.swing.JSeparator;
 
 public class MainGUI {
 
@@ -184,6 +175,7 @@ public class MainGUI {
 		panel_1.add(lblNewLabel_31, BorderLayout.NORTH);
 		
 		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(new Color(153, 204, 204));
 		panel_4.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		GridBagConstraints gbc_panel_4 = new GridBagConstraints();
 		gbc_panel_4.insets = new Insets(0, 0, 5, 5);
@@ -209,6 +201,7 @@ public class MainGUI {
 		panel_4.add(lblNewLabel_25, BorderLayout.SOUTH);
 		
 		JPanel panel_13 = new JPanel();
+		panel_13.setBackground(new Color(153, 204, 204));
 		panel_13.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		GridBagConstraints gbc_panel_13 = new GridBagConstraints();
 		gbc_panel_13.insets = new Insets(0, 0, 5, 5);
@@ -231,6 +224,7 @@ public class MainGUI {
 		panel_13.add(lblNewLabel_42, BorderLayout.SOUTH);
 		
 		JPanel panel_14 = new JPanel();
+		panel_14.setBackground(new Color(153, 204, 204));
 		panel_14.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		GridBagConstraints gbc_panel_14 = new GridBagConstraints();
 		gbc_panel_14.insets = new Insets(0, 0, 5, 5);
@@ -254,7 +248,7 @@ public class MainGUI {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(153, 204, 204));
 		GridBagConstraints gbc_panel = new GridBagConstraints();
 		gbc_panel.insets = new Insets(0, 0, 5, 0);
 		gbc_panel.fill = GridBagConstraints.BOTH;
@@ -277,7 +271,8 @@ public class MainGUI {
 		panel.add(lblNewLabel_30, BorderLayout.SOUTH);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_2.setBackground(new Color(153, 204, 204));
+		panel_2.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		GridBagConstraints gbc_panel_2 = new GridBagConstraints();
 		gbc_panel_2.insets = new Insets(0, 0, 5, 5);
 		gbc_panel_2.fill = GridBagConstraints.BOTH;
@@ -299,7 +294,8 @@ public class MainGUI {
 		panel_2.add(lblNewLabel_33, BorderLayout.SOUTH);
 		
 		JPanel panel_5 = new JPanel();
-		panel_5.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_5.setBackground(new Color(153, 204, 204));
+		panel_5.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		GridBagConstraints gbc_panel_5 = new GridBagConstraints();
 		gbc_panel_5.insets = new Insets(0, 0, 5, 5);
 		gbc_panel_5.fill = GridBagConstraints.BOTH;
@@ -321,7 +317,8 @@ public class MainGUI {
 		panel_5.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
 		JPanel panel_7 = new JPanel();
-		panel_7.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_7.setBackground(new Color(153, 204, 204));
+		panel_7.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		GridBagConstraints gbc_panel_7 = new GridBagConstraints();
 		gbc_panel_7.insets = new Insets(0, 0, 5, 5);
 		gbc_panel_7.fill = GridBagConstraints.BOTH;
@@ -343,7 +340,8 @@ public class MainGUI {
 		panel_7.add(lblNewLabel_37, BorderLayout.SOUTH);
 		
 		JPanel panel_9 = new JPanel();
-		panel_9.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_9.setBackground(new Color(153, 204, 204));
+		panel_9.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		GridBagConstraints gbc_panel_9 = new GridBagConstraints();
 		gbc_panel_9.insets = new Insets(0, 0, 5, 5);
 		gbc_panel_9.fill = GridBagConstraints.BOTH;
@@ -353,6 +351,7 @@ public class MainGUI {
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_16 = new JLabel("Gericht 2");
+		lblNewLabel_16.setBackground(new Color(153, 204, 204));
 		lblNewLabel_16.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_16, BorderLayout.NORTH);
 		
@@ -365,7 +364,8 @@ public class MainGUI {
 		panel_9.add(lblNewLabel_39, BorderLayout.SOUTH);
 		
 		JPanel panel_11 = new JPanel();
-		panel_11.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_11.setBackground(new Color(153, 204, 204));
+		panel_11.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		GridBagConstraints gbc_panel_11 = new GridBagConstraints();
 		gbc_panel_11.insets = new Insets(0, 0, 5, 0);
 		gbc_panel_11.fill = GridBagConstraints.BOTH;
@@ -387,8 +387,8 @@ public class MainGUI {
 		panel_11.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_3.setBackground(new Color(0, 255, 153));
+		panel_3.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_3.setBackground(new Color(102, 255, 102));
 		GridBagConstraints gbc_panel_3 = new GridBagConstraints();
 		gbc_panel_3.insets = new Insets(0, 0, 0, 5);
 		gbc_panel_3.fill = GridBagConstraints.BOTH;
@@ -405,13 +405,13 @@ public class MainGUI {
 		lblNewLabel_48.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_48, BorderLayout.SOUTH);
 		
-		JLabel lblNewLabel_6 = new JLabel("Gericht 1");
+		JLabel lblNewLabel_6 = new JLabel("Gericht 3");
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_6, BorderLayout.NORTH);
 		
 		JPanel panel_6 = new JPanel();
-		panel_6.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_6.setBackground(Color.GREEN);
+		panel_6.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_6.setBackground(new Color(102, 255, 102));
 		GridBagConstraints gbc_panel_6 = new GridBagConstraints();
 		gbc_panel_6.insets = new Insets(0, 0, 0, 5);
 		gbc_panel_6.fill = GridBagConstraints.BOTH;
@@ -433,8 +433,8 @@ public class MainGUI {
 		panel_6.add(lblNewLabel_49, BorderLayout.SOUTH);
 		
 		JPanel panel_8 = new JPanel();
-		panel_8.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_8.setBackground(Color.GREEN);
+		panel_8.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_8.setBackground(new Color(102, 255, 102));
 		GridBagConstraints gbc_panel_8 = new GridBagConstraints();
 		gbc_panel_8.insets = new Insets(0, 0, 0, 5);
 		gbc_panel_8.fill = GridBagConstraints.BOTH;
@@ -456,8 +456,8 @@ public class MainGUI {
 		panel_8.add(lblNewLabel_50, BorderLayout.SOUTH);
 		
 		JPanel panel_10 = new JPanel();
-		panel_10.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_10.setBackground(Color.GREEN);
+		panel_10.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_10.setBackground(new Color(102, 255, 102));
 		GridBagConstraints gbc_panel_10 = new GridBagConstraints();
 		gbc_panel_10.insets = new Insets(0, 0, 0, 5);
 		gbc_panel_10.fill = GridBagConstraints.BOTH;
@@ -479,8 +479,8 @@ public class MainGUI {
 		panel_10.add(lblNewLabel_52, BorderLayout.SOUTH);
 		
 		JPanel panel_12 = new JPanel();
-		panel_12.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_12.setBackground(Color.GREEN);
+		panel_12.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_12.setBackground(new Color(102, 255, 102));
 		GridBagConstraints gbc_panel_12 = new GridBagConstraints();
 		gbc_panel_12.fill = GridBagConstraints.BOTH;
 		gbc_panel_12.gridx = 5;
@@ -515,6 +515,13 @@ public class MainGUI {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem);
+		
+		JSeparator separator = new JSeparator();
+		mnNewMenu.add(separator);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Benutzerdaten");
+		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGUI.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
+		mnNewMenu.add(mntmNewMenuItem_1);
 		
 	}
 	public static LocalDate[] getWeekdays(LocalDate date) {
