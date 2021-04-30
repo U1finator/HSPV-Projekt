@@ -40,6 +40,9 @@ public class MainGUI {
 	private JFrame frame;
 	LocalDate today = LocalDate.now();
     LocalDate[] weekdays = getWeekdays(today);
+    Wochenplan week = new Wochenplan();
+    Object[] names = week.gerichte.keySet().toArray();
+    Object[] prices = week.gerichte.values().toArray();
 
 	/**
 	 * Launch the application.
@@ -162,7 +165,7 @@ public class MainGUI {
 		frame.getContentPane().add(panel_1, gbc_panel_1);
 		panel_1.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel_8 = new JLabel("Pommes");
+		JLabel lblNewLabel_8 = new JLabel(names[0].toString());
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_8);
 		
@@ -188,7 +191,7 @@ public class MainGUI {
 		JLabel lblNewLabel_9 = new JLabel("Gericht 1");
 		panel_4.add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_24 = new JLabel("Pommes");
+		JLabel lblNewLabel_24 = new JLabel("2");
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_24);
 		
@@ -215,7 +218,7 @@ public class MainGUI {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_26 = new JLabel("Nudeln");
+		JLabel lblNewLabel_26 = new JLabel("3");
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_26, BorderLayout.CENTER);
 		
@@ -238,7 +241,7 @@ public class MainGUI {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_43 = new JLabel("New label");
+		JLabel lblNewLabel_43 = new JLabel("4");
 		lblNewLabel_43.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_43, BorderLayout.CENTER);
 		
@@ -536,21 +539,10 @@ public class MainGUI {
 	     }
 	     return weekdays;
 	   }
-	private static void addPopup(Component component, final JPopupMenu popup) {
-		component.addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			public void mouseReleased(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			private void showMenu(MouseEvent e) {
-				popup.show(e.getComponent(), e.getX(), e.getY());
-			}
-		});
+	
+				
+			
+		
 	}
-}
+	
+
