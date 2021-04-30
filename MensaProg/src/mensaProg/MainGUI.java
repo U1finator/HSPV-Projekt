@@ -169,7 +169,7 @@ public class MainGUI {
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_27 = new JLabel("5\u20AC");
+		JLabel lblNewLabel_27 = new JLabel(prices[0].toString()+"€");
 		lblNewLabel_27.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_27, BorderLayout.SOUTH);
 		
@@ -191,7 +191,7 @@ public class MainGUI {
 		JLabel lblNewLabel_9 = new JLabel("Gericht 1");
 		panel_4.add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_24 = new JLabel("2");
+		JLabel lblNewLabel_24 = new JLabel(names[1].toString());
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_24);
 		
@@ -199,7 +199,7 @@ public class MainGUI {
 		lblNewLabel_28.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_28, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_25 = new JLabel("3\u20AC");
+		JLabel lblNewLabel_25 = new JLabel(prices[1].toString()+"€");
 		lblNewLabel_25.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_25, BorderLayout.SOUTH);
 		
@@ -218,11 +218,11 @@ public class MainGUI {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_26 = new JLabel("3");
+		JLabel lblNewLabel_26 = new JLabel(names[2].toString());
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_26, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_42 = new JLabel("New label");
+		JLabel lblNewLabel_42 = new JLabel(prices[2].toString()+"€");
 		lblNewLabel_42.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_42, BorderLayout.SOUTH);
 		
@@ -241,11 +241,11 @@ public class MainGUI {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_43 = new JLabel("4");
+		JLabel lblNewLabel_43 = new JLabel(names[3].toString());
 		lblNewLabel_43.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_43, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_44 = new JLabel("New label");
+		JLabel lblNewLabel_44 = new JLabel(prices[3].toString()+"€");
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
@@ -265,11 +265,11 @@ public class MainGUI {
 		lblNewLabel_5.setBackground(Color.YELLOW);
 		panel.add(lblNewLabel_5, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_29 = new JLabel("Pommes");
+		JLabel lblNewLabel_29 = new JLabel(names[4].toString());
 		lblNewLabel_29.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_29, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_30 = new JLabel("5\u20AC");
+		JLabel lblNewLabel_30 = new JLabel(prices[4].toString()+"€");
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_30, BorderLayout.SOUTH);
 		
@@ -288,11 +288,11 @@ public class MainGUI {
 		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_7, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_32 = new JLabel("New label");
+		JLabel lblNewLabel_32 = new JLabel(names[5].toString());
 		lblNewLabel_32.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_32, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_33 = new JLabel("New label");
+		JLabel lblNewLabel_33 = new JLabel(prices[5].toString()+"€");
 		lblNewLabel_33.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_33, BorderLayout.SOUTH);
 		
@@ -311,11 +311,11 @@ public class MainGUI {
 		lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_10, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_34 = new JLabel("New label");
+		JLabel lblNewLabel_34 = new JLabel(names[6].toString());
 		lblNewLabel_34.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_34, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_35 = new JLabel("New label");
+		JLabel lblNewLabel_35 = new JLabel(prices[6].toString()+"€");
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
@@ -334,11 +334,11 @@ public class MainGUI {
 		lblNewLabel_13.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_13, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_36 = new JLabel("New label");
+		JLabel lblNewLabel_36 = new JLabel(names[7].toString());
 		lblNewLabel_36.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_36, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_37 = new JLabel("New label");
+		JLabel lblNewLabel_37 = new JLabel(prices[7].toString()+"€");
 		lblNewLabel_37.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_37, BorderLayout.SOUTH);
 		
@@ -358,11 +358,11 @@ public class MainGUI {
 		lblNewLabel_16.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_16, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_38 = new JLabel("New label");
+		JLabel lblNewLabel_38 = new JLabel(names[8].toString());
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_38, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_39 = new JLabel("New label");
+		JLabel lblNewLabel_39 = new JLabel(prices[8].toString()+"€");
 		lblNewLabel_39.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_39, BorderLayout.SOUTH);
 		
@@ -381,11 +381,11 @@ public class MainGUI {
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_40 = new JLabel("New label");
+		JLabel lblNewLabel_40 = new JLabel(names[9].toString());
 		lblNewLabel_40.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_40, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_41 = new JLabel("New label");
+		JLabel lblNewLabel_41 = new JLabel(prices[9].toString()+"€");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
