@@ -62,7 +62,7 @@ public class Customer
 		
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("INSERT INTO kunden{vorname, nachname, pwort, nutzername} VALUES {" + vorname + "," + nachname +"," + pwort + "," + vorname +"."+ nachname +" }");	//ein SQL Statement wird durchgefÃ¼hrt um den Kontostand zu verringern
+			stmt.execute("INSERT INTO kunden{vorname, nachname, pwort, nutzername} VALUES {" + vorname + "," + nachname +"," + pwort + "," + vorname +"."+ nachname +" }");	//ein SQL Statement wird durchgeführt um einen neuen Kunden anzulegen
 		
 		}
 		catch(SQLException e)
