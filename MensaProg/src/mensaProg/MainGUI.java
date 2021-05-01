@@ -76,93 +76,160 @@ public class MainGUI {
 		frame.setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 903, 596);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-		frame.getContentPane().setLayout(gridBagLayout);
+		frame.getContentPane().setLayout(new GridLayout(0, 6, 0, 0));
+		
+		JLabel label = new JLabel("");
+		frame.getContentPane().add(label);
+		
+		JLabel label_1 = new JLabel("");
+		frame.getContentPane().add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		frame.getContentPane().add(label_2);
+		
+		JLabel label_3 = new JLabel("");
+		frame.getContentPane().add(label_3);
+		
+		JLabel label_4 = new JLabel("");
+		frame.getContentPane().add(label_4);
+		
+		JLabel label_5 = new JLabel("");
+		frame.getContentPane().add(label_5);
+		
+		JLabel label_6 = new JLabel("");
+		frame.getContentPane().add(label_6);
+		
+		JLabel label_7 = new JLabel("");
+		frame.getContentPane().add(label_7);
+		
+		JLabel label_8 = new JLabel("");
+		frame.getContentPane().add(label_8);
+		
+		JLabel label_9 = new JLabel("");
+		frame.getContentPane().add(label_9);
+		
+		JLabel label_10 = new JLabel("");
+		frame.getContentPane().add(label_10);
+		
+		JLabel label_11 = new JLabel("");
+		frame.getContentPane().add(label_11);
+		
+		JLabel label_12 = new JLabel("");
+		frame.getContentPane().add(label_12);
+		
+		JLabel label_13 = new JLabel("");
+		frame.getContentPane().add(label_13);
+		
+		JLabel label_14 = new JLabel("");
+		frame.getContentPane().add(label_14);
+		
+		JLabel label_15 = new JLabel("");
+		frame.getContentPane().add(label_15);
+		
+		JLabel label_16 = new JLabel("");
+		frame.getContentPane().add(label_16);
+		
+		JLabel label_17 = new JLabel("");
+		frame.getContentPane().add(label_17);
+		
+		JLabel label_18 = new JLabel("");
+		frame.getContentPane().add(label_18);
 		
 		JLabel Montag = new JLabel("Montag");
-		GridBagConstraints gbc_Montag = new GridBagConstraints();
-		gbc_Montag.insets = new Insets(0, 0, 5, 5);
-		gbc_Montag.gridx = 1;
-		gbc_Montag.gridy = 3;
-		frame.getContentPane().add(Montag, gbc_Montag);
+		frame.getContentPane().add(Montag);
 		
 		JLabel lblNewLabel_1 = new JLabel("Dienstag");
-		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
-		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_1.gridx = 2;
-		gbc_lblNewLabel_1.gridy = 3;
-		frame.getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
+		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("Mittwoch");
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel.gridx = 3;
-		gbc_lblNewLabel.gridy = 3;
-		frame.getContentPane().add(lblNewLabel, gbc_lblNewLabel);
+		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("Donnerstag");
-		GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
-		gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_2.gridx = 4;
-		gbc_lblNewLabel_2.gridy = 3;
-		frame.getContentPane().add(lblNewLabel_2, gbc_lblNewLabel_2);
+		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Freitag");
-		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 0);
-		gbc_lblNewLabel_3.gridx = 5;
-		gbc_lblNewLabel_3.gridy = 3;
-		frame.getContentPane().add(lblNewLabel_3, gbc_lblNewLabel_3);
+		frame.getContentPane().add(lblNewLabel_3);
+		
+		JLabel label_19 = new JLabel("");
+		frame.getContentPane().add(label_19);
+		
+		JLabel label_20 = new JLabel("");
+		frame.getContentPane().add(label_20);
+		
+		JLabel label_21 = new JLabel("");
+		frame.getContentPane().add(label_21);
+		
+		JLabel label_22 = new JLabel("");
+		frame.getContentPane().add(label_22);
+		
+		JLabel label_23 = new JLabel("");
+		frame.getContentPane().add(label_23);
+		
+		JLabel label_24 = new JLabel("");
+		frame.getContentPane().add(label_24);
+		
+		JLabel label_25 = new JLabel("");
+		frame.getContentPane().add(label_25);
+		
+		JLabel label_26 = new JLabel("");
+		frame.getContentPane().add(label_26);
+		
+		JLabel label_27 = new JLabel("");
+		frame.getContentPane().add(label_27);
+		
+		JLabel label_28 = new JLabel("");
+		frame.getContentPane().add(label_28);
+		
+		JLabel label_29 = new JLabel("");
+		frame.getContentPane().add(label_29);
+		
+		JLabel label_30 = new JLabel("");
+		frame.getContentPane().add(label_30);
+		
+		JLabel label_31 = new JLabel("");
+		frame.getContentPane().add(label_31);
 		
 		 
 		JLabel lblNewLabel_4 = new JLabel(weekdays[0].toString());
-		GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
-		gbc_lblNewLabel_4.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_4.gridx = 1;
-		gbc_lblNewLabel_4.gridy = 6;
-		frame.getContentPane().add(lblNewLabel_4, gbc_lblNewLabel_4);
+		frame.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_20 = new JLabel(weekdays[1].toString());
-		GridBagConstraints gbc_lblNewLabel_20 = new GridBagConstraints();
-		gbc_lblNewLabel_20.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_20.gridx = 2;
-		gbc_lblNewLabel_20.gridy = 6;
-		frame.getContentPane().add(lblNewLabel_20, gbc_lblNewLabel_20);
+		frame.getContentPane().add(lblNewLabel_20);
 		
 		JLabel lblNewLabel_21 = new JLabel(weekdays[2].toString());
-		GridBagConstraints gbc_lblNewLabel_21 = new GridBagConstraints();
-		gbc_lblNewLabel_21.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_21.gridx = 3;
-		gbc_lblNewLabel_21.gridy = 6;
-		frame.getContentPane().add(lblNewLabel_21, gbc_lblNewLabel_21);
+		frame.getContentPane().add(lblNewLabel_21);
 		
 		JLabel lblNewLabel_22 = new JLabel(weekdays[3].toString());
-		GridBagConstraints gbc_lblNewLabel_22 = new GridBagConstraints();
-		gbc_lblNewLabel_22.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_22.gridx = 4;
-		gbc_lblNewLabel_22.gridy = 6;
-		frame.getContentPane().add(lblNewLabel_22, gbc_lblNewLabel_22);
+		frame.getContentPane().add(lblNewLabel_22);
 		
 		JLabel lblNewLabel_23 = new JLabel(weekdays[4].toString());
-		GridBagConstraints gbc_lblNewLabel_23 = new GridBagConstraints();
-		gbc_lblNewLabel_23.insets = new Insets(0, 0, 5, 0);
-		gbc_lblNewLabel_23.gridx = 5;
-		gbc_lblNewLabel_23.gridy = 6;
-		frame.getContentPane().add(lblNewLabel_23, gbc_lblNewLabel_23);
+		frame.getContentPane().add(lblNewLabel_23);
+		
+		JLabel label_32 = new JLabel("");
+		frame.getContentPane().add(label_32);
+		
+		JLabel label_33 = new JLabel("");
+		frame.getContentPane().add(label_33);
+		
+		JLabel label_34 = new JLabel("");
+		frame.getContentPane().add(label_34);
+		
+		JLabel label_35 = new JLabel("");
+		frame.getContentPane().add(label_35);
+		
+		JLabel label_36 = new JLabel("");
+		frame.getContentPane().add(label_36);
+		
+		JLabel label_37 = new JLabel("");
+		frame.getContentPane().add(label_37);
+		
+		JLabel label_38 = new JLabel("");
+		frame.getContentPane().add(label_38);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		panel_1.setBackground(new Color(153, 204, 204));
-		GridBagConstraints gbc_panel_1 = new GridBagConstraints();
-		gbc_panel_1.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_1.fill = GridBagConstraints.BOTH;
-		gbc_panel_1.gridx = 1;
-		gbc_panel_1.gridy = 8;
-		frame.getContentPane().add(panel_1, gbc_panel_1);
+		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_8 = new JLabel(names[0].toString());
@@ -180,12 +247,7 @@ public class MainGUI {
 		JPanel panel_4 = new JPanel();
 		panel_4.setBackground(new Color(153, 204, 204));
 		panel_4.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		GridBagConstraints gbc_panel_4 = new GridBagConstraints();
-		gbc_panel_4.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_4.fill = GridBagConstraints.BOTH;
-		gbc_panel_4.gridx = 2;
-		gbc_panel_4.gridy = 8;
-		frame.getContentPane().add(panel_4, gbc_panel_4);
+		frame.getContentPane().add(panel_4);
 		panel_4.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_9 = new JLabel("Gericht 1");
@@ -206,12 +268,7 @@ public class MainGUI {
 		JPanel panel_13 = new JPanel();
 		panel_13.setBackground(new Color(153, 204, 204));
 		panel_13.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		GridBagConstraints gbc_panel_13 = new GridBagConstraints();
-		gbc_panel_13.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_13.fill = GridBagConstraints.BOTH;
-		gbc_panel_13.gridx = 3;
-		gbc_panel_13.gridy = 8;
-		frame.getContentPane().add(panel_13, gbc_panel_13);
+		frame.getContentPane().add(panel_13);
 		panel_13.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_12 = new JLabel("Gericht 1");
@@ -229,12 +286,7 @@ public class MainGUI {
 		JPanel panel_14 = new JPanel();
 		panel_14.setBackground(new Color(153, 204, 204));
 		panel_14.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		GridBagConstraints gbc_panel_14 = new GridBagConstraints();
-		gbc_panel_14.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_14.fill = GridBagConstraints.BOTH;
-		gbc_panel_14.gridx = 4;
-		gbc_panel_14.gridy = 8;
-		frame.getContentPane().add(panel_14, gbc_panel_14);
+		frame.getContentPane().add(panel_14);
 		panel_14.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_15 = new JLabel("Gericht 1");
@@ -252,12 +304,7 @@ public class MainGUI {
 		JPanel panel = new JPanel();
 		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		panel.setBackground(new Color(153, 204, 204));
-		GridBagConstraints gbc_panel = new GridBagConstraints();
-		gbc_panel.insets = new Insets(0, 0, 5, 0);
-		gbc_panel.fill = GridBagConstraints.BOTH;
-		gbc_panel.gridx = 5;
-		gbc_panel.gridy = 8;
-		frame.getContentPane().add(panel, gbc_panel);
+		frame.getContentPane().add(panel);
 		panel.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_5 = new JLabel("Gericht 1");
@@ -273,15 +320,13 @@ public class MainGUI {
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_30, BorderLayout.SOUTH);
 		
+		JLabel label_39 = new JLabel("");
+		frame.getContentPane().add(label_39);
+		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(153, 204, 204));
 		panel_2.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		GridBagConstraints gbc_panel_2 = new GridBagConstraints();
-		gbc_panel_2.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_2.fill = GridBagConstraints.BOTH;
-		gbc_panel_2.gridx = 1;
-		gbc_panel_2.gridy = 9;
-		frame.getContentPane().add(panel_2, gbc_panel_2);
+		frame.getContentPane().add(panel_2);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_7 = new JLabel("Gericht 2");
@@ -299,12 +344,7 @@ public class MainGUI {
 		JPanel panel_5 = new JPanel();
 		panel_5.setBackground(new Color(153, 204, 204));
 		panel_5.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		GridBagConstraints gbc_panel_5 = new GridBagConstraints();
-		gbc_panel_5.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_5.fill = GridBagConstraints.BOTH;
-		gbc_panel_5.gridx = 2;
-		gbc_panel_5.gridy = 9;
-		frame.getContentPane().add(panel_5, gbc_panel_5);
+		frame.getContentPane().add(panel_5);
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_10 = new JLabel("Gericht 2");
@@ -322,12 +362,7 @@ public class MainGUI {
 		JPanel panel_7 = new JPanel();
 		panel_7.setBackground(new Color(153, 204, 204));
 		panel_7.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		GridBagConstraints gbc_panel_7 = new GridBagConstraints();
-		gbc_panel_7.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_7.fill = GridBagConstraints.BOTH;
-		gbc_panel_7.gridx = 3;
-		gbc_panel_7.gridy = 9;
-		frame.getContentPane().add(panel_7, gbc_panel_7);
+		frame.getContentPane().add(panel_7);
 		panel_7.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_13 = new JLabel("Gericht 2");
@@ -345,12 +380,7 @@ public class MainGUI {
 		JPanel panel_9 = new JPanel();
 		panel_9.setBackground(new Color(153, 204, 204));
 		panel_9.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		GridBagConstraints gbc_panel_9 = new GridBagConstraints();
-		gbc_panel_9.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_9.fill = GridBagConstraints.BOTH;
-		gbc_panel_9.gridx = 4;
-		gbc_panel_9.gridy = 9;
-		frame.getContentPane().add(panel_9, gbc_panel_9);
+		frame.getContentPane().add(panel_9);
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_16 = new JLabel("Gericht 2");
@@ -369,35 +399,28 @@ public class MainGUI {
 		JPanel panel_11 = new JPanel();
 		panel_11.setBackground(new Color(153, 204, 204));
 		panel_11.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		GridBagConstraints gbc_panel_11 = new GridBagConstraints();
-		gbc_panel_11.insets = new Insets(0, 0, 5, 0);
-		gbc_panel_11.fill = GridBagConstraints.BOTH;
-		gbc_panel_11.gridx = 5;
-		gbc_panel_11.gridy = 9;
-		frame.getContentPane().add(panel_11, gbc_panel_11);
+		frame.getContentPane().add(panel_11);
 		panel_11.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_18 = new JLabel("Gericht 2");
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_40 = new JLabel(names[9].toString());
+		JLabel lblNewLabel_40 = new JLabel("t");
 		lblNewLabel_40.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_40, BorderLayout.CENTER);
 		
-		JLabel lblNewLabel_41 = new JLabel(prices[9].toString()+"€");
+		JLabel lblNewLabel_41 = new JLabel("€");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_41, BorderLayout.SOUTH);
+		
+		JLabel label_40 = new JLabel("");
+		frame.getContentPane().add(label_40);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_3.setBackground(new Color(102, 255, 102));
-		GridBagConstraints gbc_panel_3 = new GridBagConstraints();
-		gbc_panel_3.insets = new Insets(0, 0, 0, 5);
-		gbc_panel_3.fill = GridBagConstraints.BOTH;
-		gbc_panel_3.gridx = 1;
-		gbc_panel_3.gridy = 10;
-		frame.getContentPane().add(panel_3, gbc_panel_3);
+		frame.getContentPane().add(panel_3);
 		panel_3.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_45 = new JLabel("New label");
@@ -415,12 +438,7 @@ public class MainGUI {
 		JPanel panel_6 = new JPanel();
 		panel_6.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_6.setBackground(new Color(102, 255, 102));
-		GridBagConstraints gbc_panel_6 = new GridBagConstraints();
-		gbc_panel_6.insets = new Insets(0, 0, 0, 5);
-		gbc_panel_6.fill = GridBagConstraints.BOTH;
-		gbc_panel_6.gridx = 2;
-		gbc_panel_6.gridy = 10;
-		frame.getContentPane().add(panel_6, gbc_panel_6);
+		frame.getContentPane().add(panel_6);
 		panel_6.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_11 = new JLabel("Gericht 3");
@@ -438,12 +456,7 @@ public class MainGUI {
 		JPanel panel_8 = new JPanel();
 		panel_8.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_8.setBackground(new Color(102, 255, 102));
-		GridBagConstraints gbc_panel_8 = new GridBagConstraints();
-		gbc_panel_8.insets = new Insets(0, 0, 0, 5);
-		gbc_panel_8.fill = GridBagConstraints.BOTH;
-		gbc_panel_8.gridx = 3;
-		gbc_panel_8.gridy = 10;
-		frame.getContentPane().add(panel_8, gbc_panel_8);
+		frame.getContentPane().add(panel_8);
 		panel_8.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_14 = new JLabel("Gericht 3");
@@ -461,12 +474,7 @@ public class MainGUI {
 		JPanel panel_10 = new JPanel();
 		panel_10.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_10.setBackground(new Color(102, 255, 102));
-		GridBagConstraints gbc_panel_10 = new GridBagConstraints();
-		gbc_panel_10.insets = new Insets(0, 0, 0, 5);
-		gbc_panel_10.fill = GridBagConstraints.BOTH;
-		gbc_panel_10.gridx = 4;
-		gbc_panel_10.gridy = 10;
-		frame.getContentPane().add(panel_10, gbc_panel_10);
+		frame.getContentPane().add(panel_10);
 		panel_10.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_17 = new JLabel("Gericht 3");
@@ -484,11 +492,7 @@ public class MainGUI {
 		JPanel panel_12 = new JPanel();
 		panel_12.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panel_12.setBackground(new Color(102, 255, 102));
-		GridBagConstraints gbc_panel_12 = new GridBagConstraints();
-		gbc_panel_12.fill = GridBagConstraints.BOTH;
-		gbc_panel_12.gridx = 5;
-		gbc_panel_12.gridy = 10;
-		frame.getContentPane().add(panel_12, gbc_panel_12);
+		frame.getContentPane().add(panel_12);
 		panel_12.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_19 = new JLabel("Gericht 3");

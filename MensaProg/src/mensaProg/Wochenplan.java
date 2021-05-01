@@ -7,7 +7,9 @@ import java.util.HashMap;
 
 public class Wochenplan {
 	
-	HashMap<String, String> gerichte = new HashMap<String, String>();
+	HashMap<String, String> gerichte = new HashMap<>();
+	HashMap<String,String> vegGerichte = new HashMap<>();
+	boolean again = true;
 	Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
 	Wochenplan(){
 		try 
@@ -25,10 +27,21 @@ public class Wochenplan {
 				count++;
 				//}
 			}
-		} 
+			int count2 = 0;
+			//boolean again =true;
+			while(count2!=5 || again==true)
+			{
+				int random = (int) (Math.random()*60);
+				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);	
+				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
+				vegGerichte.put(name, price);
+				again = false;
+				count2++;
+		}
+		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			again=true;
 		}
 		
 		try 
@@ -42,6 +55,7 @@ public class Wochenplan {
 	//wenn jemand die Methode aufruft, bekommt er Login info
 	protected HashMap<String, String> getGerichte() {
 		System.out.println(gerichte);
+		System.out.println(vegGerichte);
 		return gerichte;
 	}
 	
