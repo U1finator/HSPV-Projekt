@@ -18,12 +18,14 @@ public class IDandPW {
 		try 
 		{
 			Statement stmt = conn.createStatement();
-			for(int i = 1; i <= stmt.executeQuery("SELECT max(id) FROM kunden").toString().charAt(0); i++)	//mithilfe des Statements wird die Anzahl von Nutzern in der Datenbank abgefragt
+			for(int i = 1; i <= stmt.executeQuery("SELECT max(id) FROM kunden").getInt(1); i++)	//mithilfe des Statements wird die Anzahl von Nutzern in der Datenbank abgefragt
 			{
 				logininfo.put(stmt.executeQuery("SELECT username FROM kunden WHERE id="+i).getString(1).toLowerCase() , stmt.executeQuery("SELECT pwort FROM kunden WHERE id="+i).getString(1));	//der Nutzername und das dazugehörige Passwort wird in die Hashmap eingetragen
 			}
-		} 
-		catch (SQLException e){}
+		} catch (SQLException e){
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		try 
 		{
