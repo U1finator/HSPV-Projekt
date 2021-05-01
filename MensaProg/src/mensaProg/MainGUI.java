@@ -44,24 +44,14 @@ public class MainGUI {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainGUI window = new MainGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+		
 
 	/**
 	 * Create the application.
 	 */
 	public MainGUI() {
 		initialize();
+		frame.setVisible(true);
 	}
 
 	/**
