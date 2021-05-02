@@ -70,11 +70,11 @@ public class Customer
 		}	//die Verbindung soll geschlossen werden 
 	}
 	
-	public int getKontostand(String username)
+	public double getKontostand(String username)
 	{
 		try {
 			Statement stmt = conn.createStatement();
-			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = " + username).getInt(1);
+			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = " + username).getDouble(1);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
