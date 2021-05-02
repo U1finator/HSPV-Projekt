@@ -3,6 +3,7 @@ package mensaProg;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
 
 public class Wochenplan {
 	
@@ -13,7 +14,7 @@ public class Wochenplan {
 		try 
 		{
 			Statement stmt = conn.createStatement();
-			for(int i = 1; i <= stmt.executeQuery("SELECT MAX(id) FROM gerichte").toString().charAt(0); i++)	//mithilfe des Statements wird die Anzahl von Gerichten in der Datenbank abgefragt
+			for(int i = 1; i <= stmt.executeQuery("SELECT max(id) FROM kunden").getInt(1); i++)	//mithilfe des Statements wird die Anzahl von Gerichten in der Datenbank abgefragt
 			{
 				gerichte.put(stmt.executeQuery("SELECT name FROM gerichte WHERE id="+i).getString(1), stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+i).getString(1));	//das Gericht mit dazugehörigem Preis wird abgefragt
 			}
@@ -31,7 +32,7 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
-	//wenn jemand die Methode aufruft, bekommt er Login info
+	//wenn jemand die Methode aufruft, bekommt er die Gerichte in einer Hashmap
 	protected HashMap<String, String> getGerichte() {
 		return gerichte;
 	}
@@ -55,11 +56,4 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
-
-	public static void main(String[] args) {
-		create();
-		
-
-	}
-
 }
