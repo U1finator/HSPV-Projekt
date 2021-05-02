@@ -18,8 +18,8 @@ public class Wochenplan {
 			int count = 0;
 			while(count!=10)
 			{
-				//int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM gerichte").toString().charAt(0));
-				int random = (int) (Math.random()*60);
+				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM gerichte").getInt(1));
+				//int random = (int) (Math.random()*60);
 				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE id="+random).getString(1);	
 				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
 				//if(stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=0 And id="+random).getString(1)!="") {
@@ -29,15 +29,15 @@ public class Wochenplan {
 			}
 			int count2 = 0;
 			//boolean again =true;
-			while(count2!=5 || again==true)
-			{
-				int random = (int) (Math.random()*60);
-				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);	
-				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
-				vegGerichte.put(name, price);
-				again = false;
-				count2++;
-		}
+//			while(count2!=5 || again==true)
+//			{
+//				int random = (int) (Math.random()*60);
+//				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);	
+//				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
+//				vegGerichte.put(name, price);
+//				again = false;
+//				count2++;
+		//}
 		}
 		catch (SQLException e)
 		{
@@ -55,7 +55,7 @@ public class Wochenplan {
 	//wenn jemand die Methode aufruft, bekommt er Login info
 	protected HashMap<String, String> getGerichte() {
 		System.out.println(gerichte);
-		System.out.println(vegGerichte);
+		//System.out.println(vegGerichte);
 		return gerichte;
 	}
 	

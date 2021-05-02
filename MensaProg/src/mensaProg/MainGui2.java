@@ -13,6 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -22,6 +25,9 @@ import java.awt.Cursor;
 import javax.swing.JTextArea;
 import java.awt.Font;
 import java.awt.Component;
+import javax.swing.JTextField;
+import javax.swing.JFormattedTextField;
+import javax.swing.JTextPane;
 
 public class MainGui2 {
 
@@ -244,14 +250,14 @@ public class MainGui2 {
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
-		JTextArea txtrSchnitzelMitButtergemse = new JTextArea();
-		txtrSchnitzelMitButtergemse.setFont(new Font("Monospaced", Font.BOLD, 13));
-		txtrSchnitzelMitButtergemse.setWrapStyleWord(true);
-		txtrSchnitzelMitButtergemse.setText("\r\nSchnitzel mit Buttergem\u00FCse in der Pfanne ger\u00F6stet");
-		txtrSchnitzelMitButtergemse.setBackground(Color.LIGHT_GRAY);
-		txtrSchnitzelMitButtergemse.setEditable(false);
-		txtrSchnitzelMitButtergemse.setLineWrap(true);
-		panel_12.add(txtrSchnitzelMitButtergemse, BorderLayout.CENTER);
+		JTextPane txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj = new JTextPane();
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setEditable(false);
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setText("\n"+names[1].toString());
+		StyledDocument doc2 = txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.getStyledDocument();
+		SimpleAttributeSet center2 = new SimpleAttributeSet();
+		StyleConstants.setAlignment(center2, StyleConstants.ALIGN_CENTER);
+		doc2.setParagraphAttributes(0, doc2.getLength(), center2, false);
+		panel_12.add(txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj, BorderLayout.CENTER);
 		
 		JPanel panel_13 = new JPanel();
 		panel.add(panel_13);
@@ -261,13 +267,21 @@ public class MainGui2 {
 		lblNewLabel_36.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_36, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_37 = new JLabel("New label");
-		lblNewLabel_37.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_13.add(lblNewLabel_37, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_38 = new JLabel("New label");
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
+		
+		JTextPane txtpnSchnitzelMitButtergemse = new JTextPane();
+		StyledDocument doc = txtpnSchnitzelMitButtergemse.getStyledDocument();
+		SimpleAttributeSet center = new SimpleAttributeSet();
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		doc.setParagraphAttributes(0, doc.getLength(), center, false);
+		txtpnSchnitzelMitButtergemse.setFont(new Font("Tahoma", Font.BOLD, 12));
+		txtpnSchnitzelMitButtergemse.setAlignmentY(Component.BOTTOM_ALIGNMENT);
+		txtpnSchnitzelMitButtergemse.setAlignmentX(Component.RIGHT_ALIGNMENT);
+		txtpnSchnitzelMitButtergemse.setEditable(false);
+		txtpnSchnitzelMitButtergemse.setText("\r\nSchnitzel mit Buttergem\u00FCse in der Pfanne ger\u00F6stet");
+		panel_13.add(txtpnSchnitzelMitButtergemse, BorderLayout.CENTER);
 		
 		JPanel panel_14 = new JPanel();
 		panel.add(panel_14);
@@ -277,13 +291,13 @@ public class MainGui2 {
 		lblNewLabel_39.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_39, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_40 = new JLabel("New label");
-		lblNewLabel_40.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_14.add(lblNewLabel_40, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_41 = new JLabel("New label");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setEditable(false);
+		panel_14.add(textPane_1, BorderLayout.CENTER);
 		
 		JPanel panel_15 = new JPanel();
 		panel.add(panel_15);
@@ -293,13 +307,13 @@ public class MainGui2 {
 		lblNewLabel_42.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_42, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_43 = new JLabel("New label");
-		lblNewLabel_43.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_15.add(lblNewLabel_43, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_44 = new JLabel("New label");
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
+		
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setEditable(false);
+		panel_15.add(textPane_2, BorderLayout.CENTER);
 		
 		JPanel panel_16 = new JPanel();
 		panel.add(panel_16);
@@ -309,13 +323,13 @@ public class MainGui2 {
 		lblNewLabel_45.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_45, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_46 = new JLabel("New label");
-		lblNewLabel_46.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_16.add(lblNewLabel_46, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_47 = new JLabel("New label");
 		lblNewLabel_47.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
+		
+		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setEditable(false);
+		panel_16.add(textPane_3, BorderLayout.CENTER);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(Color.LIGHT_GRAY);
