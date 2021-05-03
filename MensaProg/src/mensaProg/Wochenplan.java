@@ -19,15 +19,15 @@ public class Wochenplan {
 			while(count!=10)
 			{
 				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM gerichte").getInt(1));
-				//int random = (int) (Math.random()*60);
 				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE id="+random).getString(1);	
 				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
-				//if(stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=0 And id="+random).getString(1)!="") {
+				//String name2 = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);
+				//if(name.compareTo(name2)==0) {
 				gerichte.put(name, price);	
 				count++;
 				//}
 			}
-			int count2 = 0;
+//			int count2 = 0;
 			//boolean again =true;
 //			while(count2!=5 || again==true)
 //			{

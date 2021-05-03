@@ -86,13 +86,19 @@ public class MainGui2 {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_3, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_4 = new JLabel(names[0].toString());
-		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_6.add(lblNewLabel_4, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"€");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA = new JTextPane();
+		txtpnA.setDisabledTextColor(Color.BLACK);
+		txtpnA.setSelectedTextColor(Color.BLACK);
+		txtpnA.setForeground(Color.BLACK);
+		txtpnA.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA.setText("\n"+ names[0].toString());
+		center(txtpnA);
+		txtpnA.setEnabled(false);
+		panel_6.add(txtpnA, BorderLayout.CENTER);
 		
 		JPanel panel_7 = new JPanel();
 		panel.add(panel_7);
@@ -102,13 +108,18 @@ public class MainGui2 {
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_6, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_7 = new JLabel(names[1].toString());
-		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_7.add(lblNewLabel_7, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"€");
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_1 = new JTextPane();
+		txtpnA_1.setDisabledTextColor(Color.BLACK);
+		txtpnA_1.setForeground(Color.BLACK);
+		txtpnA_1.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_1.setText("\n"+ names[1].toString());
+		center(txtpnA_1);
+		txtpnA_1.setEnabled(false);
+		panel_7.add(txtpnA_1, BorderLayout.CENTER);
 		
 		JPanel panel_3 = new JPanel();
 		panel.add(panel_3);
@@ -118,13 +129,18 @@ public class MainGui2 {
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_9, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_10 = new JLabel(names[2].toString());
-		lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_3.add(lblNewLabel_10, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"€");
 		lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_2 = new JTextPane();
+		txtpnA_2.setDisabledTextColor(Color.BLACK);
+		txtpnA_2.setForeground(Color.BLACK);
+		txtpnA_2.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_2.setText("\n"+ names[2].toString());
+		center(txtpnA_2);
+		txtpnA_2.setEnabled(false);
+		panel_3.add(txtpnA_2, BorderLayout.CENTER);
 		
 		JPanel panel_1 = new JPanel();
 		panel.add(panel_1);
@@ -134,13 +150,18 @@ public class MainGui2 {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_13 = new JLabel(names[3].toString());
-		lblNewLabel_13.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_1.add(lblNewLabel_13, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"€");
 		lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_3 = new JTextPane();
+		txtpnA_3.setDisabledTextColor(Color.BLACK);
+		txtpnA_3.setForeground(Color.BLACK);
+		txtpnA_3.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_3.setText("\n"+ names[3].toString());
+		center(txtpnA_3);
+		txtpnA_3.setEnabled(false);
+		panel_1.add(txtpnA_3, BorderLayout.CENTER);
 		
 		JPanel panel_4 = new JPanel();
 		panel.add(panel_4);
@@ -150,13 +171,18 @@ public class MainGui2 {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_16 = new JLabel(names[4].toString());
-		lblNewLabel_16.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_4.add(lblNewLabel_16, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"€");
 		lblNewLabel_17.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_4 = new JTextPane();
+		txtpnA_4.setDisabledTextColor(Color.BLACK);
+		txtpnA_4.setForeground(Color.BLACK);
+		txtpnA_4.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_4.setText("\n"+ names[4].toString());
+		center(txtpnA_4);
+		txtpnA_4.setEnabled(false);
+		panel_4.add(txtpnA_4, BorderLayout.CENTER);
 		
 		JPanel panel_5 = new JPanel();
 		panel.add(panel_5);
@@ -166,13 +192,18 @@ public class MainGui2 {
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_19 = new JLabel(names[5].toString());
-		lblNewLabel_19.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_5.add(lblNewLabel_19, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"€");
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_5 = new JTextPane();
+		txtpnA_5.setDisabledTextColor(Color.BLACK);
+		txtpnA_5.setForeground(Color.BLACK);
+		txtpnA_5.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_5.setText("\n"+ names[5].toString());
+		center(txtpnA_5);
+		txtpnA_5.setEnabled(false);
+		panel_5.add(txtpnA_5, BorderLayout.CENTER);
 		
 		JPanel panel_8 = new JPanel();
 		panel.add(panel_8);
@@ -182,13 +213,18 @@ public class MainGui2 {
 		lblNewLabel_21.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_21, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_22 = new JLabel(names[6].toString());
-		lblNewLabel_22.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_8.add(lblNewLabel_22, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"€");
 		lblNewLabel_23.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_6 = new JTextPane();
+		txtpnA_6.setDisabledTextColor(Color.BLACK);
+		txtpnA_6.setForeground(Color.BLACK);
+		txtpnA_6.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_6.setText("\n"+ names[6].toString());
+		center(txtpnA_6);
+		txtpnA_6.setEnabled(false);
+		panel_8.add(txtpnA_6, BorderLayout.CENTER);
 		
 		JPanel panel_9 = new JPanel();
 		panel.add(panel_9);
@@ -198,13 +234,18 @@ public class MainGui2 {
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_24, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_25 = new JLabel(names[7].toString());
-		lblNewLabel_25.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_9.add(lblNewLabel_25, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"€");
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_7 = new JTextPane();
+		txtpnA_7.setDisabledTextColor(Color.BLACK);
+		txtpnA_7.setForeground(Color.BLACK);
+		txtpnA_7.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_7.setText("\n"+ names[0].toString());
+		center(txtpnA_7);
+		txtpnA_7.setEnabled(false);
+		panel_9.add(txtpnA_7, BorderLayout.CENTER);
 		
 		JPanel panel_10 = new JPanel();
 		panel.add(panel_10);
@@ -214,13 +255,18 @@ public class MainGui2 {
 		lblNewLabel_27.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_27, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_28 = new JLabel(names[8].toString());
-		lblNewLabel_28.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_10.add(lblNewLabel_28, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"€");
 		lblNewLabel_29.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_8 = new JTextPane();
+		txtpnA_8.setDisabledTextColor(Color.BLACK);
+		txtpnA_8.setForeground(Color.BLACK);
+		txtpnA_8.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_8.setText("\n"+ names[8].toString());
+		center(txtpnA_8);
+		txtpnA_8.setEnabled(false);
+		panel_10.add(txtpnA_8, BorderLayout.CENTER);
 		
 		JPanel panel_11 = new JPanel();
 		panel.add(panel_11);
@@ -230,13 +276,18 @@ public class MainGui2 {
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_30, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_31 = new JLabel(names[9].toString());
-		lblNewLabel_31.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_11.add(lblNewLabel_31, BorderLayout.CENTER);
-		
 		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"€");
 		lblNewLabel_32.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
+		
+		JTextPane txtpnA_9 = new JTextPane();
+		txtpnA_9.setDisabledTextColor(Color.BLACK);
+		txtpnA_9.setForeground(Color.BLACK);
+		txtpnA_9.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_9.setText("\n"+ names[9].toString());
+		center(txtpnA_9);
+		txtpnA_9.setEnabled(false);
+		panel_11.add(txtpnA_9, BorderLayout.CENTER);
 		
 		JPanel panel_12 = new JPanel();
 		panel.add(panel_12);
@@ -251,12 +302,14 @@ public class MainGui2 {
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
 		JTextPane txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj = new JTextPane();
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setDisabledTextColor(Color.BLACK);
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setSelectedTextColor(Color.BLACK);
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setForeground(Color.BLACK);
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setEnabled(false);
 		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setEditable(false);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setText("\n"+names[1].toString());
-		StyledDocument doc2 = txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.getStyledDocument();
-		SimpleAttributeSet center2 = new SimpleAttributeSet();
-		StyleConstants.setAlignment(center2, StyleConstants.ALIGN_CENTER);
-		doc2.setParagraphAttributes(0, doc2.getLength(), center2, false);
+		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setText("a");
+		center(txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj);
 		panel_12.add(txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj, BorderLayout.CENTER);
 		
 		JPanel panel_13 = new JPanel();
@@ -272,15 +325,15 @@ public class MainGui2 {
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
 		JTextPane txtpnSchnitzelMitButtergemse = new JTextPane();
-		StyledDocument doc = txtpnSchnitzelMitButtergemse.getStyledDocument();
-		SimpleAttributeSet center = new SimpleAttributeSet();
-		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
-		doc.setParagraphAttributes(0, doc.getLength(), center, false);
-		txtpnSchnitzelMitButtergemse.setFont(new Font("Tahoma", Font.BOLD, 12));
+		txtpnSchnitzelMitButtergemse.setDisabledTextColor(Color.BLACK);
+		txtpnSchnitzelMitButtergemse.setForeground(Color.BLACK);
+		txtpnSchnitzelMitButtergemse.setEnabled(false);
+		center(txtpnSchnitzelMitButtergemse);
+		txtpnSchnitzelMitButtergemse.setFont(new Font("Arial Black", Font.PLAIN, 12));
 		txtpnSchnitzelMitButtergemse.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		txtpnSchnitzelMitButtergemse.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		txtpnSchnitzelMitButtergemse.setEditable(false);
-		txtpnSchnitzelMitButtergemse.setText("\r\nSchnitzel mit Buttergem\u00FCse in der Pfanne ger\u00F6stet");
+		txtpnSchnitzelMitButtergemse.setText("a");
 		panel_13.add(txtpnSchnitzelMitButtergemse, BorderLayout.CENTER);
 		
 		JPanel panel_14 = new JPanel();
@@ -295,9 +348,14 @@ public class MainGui2 {
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
-		JTextPane textPane_1 = new JTextPane();
-		textPane_1.setEditable(false);
-		panel_14.add(textPane_1, BorderLayout.CENTER);
+		JTextPane txtpnA_10 = new JTextPane();
+		txtpnA_10.setDisabledTextColor(Color.BLACK);
+		txtpnA_10.setForeground(Color.BLACK);
+		txtpnA_10.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_10.setText("a");
+		txtpnA_10.setEnabled(false);
+		txtpnA_10.setEditable(false);
+		panel_14.add(txtpnA_10, BorderLayout.CENTER);
 		
 		JPanel panel_15 = new JPanel();
 		panel.add(panel_15);
@@ -311,9 +369,14 @@ public class MainGui2 {
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
-		JTextPane textPane_2 = new JTextPane();
-		textPane_2.setEditable(false);
-		panel_15.add(textPane_2, BorderLayout.CENTER);
+		JTextPane txtpnA_11 = new JTextPane();
+		txtpnA_11.setDisabledTextColor(Color.BLACK);
+		txtpnA_11.setForeground(Color.BLACK);
+		txtpnA_11.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_11.setText("a");
+		txtpnA_11.setEnabled(false);
+		txtpnA_11.setEditable(false);
+		panel_15.add(txtpnA_11, BorderLayout.CENTER);
 		
 		JPanel panel_16 = new JPanel();
 		panel.add(panel_16);
@@ -327,9 +390,14 @@ public class MainGui2 {
 		lblNewLabel_47.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
-		JTextPane textPane_3 = new JTextPane();
-		textPane_3.setEditable(false);
-		panel_16.add(textPane_3, BorderLayout.CENTER);
+		JTextPane txtpnA_12 = new JTextPane();
+		txtpnA_12.setDisabledTextColor(Color.BLACK);
+		txtpnA_12.setForeground(Color.BLACK);
+		txtpnA_12.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_12.setText("a");
+		txtpnA_12.setEnabled(false);
+		txtpnA_12.setEditable(false);
+		panel_16.add(txtpnA_12, BorderLayout.CENTER);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(Color.LIGHT_GRAY);
@@ -394,6 +462,7 @@ public class MainGui2 {
 		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
 		mnNewMenu.add(mntmNewMenuItem_1);
 	}
+	
 	public static LocalDate[] getWeekdays(LocalDate date) {
 	     LocalDate monday = date;
 	     if(date.getDayOfWeek().getValue() > 1) {
@@ -406,4 +475,12 @@ public class MainGui2 {
 	     }
 	     return weekdays;
 	   }
+	
+	public static void center (JTextPane textPane) {
+		StyledDocument doc = textPane.getStyledDocument();
+		SimpleAttributeSet center = new SimpleAttributeSet();
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		doc.setParagraphAttributes(0, doc.getLength(), center, false);
+	}
+	
 }
