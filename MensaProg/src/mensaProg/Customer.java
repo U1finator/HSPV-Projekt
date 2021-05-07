@@ -78,7 +78,26 @@ public class Customer
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return (Double) null;
 		}
+	}
+	
+	public void editpw(String name, String pwort)	//Methode um einen neuen Kunden hinzuzufügen
+	{
+		try {
+			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
+			stmt.execute("UPDATE Kunden SET pwort='"+pwort+"'  WHERE username='" + name + "'")		
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//die Verbindung soll geschlossen werden 
 	}
 }
