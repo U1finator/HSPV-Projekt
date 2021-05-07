@@ -15,33 +15,25 @@ public class Wochenplan {
 		try 
 		{
 			Statement stmt = conn.createStatement();
-			int count = 0;
-			while(count!=10)
+			while(gerichte.size()!=10)
 			{
-				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM gerichte").getInt(1));
-				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE id="+random).getString(1);	
-				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
-				//String name2 = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);
-				//if(name.compareTo(name2)==0) {
+				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM BBQ").getInt(1)+1);
+				String name = stmt.executeQuery("SELECT name FROM BBQ WHERE id="+random).getString(1);	
+				String price = stmt.executeQuery("SELECT preis FROM BBQ WHERE id="+random).getString(1);
 				gerichte.put(name, price);	
-				count++;
-				//}
 			}
-//			int count2 = 0;
-			//boolean again =true;
-//			while(count2!=5 || again==true)
-//			{
-//				int random = (int) (Math.random()*60);
-//				String name = stmt.executeQuery("SELECT name FROM gerichte WHERE vegetarisch=1 And id="+random).getString(1);	
-//				String price = stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+random).getString(1);
-//				vegGerichte.put(name, price);
-//				again = false;
-//				count2++;
-		//}
+			while(vegGerichte.size()!=5)
+			{
+				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM Vegetarisch").getInt(1)+1);
+				String name = stmt.executeQuery("SELECT name FROM Vegetarisch WHERE id="+random).getString(1);	
+				String price = stmt.executeQuery("SELECT preis FROM Vegetarisch WHERE id="+random).getString(1);
+				vegGerichte.put(name, price);	
+			}
+
 		}
 		catch (SQLException e)
 		{
-			again=true;
+			e.printStackTrace();
 		}
 		
 		try 
@@ -55,6 +47,7 @@ public class Wochenplan {
 	//wenn jemand die Methode aufruft, bekommt er Login info
 	protected HashMap<String, String> getGerichte() {
 		System.out.println(gerichte);
+		System.out.println(vegGerichte);
 		//System.out.println(vegGerichte);
 		return gerichte;
 	}
