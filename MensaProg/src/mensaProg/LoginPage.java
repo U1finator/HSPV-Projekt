@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 public class LoginPage implements ActionListener{
 	
 	JFrame frame = new JFrame();
-	JButton loginButton = new JButton("Login");
+	JButton login = new JButton("Login");
 	JButton resetButton = new JButton("Löschen");
 	JTextField userIDField = new JTextField();
 	JPasswordField userPasswordField = new JPasswordField();
@@ -33,15 +33,15 @@ public class LoginPage implements ActionListener{
 		userIDLabel.setBounds(50,100,120,25);
 		userPasswordLabel.setBounds(50,150,120,25); //
 		
-		messageLabel.setBounds(125,250,250,35);
+		messageLabel.setBounds(125,250,250,35); // Momentan leer
 		messageLabel.setFont(new Font(null,Font.ITALIC,25));
 		
 		userIDField.setBounds(150,100,200,25);
 		userPasswordField.setBounds(150,150,200,25);
 		
-		loginButton.setBounds(150,200,100,25);
+		login.setBounds(150,200,100,25);
 		//loginButton.setFocusable(false);
-		loginButton.addActionListener(this);
+		login.addActionListener(this);
 		
 		resetButton.setBounds(250,200,100,25);
 		//resetButton.setFocusable(false);
@@ -52,7 +52,7 @@ public class LoginPage implements ActionListener{
 		frame.add(messageLabel);
 		frame.add(userIDField);
 		frame.add(userPasswordField);
-		frame.add(loginButton);
+		frame.add(login);
 		frame.add(resetButton);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420,420);
@@ -69,7 +69,7 @@ public class LoginPage implements ActionListener{
 			userPasswordField.setText("");
 		}
 		
-		if(e.getSource()==loginButton) {
+		if(e.getSource()==login) {
 			
 			String userID = userIDField.getText();
 			String password = String.valueOf(userPasswordField.getPassword());
