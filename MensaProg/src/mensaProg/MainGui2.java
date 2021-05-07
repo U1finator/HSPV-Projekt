@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -22,11 +21,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 import javax.swing.ImageIcon;
 import java.awt.Cursor;
-import javax.swing.JTextArea;
 import java.awt.Font;
 import java.awt.Component;
-import javax.swing.JTextField;
-import javax.swing.JFormattedTextField;
 import javax.swing.JTextPane;
 
 public class MainGui2 {
@@ -91,13 +87,13 @@ public class MainGui2 {
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA = new JTextPane();
+		txtpnA.setEditable(false);
 		txtpnA.setDisabledTextColor(Color.BLACK);
 		txtpnA.setSelectedTextColor(Color.BLACK);
 		txtpnA.setForeground(Color.BLACK);
-		txtpnA.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA.setText("\n"+ names[0].toString());
 		center(txtpnA);
-		txtpnA.setEnabled(false);
 		panel_6.add(txtpnA, BorderLayout.CENTER);
 		
 		JPanel panel_7 = new JPanel();
@@ -113,12 +109,12 @@ public class MainGui2 {
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_1 = new JTextPane();
+		txtpnA_1.setEditable(false);
 		txtpnA_1.setDisabledTextColor(Color.BLACK);
 		txtpnA_1.setForeground(Color.BLACK);
-		txtpnA_1.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_1.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_1.setText("\n"+ names[1].toString());
 		center(txtpnA_1);
-		txtpnA_1.setEnabled(false);
 		panel_7.add(txtpnA_1, BorderLayout.CENTER);
 		
 		JPanel panel_3 = new JPanel();
@@ -134,12 +130,12 @@ public class MainGui2 {
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_2 = new JTextPane();
+		txtpnA_2.setEditable(false);
 		txtpnA_2.setDisabledTextColor(Color.BLACK);
 		txtpnA_2.setForeground(Color.BLACK);
-		txtpnA_2.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_2.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_2.setText("\n"+ names[2].toString());
 		center(txtpnA_2);
-		txtpnA_2.setEnabled(false);
 		panel_3.add(txtpnA_2, BorderLayout.CENTER);
 		
 		JPanel panel_1 = new JPanel();
@@ -155,12 +151,12 @@ public class MainGui2 {
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_3 = new JTextPane();
+		txtpnA_3.setEditable(false);
 		txtpnA_3.setDisabledTextColor(Color.BLACK);
 		txtpnA_3.setForeground(Color.BLACK);
-		txtpnA_3.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_3.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_3.setText("\n"+ names[3].toString());
 		center(txtpnA_3);
-		txtpnA_3.setEnabled(false);
 		panel_1.add(txtpnA_3, BorderLayout.CENTER);
 		
 		JPanel panel_4 = new JPanel();
@@ -176,12 +172,12 @@ public class MainGui2 {
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_4 = new JTextPane();
+		txtpnA_4.setEditable(false);
 		txtpnA_4.setDisabledTextColor(Color.BLACK);
 		txtpnA_4.setForeground(Color.BLACK);
-		txtpnA_4.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_4.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_4.setText("\n"+ names[4].toString());
 		center(txtpnA_4);
-		txtpnA_4.setEnabled(false);
 		panel_4.add(txtpnA_4, BorderLayout.CENTER);
 		
 		JPanel panel_5 = new JPanel();
@@ -197,12 +193,12 @@ public class MainGui2 {
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_5 = new JTextPane();
+		txtpnA_5.setEditable(false);
 		txtpnA_5.setDisabledTextColor(Color.BLACK);
 		txtpnA_5.setForeground(Color.BLACK);
-		txtpnA_5.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_5.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_5.setText("\n"+ names[5].toString());
 		center(txtpnA_5);
-		txtpnA_5.setEnabled(false);
 		panel_5.add(txtpnA_5, BorderLayout.CENTER);
 		
 		JPanel panel_8 = new JPanel();
@@ -218,12 +214,12 @@ public class MainGui2 {
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_6 = new JTextPane();
+		txtpnA_6.setEditable(false);
 		txtpnA_6.setDisabledTextColor(Color.BLACK);
 		txtpnA_6.setForeground(Color.BLACK);
-		txtpnA_6.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_6.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_6.setText("\n"+ names[6].toString());
 		center(txtpnA_6);
-		txtpnA_6.setEnabled(false);
 		panel_8.add(txtpnA_6, BorderLayout.CENTER);
 		
 		JPanel panel_9 = new JPanel();
@@ -239,12 +235,12 @@ public class MainGui2 {
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_7 = new JTextPane();
+		txtpnA_7.setEditable(false);
 		txtpnA_7.setDisabledTextColor(Color.BLACK);
 		txtpnA_7.setForeground(Color.BLACK);
-		txtpnA_7.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_7.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_7.setText("\n"+ names[0].toString());
 		center(txtpnA_7);
-		txtpnA_7.setEnabled(false);
 		panel_9.add(txtpnA_7, BorderLayout.CENTER);
 		
 		JPanel panel_10 = new JPanel();
@@ -260,12 +256,12 @@ public class MainGui2 {
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_8 = new JTextPane();
+		txtpnA_8.setEditable(false);
 		txtpnA_8.setDisabledTextColor(Color.BLACK);
 		txtpnA_8.setForeground(Color.BLACK);
-		txtpnA_8.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_8.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_8.setText("\n"+ names[8].toString());
 		center(txtpnA_8);
-		txtpnA_8.setEnabled(false);
 		panel_10.add(txtpnA_8, BorderLayout.CENTER);
 		
 		JPanel panel_11 = new JPanel();
@@ -281,12 +277,12 @@ public class MainGui2 {
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_9 = new JTextPane();
+		txtpnA_9.setEditable(false);
 		txtpnA_9.setDisabledTextColor(Color.BLACK);
 		txtpnA_9.setForeground(Color.BLACK);
-		txtpnA_9.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_9.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_9.setText("\n"+ names[9].toString());
 		center(txtpnA_9);
-		txtpnA_9.setEnabled(false);
 		panel_11.add(txtpnA_9, BorderLayout.CENTER);
 		
 		JPanel panel_12 = new JPanel();
@@ -301,16 +297,12 @@ public class MainGui2 {
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
-		JTextPane txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj = new JTextPane();
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setDisabledTextColor(Color.BLACK);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setSelectedTextColor(Color.BLACK);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setForeground(Color.BLACK);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setFont(new Font("Arial Black", Font.PLAIN, 12));
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setEnabled(false);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setEditable(false);
-		txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj.setText("a");
-		center(txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj);
-		panel_12.add(txtpnShahjjdajhsdhhDsajhasjddhjajDjshajdhj, BorderLayout.CENTER);
+		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
+		textPane.setEditable(false);
+		panel_12.add(textPane, BorderLayout.CENTER);
+		
+		
 		
 		JPanel panel_13 = new JPanel();
 		panel.add(panel_13);
@@ -324,17 +316,11 @@ public class MainGui2 {
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
-		JTextPane txtpnSchnitzelMitButtergemse = new JTextPane();
-		txtpnSchnitzelMitButtergemse.setDisabledTextColor(Color.BLACK);
-		txtpnSchnitzelMitButtergemse.setForeground(Color.BLACK);
-		txtpnSchnitzelMitButtergemse.setEnabled(false);
-		center(txtpnSchnitzelMitButtergemse);
-		txtpnSchnitzelMitButtergemse.setFont(new Font("Arial Black", Font.PLAIN, 12));
-		txtpnSchnitzelMitButtergemse.setAlignmentY(Component.BOTTOM_ALIGNMENT);
-		txtpnSchnitzelMitButtergemse.setAlignmentX(Component.RIGHT_ALIGNMENT);
-		txtpnSchnitzelMitButtergemse.setEditable(false);
-		txtpnSchnitzelMitButtergemse.setText("a");
-		panel_13.add(txtpnSchnitzelMitButtergemse, BorderLayout.CENTER);
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
+		textPane_1.setEditable(false);
+		panel_13.add(textPane_1, BorderLayout.CENTER);
+	
 		
 		JPanel panel_14 = new JPanel();
 		panel.add(panel_14);
@@ -349,12 +335,11 @@ public class MainGui2 {
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_10 = new JTextPane();
+		txtpnA_10.setEditable(false);
 		txtpnA_10.setDisabledTextColor(Color.BLACK);
 		txtpnA_10.setForeground(Color.BLACK);
-		txtpnA_10.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_10.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_10.setText("a");
-		txtpnA_10.setEnabled(false);
-		txtpnA_10.setEditable(false);
 		panel_14.add(txtpnA_10, BorderLayout.CENTER);
 		
 		JPanel panel_15 = new JPanel();
@@ -370,12 +355,11 @@ public class MainGui2 {
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_11 = new JTextPane();
+		txtpnA_11.setEditable(false);
 		txtpnA_11.setDisabledTextColor(Color.BLACK);
 		txtpnA_11.setForeground(Color.BLACK);
-		txtpnA_11.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_11.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_11.setText("a");
-		txtpnA_11.setEnabled(false);
-		txtpnA_11.setEditable(false);
 		panel_15.add(txtpnA_11, BorderLayout.CENTER);
 		
 		JPanel panel_16 = new JPanel();
@@ -391,12 +375,11 @@ public class MainGui2 {
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_12 = new JTextPane();
+		txtpnA_12.setEditable(false);
 		txtpnA_12.setDisabledTextColor(Color.BLACK);
 		txtpnA_12.setForeground(Color.BLACK);
-		txtpnA_12.setFont(new Font("Arial Black", Font.PLAIN, 12));
+		txtpnA_12.setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
 		txtpnA_12.setText("a");
-		txtpnA_12.setEnabled(false);
-		txtpnA_12.setEditable(false);
 		panel_16.add(txtpnA_12, BorderLayout.CENTER);
 		
 		JPanel panel_2 = new JPanel();
