@@ -81,7 +81,7 @@ public class LoginPage implements ActionListener{
 					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 					messageLabel.setText("Login erfolgreich");
 					frame.dispose(); //Schlieﬂen des Login Fensters
-					WelcomePage welcomePage = new WelcomePage(userID);
+					//WelcomePage welcomePage = new WelcomePage(userID);
 					
 					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
 						public void run() {
