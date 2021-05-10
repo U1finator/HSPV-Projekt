@@ -3,6 +3,7 @@ package mensaProg;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Wochenplan {
@@ -10,7 +11,9 @@ public class Wochenplan {
 	HashMap<String, String> gerichte = new HashMap<>();
 	HashMap<String,String> vegGerichte = new HashMap<>();
 	boolean again = true;
-	Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
+	Connection conn = SqlConnector.dbConnector();//eine Verbindung zur SQLite Datenbank wird hergestellt
+
+	
 	Wochenplan(){
 		try 
 		{
@@ -44,6 +47,7 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
+
 	//wenn jemand die Methode aufruft, bekommt er Login info
 	protected HashMap<String, String> getGerichte() {
 		System.out.println(gerichte);
