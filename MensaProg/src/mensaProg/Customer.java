@@ -82,7 +82,7 @@ public class Customer
 		}
 	}
 	
-	public void editpw(String name, String pwort)	//Methode um einen neuen Kunden hinzuzuf√ºgen
+	public void editpw(String name, String pwort)	//Methode um das Passwort zu ‰ndern
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
