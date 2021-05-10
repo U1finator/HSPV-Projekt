@@ -3,13 +3,21 @@ package mensaProg;
 public class Kunde
 {
   public String username;
-  public double kontostand;
   public String passwort;
 
-  Kunde(String username, double kontostand, String passwort)
+  Kunde(String username, String passwort) //Konstruktor des Kunden
   {
     this.username = username;
-    this.kontostand = kontostand;
     this.passwort = passwort;
+  }
+  
+  public String getUsername() //Abfrage des Nutzernamens des Kunden
+  {
+    return this.username;
+  }
+  
+  public getPW()  //Abfrage des Passwortes des Kunden
+  {
+    return this.passwort;
   }
 }
