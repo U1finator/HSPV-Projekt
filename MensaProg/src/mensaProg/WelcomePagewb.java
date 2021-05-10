@@ -3,6 +3,10 @@ package mensaProg;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JToggleButton;
+import java.awt.BorderLayout;
+import javax.swing.JRadioButton;
+import javax.swing.SwingConstants;
 
 public class WelcomePagewb {
 
@@ -38,6 +42,10 @@ public class WelcomePagewb {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("vegetarisch");
+		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
+		frame.getContentPane().add(rdbtnNewRadioButton, BorderLayout.EAST);
 	}
 
 }

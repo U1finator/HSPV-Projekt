@@ -14,6 +14,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
+	public String username;
 	
 	JFrame frame = new JFrame();
 	JButton login = new JButton("Login");
@@ -26,7 +27,8 @@ public class LoginPage implements ActionListener{
 	HashMap<String,String> logininfo = new HashMap<String,String>();
 	
 	//constructor
-	LoginPage(HashMap<String,String> loginInfoOriginal) {
+	LoginPage(HashMap<String,String> loginInfoOriginal, Kunde kunde) {
+		
 		
 		logininfo = loginInfoOriginal;
 		
@@ -61,7 +63,7 @@ public class LoginPage implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e, Kunde kunde) {
+	public void actionPerformed(ActionEvent e) {
 		
 		//Reset Button resets fields
 		if(e.getSource()==resetButton) {
@@ -81,15 +83,14 @@ public class LoginPage implements ActionListener{
 					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 					username = userID;
 					messageLabel.setText("Login erfolgreich");
-					kunde.setUsername(userID);
-					kunde.setPW(password);
-					frame.dispose(); //Schlie√üen des Login Fensters
+					Kunde kunde = new Kunde(userID, password);
+					frame.dispose(); //Schlieﬂen des Login Fensters
 					//WelcomePage welcomePage = new WelcomePage(userID);
 					
 					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
 						public void run() {
 							try {
-								MainGUI window = new MainGUI();
+								MainGUI window = new MainGUI(kunde);
 							} catch (Exception e) {
 								e.printStackTrace();
 							}

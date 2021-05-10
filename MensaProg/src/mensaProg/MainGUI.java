@@ -509,7 +509,10 @@ public class MainGUI {
 		JSeparator separator = new JSeparator();
 		mnNewMenu.add(separator);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Benutzerdaten");
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Benutzerdaten"); 
+		/*
+		 * wenn du Konstruktor von Benutzerdaten aufrufst, dann schreib Benutzerdaten(kunde)
+		 */
 		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGUI.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
 		mnNewMenu.add(mntmNewMenuItem_1);
 		

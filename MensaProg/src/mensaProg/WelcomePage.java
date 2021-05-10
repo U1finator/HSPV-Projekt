@@ -10,9 +10,10 @@ public class WelcomePage {
 	JFrame frame = new JFrame();
 	JLabel welcomeLabel = new JLabel("Einstellungen");
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
-	JLabel nutritionLabel = new JLabel("Ern√§hrung");
+	JLabel nutritionLabel = new JLabel("Ern‰hrung");
 	
 	WelcomePage(Kunde kunde) {
+		Customer customer = new Customer();
 		
 		// Willkommen-Label wird erstellt
 		welcomeLabel.setBounds(0,0,200,35);
@@ -22,12 +23,12 @@ public class WelcomePage {
 		//Kontostand-Label + momentaner Kontostand
 		bankBalanceLabel.setBounds(50,100,200,35);
 		bankBalanceLabel.setFont(new Font(null,Font.PLAIN,16));
-		bankBalanceLabel.setText("Kontostand: "+ kunde.getKonstostand);
+		bankBalanceLabel.setText("Kontostand: "+ customer.getKontostand(kunde));
 		
-		//Ern√§hrungs-Label
+		//Ern‰hrungs-Label
 		nutritionLabel.setBounds(50,120,200,35);
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
-		nutritionLabel.setText("Ern√§hrung: ");
+		nutritionLabel.setText("Ern‰hrung: ");
 		
 		
 		frame.getContentPane().add(welcomeLabel);
