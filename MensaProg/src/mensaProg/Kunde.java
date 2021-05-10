@@ -16,7 +16,7 @@ public class Kunde
     return this.username;
   }
   
-  public getPW()  //Abfrage des Passwortes des Kunden
+  public String getPW()  //Abfrage des Passwortes des Kunden
   {
     return this.passwort;
   }
