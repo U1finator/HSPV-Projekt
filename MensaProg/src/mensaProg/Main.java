@@ -15,7 +15,7 @@ public class Main
 		
 		Kunde kunde = new Kunde();
 		IDandPW idandpw = new IDandPW();
-		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo());
+		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo(), kunde);
 		
 		
 		try {
