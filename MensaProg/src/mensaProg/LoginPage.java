@@ -18,7 +18,7 @@ public class LoginPage implements ActionListener{
 	
 	JFrame frame = new JFrame();
 	JButton login = new JButton("Login");
-	JButton resetButton = new JButton("Löschen");
+	JButton resetButton = new JButton("LÃ¶schen");
 	JTextField userIDField = new JTextField();
 	JPasswordField userPasswordField = new JPasswordField();
 	JLabel userIDLabel = new JLabel("Benutzername:");
@@ -82,8 +82,9 @@ public class LoginPage implements ActionListener{
 					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 					username = userID;
 					messageLabel.setText("Login erfolgreich");
-					Kunde kunde = new Kunde(userID,password);
-					frame.dispose(); //Schließen des Login Fensters
+					kunde.setUsername(userID);
+					kunde.setPW(password);
+					frame.dispose(); //SchlieÃŸen des Login Fensters
 					//WelcomePage welcomePage = new WelcomePage(userID);
 					
 					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
