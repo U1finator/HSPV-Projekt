@@ -13,8 +13,10 @@ public class Main
 		// TODO Auto-generated method stub
 		Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
 		
+		Kunde kunde = new Kunde();
 		IDandPW idandpw = new IDandPW();
 		LoginPage logininfo = new LoginPage(idandpw.getLoginInfo());
+		
 		
 		try {
 			conn.close();
