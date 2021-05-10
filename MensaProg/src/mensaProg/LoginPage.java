@@ -14,7 +14,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
-	public String username;
 	
 	JFrame frame = new JFrame();
 	JButton login = new JButton("Login");
@@ -62,7 +61,7 @@ public class LoginPage implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e, Kunde kunde) {
 		
 		//Reset Button resets fields
 		if(e.getSource()==resetButton) {
