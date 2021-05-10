@@ -49,15 +49,15 @@ public class MainGUI {
 	/**
 	 * Create the application.
 	 */
-	public MainGUI() {
-		initialize();
+	public MainGUI(Kunde kunde) {
+		initialize(kunde);
 		frame.setVisible(true);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(Kunde kunde) {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBackground(Color.WHITE);
