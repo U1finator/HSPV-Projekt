@@ -14,6 +14,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
+	public String username;
 	
 	JFrame frame = new JFrame();
 	JButton login = new JButton("Login");
@@ -79,6 +80,7 @@ public class LoginPage implements ActionListener{
 				if(logininfo.get(userID).equals(password)) {
 					messageLabel.setForeground(Color.green);
 					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+					username = userID;
 					messageLabel.setText("Login erfolgreich");
 					frame.dispose(); //Schlieﬂen des Login Fensters
 					//WelcomePage welcomePage = new WelcomePage(userID);
