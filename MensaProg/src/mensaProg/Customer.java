@@ -86,7 +86,7 @@ public class Customer
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("UPDATE Kunden SET pwort='"+pwort+"'  WHERE username='" + name + "'")		
+			stmt.execute("UPDATE Kunden SET pwort='"+pwort+"'  WHERE username='" + name + "'");		
 		}
 		catch(SQLException e)
 		{

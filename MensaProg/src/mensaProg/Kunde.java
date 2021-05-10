@@ -32,4 +32,9 @@ public class Kunde
   {
     this.passwort = pw;
   }
+
+public Object getKonstostand() {
+	// TODO Auto-generated method stub
+	return null;
+}
 }
