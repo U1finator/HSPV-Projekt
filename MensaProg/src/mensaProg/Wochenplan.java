@@ -9,7 +9,6 @@ public class Wochenplan {
 	
 	HashMap<String, String> gerichte = new HashMap<>();
 	HashMap<String,String> vegGerichte = new HashMap<>();
-	boolean again = true;
 	Connection conn = SqlConnector.dbConnector();//eine Verbindung zur SQLite Datenbank wird hergestellt
 
 	

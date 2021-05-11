@@ -41,6 +41,7 @@ public class MainGui2 {
     Object[] vegPrices = week.vegGerichte.values().toArray();
     String datePattern = "dd.MM.yyyy";
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(datePattern);
+    JTextPane[] meat = new JTextPane[10];
 
 	/**
 	 * Launch the application.
@@ -93,6 +94,7 @@ public class MainGui2 {
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA = new JTextPane();
+		meat[0] = txtpnA;
 		txtpnA.setBackground(Color.LIGHT_GRAY);
 		txtpnA.setEditable(false);
 		txtpnA.setDisabledTextColor(Color.BLACK);
@@ -116,6 +118,7 @@ public class MainGui2 {
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_1 = new JTextPane();
+		meat[1] = txtpnA_1;
 		txtpnA_1.setBackground(Color.LIGHT_GRAY);
 		txtpnA_1.setEditable(false);
 		txtpnA_1.setDisabledTextColor(Color.BLACK);
@@ -138,6 +141,7 @@ public class MainGui2 {
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_2 = new JTextPane();
+		meat[2] = txtpnA_2;
 		txtpnA_2.setBackground(Color.LIGHT_GRAY);
 		txtpnA_2.setEditable(false);
 		txtpnA_2.setDisabledTextColor(Color.BLACK);
@@ -160,6 +164,7 @@ public class MainGui2 {
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_3 = new JTextPane();
+		meat[3] = txtpnA_3;
 		txtpnA_3.setBackground(Color.LIGHT_GRAY);
 		txtpnA_3.setEditable(false);
 		txtpnA_3.setDisabledTextColor(Color.BLACK);
@@ -182,6 +187,7 @@ public class MainGui2 {
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_4 = new JTextPane();
+		meat[4] = txtpnA_4;
 		txtpnA_4.setBackground(Color.LIGHT_GRAY);
 		txtpnA_4.setEditable(false);
 		txtpnA_4.setDisabledTextColor(Color.BLACK);
@@ -204,6 +210,7 @@ public class MainGui2 {
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_5 = new JTextPane();
+		meat[5] = txtpnA_5;
 		txtpnA_5.setBackground(Color.LIGHT_GRAY);
 		txtpnA_5.setEditable(false);
 		txtpnA_5.setDisabledTextColor(Color.BLACK);
@@ -226,6 +233,7 @@ public class MainGui2 {
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_6 = new JTextPane();
+		meat[6] = txtpnA_6;
 		txtpnA_6.setBackground(Color.LIGHT_GRAY);
 		txtpnA_6.setEditable(false);
 		txtpnA_6.setDisabledTextColor(Color.BLACK);
@@ -248,6 +256,7 @@ public class MainGui2 {
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_7 = new JTextPane();
+		meat[7] = txtpnA_7;
 		txtpnA_7.setBackground(Color.LIGHT_GRAY);
 		txtpnA_7.setEditable(false);
 		txtpnA_7.setDisabledTextColor(Color.BLACK);
@@ -270,6 +279,7 @@ public class MainGui2 {
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_8 = new JTextPane();
+		meat[8] = txtpnA_8;
 		txtpnA_8.setBackground(Color.LIGHT_GRAY);
 		txtpnA_8.setEditable(false);
 		txtpnA_8.setDisabledTextColor(Color.BLACK);
@@ -292,6 +302,7 @@ public class MainGui2 {
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_9 = new JTextPane();
+		meat[9] = txtpnA_9;
 		txtpnA_9.setBackground(Color.LIGHT_GRAY);
 		txtpnA_9.setEditable(false);
 		txtpnA_9.setDisabledTextColor(Color.BLACK);
@@ -473,7 +484,7 @@ public class MainGui2 {
 		mntmNewMenuItem.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new WelcomePage("2");
+				new WelcomePage(new Kunde());
 			}
 		});
 		mntmNewMenuItem.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_settings_black_24dp.png")));
@@ -486,7 +497,7 @@ public class MainGui2 {
 		mntmNewMenuItem_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new Benutzerdaten("Felix", "passwort");
+				new Benutzerdaten(new Kunde());
 			}
 		});
 		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
@@ -513,12 +524,10 @@ public class MainGui2 {
 		doc.setParagraphAttributes(0, doc.getLength(), center, false);
 	}
 	
-	public Wochenplan newWeek() {
-		LocalDate date = LocalDate.now();
-		if(date.getDayOfWeek().getValue()==1) {
-			week = new Wochenplan();
+	public void nichtVegWeg() {
+		for(int i=0;i<=meat.length;i++) {
+			meat[i].setEnabled(false);
 		}
-		return week;
 	}
 	
 }

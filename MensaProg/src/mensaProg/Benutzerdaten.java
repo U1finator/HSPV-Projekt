@@ -18,18 +18,22 @@ public class Benutzerdaten implements ActionListener{
 	JLabel PWLabel = new JLabel("Passwort");
 	JButton changePW = new JButton("Passwort ändern");
 	
-	Benutzerdaten(String userID, String password) {
-		
+	Benutzerdaten(Kunde kunde) {
 		IDLabel.setBounds(50,100,200,35);
 		IDLabel.setFont(new Font(null,Font.PLAIN,16));
-		IDLabel.setText("Benutzername: "+userID);
+		IDLabel.setText("Benutzername: "+kunde.getUsername());
 		
 		PWLabel.setBounds(50,125,200,35);
 		PWLabel.setFont(new Font(null,Font.PLAIN,16));
-		PWLabel.setText("Passwort: "+password);
+		PWLabel.setText("Passwort: "+kunde.getPW());
 		
 		changePW.setBounds(60,125,200,35);
 		changePW.addActionListener(this);
+		
+		frame.getContentPane().add(IDLabel);
+		frame.getContentPane().add(PWLabel);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 	}
 
 	@Override
@@ -37,7 +41,7 @@ public class Benutzerdaten implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if(e.getSource()==changePW) {
-			
+			//addedpw userID, newpassword
 		}
 	}
 }
