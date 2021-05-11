@@ -3,7 +3,6 @@ package mensaProg;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Wochenplan {
@@ -62,3 +61,5 @@ public class Wochenplan {
 		a.getGerichte();
 	}
 }
+
+	

@@ -11,7 +11,9 @@ public class WelcomePage {
 	JLabel welcomeLabel = new JLabel("Einstellungen");
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
 	JLabel nutritionLabel = new JLabel("Ernährung");
+
 	
+
 	
 	WelcomePage(String userID) {
 		
