@@ -17,8 +17,13 @@ public class Benutzerdaten implements ActionListener{
 	JLabel IDLabel = new JLabel("Benutzername");
 	JLabel PWLabel = new JLabel("Passwort");
 	JButton changePW = new JButton("Passwort ändern");
+	public String username;
+	public String password;
 	
 	Benutzerdaten(Kunde kunde) {
+		
+		username = kunde.getUsername();
+		password = kunde.getPW();
 		IDLabel.setBounds(50,100,200,35);
 		IDLabel.setFont(new Font(null,Font.PLAIN,16));
 		IDLabel.setText("Benutzername: "+kunde.getUsername());
@@ -32,7 +37,7 @@ public class Benutzerdaten implements ActionListener{
 		
 		frame.getContentPane().add(IDLabel);
 		frame.getContentPane().add(PWLabel);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.setVisible(true);
 	}
 
@@ -41,7 +46,11 @@ public class Benutzerdaten implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if(e.getSource()==changePW) {
-			//addedpw userID, newpassword
+			Customer customer = new Customer();
+			customer.editpw(username, password);
+			
+			//password = neues Passwort
+		
 		}
 	}
 }

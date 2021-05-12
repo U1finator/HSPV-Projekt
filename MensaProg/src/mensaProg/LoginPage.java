@@ -14,10 +14,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
+	public String username;
 	
 	JFrame frame = new JFrame();
-	JButton loginButton = new JButton("Login");
-	JButton resetButton = new JButton("Löschen");
+	JButton login = new JButton("Login");
+	JButton resetButton = new JButton("LÃ¶schen");
 	JTextField userIDField = new JTextField();
 	JPasswordField userPasswordField = new JPasswordField();
 	JLabel userIDLabel = new JLabel("Benutzername:");
@@ -26,22 +27,23 @@ public class LoginPage implements ActionListener{
 	HashMap<String,String> logininfo = new HashMap<String,String>();
 	
 	//constructor
-	LoginPage(HashMap<String,String> loginInfoOriginal) {
+	LoginPage(HashMap<String,String> loginInfoOriginal, Kunde kunde) {
+		
 		
 		logininfo = loginInfoOriginal;
 		
 		userIDLabel.setBounds(50,100,120,25);
 		userPasswordLabel.setBounds(50,150,120,25); //
 		
-		messageLabel.setBounds(125,250,250,35);
+		messageLabel.setBounds(125,250,250,35); // Momentan leer
 		messageLabel.setFont(new Font(null,Font.ITALIC,25));
 		
 		userIDField.setBounds(150,100,200,25);
 		userPasswordField.setBounds(150,150,200,25);
 		
-		loginButton.setBounds(150,200,100,25);
+		login.setBounds(150,200,100,25);
 		//loginButton.setFocusable(false);
-		loginButton.addActionListener(this);
+		login.addActionListener(this);
 		
 		resetButton.setBounds(250,200,100,25);
 		//resetButton.setFocusable(false);
@@ -52,7 +54,7 @@ public class LoginPage implements ActionListener{
 		frame.add(messageLabel);
 		frame.add(userIDField);
 		frame.add(userPasswordField);
-		frame.add(loginButton);
+		frame.add(login);
 		frame.add(resetButton);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420,420);
@@ -69,7 +71,7 @@ public class LoginPage implements ActionListener{
 			userPasswordField.setText("");
 		}
 		
-		if(e.getSource()==loginButton) {
+		if(e.getSource()==login) {
 			
 			String userID = userIDField.getText();
 			String password = String.valueOf(userPasswordField.getPassword());
@@ -79,9 +81,11 @@ public class LoginPage implements ActionListener{
 				if(logininfo.get(userID).equals(password)) {
 					messageLabel.setForeground(Color.green);
 					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+					username = userID;
 					messageLabel.setText("Login erfolgreich");
+					Kunde kunde = new Kunde(userID, password);
 					frame.dispose(); //Schließen des Login Fensters
-					WelcomePage welcomePage = new WelcomePage(userID);
+					//WelcomePage welcomePage = new WelcomePage(userID);
 					
 					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
 						public void run() {

@@ -26,6 +26,9 @@ import java.awt.Component;
 import javax.swing.JTextPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -481,10 +484,11 @@ public class MainGui2 {
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Einstellungen");
-		mntmNewMenuItem.addMouseListener(new MouseAdapter() {
+		mntmNewMenuItem.addActionListener(new ActionListener() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void actionPerformed(ActionEvent e) {
 				new WelcomePage(new Kunde());
+				
 			}
 		});
 		mntmNewMenuItem.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_settings_black_24dp.png")));
@@ -494,10 +498,11 @@ public class MainGui2 {
 		mnNewMenu.add(separator);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Benutzerdaten");
-		mntmNewMenuItem_1.addMouseListener(new MouseAdapter() {
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void actionPerformed(ActionEvent e) {
 				new Benutzerdaten(new Kunde());
+				
 			}
 		});
 		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
@@ -524,9 +529,15 @@ public class MainGui2 {
 		doc.setParagraphAttributes(0, doc.getLength(), center, false);
 	}
 	
-	public void nichtVegWeg() {
+	public void FleischWeg() {
 		for(int i=0;i<=meat.length;i++) {
 			meat[i].setEnabled(false);
+		}
+	}
+	
+	public void FleischDa() {
+		for(int i=0;i<=meat.length;i++) {
+			meat[i].setEnabled(true);
 		}
 	}
 	

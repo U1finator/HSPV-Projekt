@@ -1,9 +1,12 @@
 package mensaProg;
 
+import java.awt.BorderLayout;
 import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.SwingConstants;
 
 public class WelcomePage {
 	
@@ -29,6 +32,9 @@ public class WelcomePage {
 		nutritionLabel.setBounds(50,120,200,35);
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
 		nutritionLabel.setText("Ernährung: ");
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("vegetarisch");
+		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
+		frame.getContentPane().add(rdbtnNewRadioButton, BorderLayout.EAST);
 		
 		
 		frame.getContentPane().add(welcomeLabel);
