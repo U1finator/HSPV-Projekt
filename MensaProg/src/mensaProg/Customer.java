@@ -74,7 +74,7 @@ public class Customer
 	{
 		try {
 			Statement stmt = conn.createStatement();
-			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = " + kunde.getUsername()).getDouble(1);
+			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = '" + kunde.getUsername()+"'").getDouble(1);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

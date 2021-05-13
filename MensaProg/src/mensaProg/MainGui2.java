@@ -91,14 +91,29 @@ public class MainGui2 {
 		txtpnA.setEditable(false);
 		
 		txtpnA.addMouseListener(new MouseAdapter() {
+			boolean check = false;
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				if(txtpnA.isEnabled()==true)
+				if(txtpnA.isEnabled()==true) {
 				txtpnA.setBorder(new LineBorder(Color.RED, 1, true));
+				}
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
+				if(check==false) {
 				txtpnA.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check= false;
+					txtpnA.setBorder(null);
+				}
 			}
 		});
 		meat[0] = txtpnA;
@@ -122,6 +137,32 @@ public class MainGui2 {
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_1 = new JTextPane();
+		txtpnA_1.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_1.isEnabled()==true) {
+				txtpnA_1.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_1.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_1.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_1.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_1.setBorder(null);
+				}
+			}
+		});
 		meat[1] = txtpnA_1;
 		txtpnA_1.setBackground(Color.LIGHT_GRAY);
 		txtpnA_1.setEditable(false);
@@ -145,6 +186,32 @@ public class MainGui2 {
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_2 = new JTextPane();
+		txtpnA_2.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_2.isEnabled()==true) {
+				txtpnA_2.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_2.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_2.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_2.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_2.setBorder(null);
+				}
+			}
+		});
 		meat[2] = txtpnA_2;
 		txtpnA_2.setBackground(Color.LIGHT_GRAY);
 		txtpnA_2.setEditable(false);
@@ -168,6 +235,32 @@ public class MainGui2 {
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_3 = new JTextPane();
+		txtpnA_3.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_3.isEnabled()==true) {
+				txtpnA_3.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_3.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_3.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_3.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_3.setBorder(null);
+				}
+			}
+		});
 		meat[3] = txtpnA_3;
 		txtpnA_3.setBackground(Color.LIGHT_GRAY);
 		txtpnA_3.setEditable(false);
@@ -191,6 +284,32 @@ public class MainGui2 {
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_4 = new JTextPane();
+		txtpnA_4.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_4.isEnabled()==true) {
+				txtpnA_4.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_4.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_4.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_4.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_4.setBorder(null);
+				}
+			}
+		});
 		meat[4] = txtpnA_4;
 		txtpnA_4.setBackground(Color.LIGHT_GRAY);
 		txtpnA_4.setEditable(false);
@@ -214,6 +333,32 @@ public class MainGui2 {
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_5 = new JTextPane();
+		txtpnA_5.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_5.isEnabled()==true) {
+				txtpnA_5.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_5.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_5.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_5.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_5.setBorder(null);
+				}
+			}
+		});
 		meat[5] = txtpnA_5;
 		txtpnA_5.setBackground(Color.LIGHT_GRAY);
 		txtpnA_5.setEditable(false);
@@ -237,6 +382,32 @@ public class MainGui2 {
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_6 = new JTextPane();
+		txtpnA_6.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_6.isEnabled()==true) {
+				txtpnA_6.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_6.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_6.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_6.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_6.setBorder(null);
+				}
+			}
+		});
 		meat[6] = txtpnA_6;
 		txtpnA_6.setBackground(Color.LIGHT_GRAY);
 		txtpnA_6.setEditable(false);
@@ -260,6 +431,32 @@ public class MainGui2 {
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_7 = new JTextPane();
+		txtpnA_7.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_7.isEnabled()==true) {
+				txtpnA_7.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_7.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_7.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_7.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_7.setBorder(null);
+				}
+			}
+		});
 		meat[7] = txtpnA_7;
 		txtpnA_7.setBackground(Color.LIGHT_GRAY);
 		txtpnA_7.setEditable(false);
@@ -283,6 +480,32 @@ public class MainGui2 {
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_8 = new JTextPane();
+		txtpnA_8.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_8.isEnabled()==true) {
+				txtpnA_8.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_8.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_8.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_8.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_8.setBorder(null);
+				}
+			}
+		});
 		meat[8] = txtpnA_8;
 		txtpnA_8.setBackground(Color.LIGHT_GRAY);
 		txtpnA_8.setEditable(false);
@@ -306,6 +529,32 @@ public class MainGui2 {
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_9 = new JTextPane();
+		txtpnA_9.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_9.isEnabled()==true) {
+				txtpnA_9.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_9.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_9.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_9.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_2.setBorder(null);
+				}
+			}
+		});
 		meat[9] = txtpnA_9;
 		txtpnA_9.setBackground(Color.LIGHT_GRAY);
 		txtpnA_9.setEditable(false);
@@ -330,6 +579,32 @@ public class MainGui2 {
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
 		JTextPane textPane = new JTextPane();
+		textPane.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(textPane.isEnabled()==true) {
+				textPane.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				textPane.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(textPane.isEnabled()==true&& check==false) {
+				check = true;
+				textPane.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					textPane.setBorder(null);
+				}
+			}
+		});
 		textPane.setBackground(Color.LIGHT_GRAY);
 		textPane.setForeground(Color.BLACK);
 		textPane.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -354,6 +629,32 @@ public class MainGui2 {
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
 		JTextPane textPane_1 = new JTextPane();
+		textPane_1.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(textPane_1.isEnabled()==true) {
+				textPane_1.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				textPane_1.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(textPane_1.isEnabled()==true&& check==false) {
+				check = true;
+				textPane_1.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					textPane_1.setBorder(null);
+				}
+			}
+		});
 		textPane_1.setBackground(Color.LIGHT_GRAY);
 		textPane_1.setForeground(Color.BLACK);
 		textPane_1.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -377,6 +678,32 @@ public class MainGui2 {
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_10 = new JTextPane();
+		txtpnA_10.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_10.isEnabled()==true) {
+				txtpnA_10.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_10.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_10.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_10.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_10.setBorder(null);
+				}
+			}
+		});
 		txtpnA_10.setBackground(Color.LIGHT_GRAY);
 		txtpnA_10.setEditable(false);
 		txtpnA_10.setDisabledTextColor(Color.BLACK);
@@ -400,6 +727,32 @@ public class MainGui2 {
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_11 = new JTextPane();
+		txtpnA_11.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_11.isEnabled()==true) {
+				txtpnA_11.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_11.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_11.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_11.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_11.setBorder(null);
+				}
+			}
+		});
 		txtpnA_11.setBackground(Color.LIGHT_GRAY);
 		txtpnA_11.setEditable(false);
 		txtpnA_11.setDisabledTextColor(Color.BLACK);
@@ -423,6 +776,32 @@ public class MainGui2 {
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA_12 = new JTextPane();
+		txtpnA_12.addMouseListener(new MouseAdapter() {
+			boolean check = false;
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA_12.isEnabled()==true) {
+				txtpnA_12.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				if(check==false) {
+				txtpnA_12.setBorder(null);
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(txtpnA_12.isEnabled()==true&& check==false) {
+				check = true;
+				txtpnA_12.setBorder(new LineBorder(Color.RED, 1, true));
+				}
+				else if(check==true) {
+					check = false;
+					txtpnA_12.setBorder(null);
+				}
+			}
+		});
 		txtpnA_12.setBackground(Color.LIGHT_GRAY);
 		txtpnA_12.setEditable(false);
 		txtpnA_12.setDisabledTextColor(Color.BLACK);
@@ -488,7 +867,7 @@ public class MainGui2 {
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new WelcomePage(new Kunde());
+				new WelcomePage(kunde);
 				
 			}
 		});
@@ -502,7 +881,7 @@ public class MainGui2 {
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Benutzerdaten(new Kunde());
+				new Benutzerdaten(kunde);
 				
 			}
 		});
@@ -543,3 +922,5 @@ public class MainGui2 {
 	}
 	
 }
+	
+
