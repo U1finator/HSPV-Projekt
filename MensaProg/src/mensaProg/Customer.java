@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JOptionPane;
+
 public class Customer 
 {		
 	Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
@@ -54,7 +56,7 @@ public class Customer
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("INSERT INTO kunden(vorname, nachname, pwort, username, kontostand) VALUES ('" + vorname + "','" + nachname +"','" + pwort + "','" + vorname.toLowerCase() +"."+ nachname.toLowerCase() +"','0' )");	//ein SQL Statement wird durchgeführt um einen neuen Kunden anzulegen
+			stmt.execute("INSERT INTO kunden(vorname, nachname, pwort, username, kontostand, vegetarisch) VALUES ('" + vorname + "','" + nachname +"','" + pwort + "','" + vorname.toLowerCase() +"."+ nachname.toLowerCase() +"','0', '0' )");	//ein SQL Statement wird durchgeführt um einen neuen Kunden anzulegen
 		
 		}
 		catch(SQLException e)
@@ -111,6 +113,36 @@ public class Customer
 		{
 			System.out.println(e.getMessage());
 		}
-		
+	}
+	
+	public boolean getVeg(String username)	//Methode zum Abfragen ob ein Nutzer Vegetarisch is(s)t oder nicht
+	{
+		try {
+			boolean veg;
+			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
+			int result = stmt.executeQuery("SELECT Kunden WHERE username='" + username + "'").getInt(1);
+			
+			if(result == 1)	//Wenn der Nutzer vegetarisch is(s)t
+			{
+				veg = true;
+			}
+			else if(result == 0)	//wenn er auch Fleisch zu sich nimmt
+			{
+				veg = false;
+			}
+			else
+			{
+				veg = false;
+				JOptionPane.showMessageDialog(null, result,  "Es gab einen Fehler bei der Abfrage in der Datenbank", 0);
+				
+			}
+			return veg;
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e.getMessage());
+			
+			return false;
+		}
 	}
 }
