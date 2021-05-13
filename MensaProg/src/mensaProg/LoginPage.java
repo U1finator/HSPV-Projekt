@@ -90,7 +90,7 @@ public class LoginPage implements ActionListener{
 					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
 						public void run() {
 							try {
-								MainGui2 window = new MainGui2();
+								MainGui2 window = new MainGui2(kunde);
 							} catch (Exception e) {
 								e.printStackTrace();
 							}

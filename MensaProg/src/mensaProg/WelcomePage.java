@@ -40,7 +40,7 @@ public class WelcomePage {
 		frame.getContentPane().add(welcomeLabel);
 		frame.getContentPane().add(bankBalanceLabel);
 		frame.getContentPane().add(nutritionLabel);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setSize(420,420);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);

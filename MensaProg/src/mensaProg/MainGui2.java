@@ -31,6 +31,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.border.LineBorder;
 
 public class MainGui2 {
 
@@ -49,30 +50,20 @@ public class MainGui2 {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainGui2 window = new MainGui2();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the application.
 	 */
-	public MainGui2() {
-		initialize();
+	public MainGui2(Kunde kunde) {
+		initialize(kunde);
+		frame.setVisible(true);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(Kunde kunde) {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 870, 478);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -97,12 +88,22 @@ public class MainGui2 {
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
 		JTextPane txtpnA = new JTextPane();
+		txtpnA.setEditable(false);
+		
+		txtpnA.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				if(txtpnA.isEnabled()==true)
+				txtpnA.setBorder(new LineBorder(Color.RED, 1, true));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				txtpnA.setBorder(null);
+			}
+		});
 		meat[0] = txtpnA;
 		txtpnA.setBackground(Color.LIGHT_GRAY);
-		txtpnA.setEditable(false);
-		txtpnA.setDisabledTextColor(Color.BLACK);
 		txtpnA.setSelectedTextColor(Color.BLACK);
-		txtpnA.setForeground(Color.BLACK);
 		txtpnA.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA.setText("\n"+ names[0].toString());
 		center(txtpnA);

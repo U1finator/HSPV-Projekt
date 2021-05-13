@@ -37,7 +37,7 @@ public class Benutzerdaten implements ActionListener{
 		
 		frame.getContentPane().add(IDLabel);
 		frame.getContentPane().add(PWLabel);
-		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setVisible(true);
 	}
 
