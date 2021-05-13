@@ -18,7 +18,7 @@ public class LoginPage implements ActionListener{
 	
 	JFrame frame = new JFrame();
 	JButton login = new JButton("Login");
-	JButton resetButton = new JButton("LÃ¶schen");
+	JButton resetButton = new JButton("Löschen");
 	JTextField userIDField = new JTextField();
 	JPasswordField userPasswordField = new JPasswordField();
 	JLabel userIDLabel = new JLabel("Benutzername:");
