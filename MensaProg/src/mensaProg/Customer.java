@@ -100,4 +100,17 @@ public class Customer
 			e.printStackTrace();
 		}	//die Verbindung soll geschlossen werden 
 	}
+	
+	public void editVeg(String username, int veg)	//Methode um den Status Vegetarisch in der Datenbank zu ändern
+	{
+		try {
+			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
+			stmt.execute("UPDATE Kunden SET vegetrarisch='"+ veg +"'  WHERE username='" + username + "'");		
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+	}
 }
