@@ -37,8 +37,8 @@ public class LoginPage implements ActionListener, KeyListener{
 	
 	//constructor
 	/**
-	 * @param loginInfoOriginal
-	 * @param kunde
+	 * @param loginInfoOriginal	Hashmap in der die in der DB gespeicherten Usernamen und Passwörter stehen
+	 * @param kunde	Zwischenspeicherungsobjekt Kunde
 	 */
 	LoginPage(HashMap<String,String> loginInfoOriginal, Kunde kunde) {
 		

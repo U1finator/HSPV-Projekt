@@ -925,7 +925,7 @@ public class MainGui2 {
 	
 
 	/**
-	 * 
+	 *  Methode um die Gerichte mit Fleisch auszublenden
 	 */
 	public void FleischWeg() {
 		for(int i=0;i<=meat.length;i++) {
@@ -934,7 +934,7 @@ public class MainGui2 {
 	}
 	
 	/**
-	 * 
+	 * Methode um Gerichte mit Fleisch einzublenden
 	 */
 	public void FleischDa() {
 		for(int i=0;i<=meat.length;i++) {

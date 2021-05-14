@@ -39,7 +39,11 @@ public class IDandPW {
 			e.printStackTrace();
 		}
 	}
-	//wenn jemand die Methode aufruft, bekommt er Login info
+	/**
+	 * wenn jemand die Methode aufruft, bekommt er Login info
+	 * 
+	 * @return Hashmap mit den Logindaten
+	 */
 	protected HashMap<String, String> getLoginInfo() {
 		return logininfo;
 	}
