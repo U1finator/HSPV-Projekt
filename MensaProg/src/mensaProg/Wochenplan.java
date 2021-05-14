@@ -7,18 +7,31 @@ import java.util.HashMap;
 
 public class Wochenplan {
 	
-	HashMap<String, String> gerichte = new HashMap<String, String>();
-	Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
+	HashMap<String, String> gerichte = new HashMap<>();
+	HashMap<String,String> vegGerichte = new HashMap<>();
+	Connection conn = SqlConnector.dbConnector();//eine Verbindung zur SQLite Datenbank wird hergestellt
+
 	
 	Wochenplan(){
 		try 
 		{
 			Statement stmt = conn.createStatement();
-			for(int i = 1; i <= stmt.executeQuery("SELECT max(id) FROM kunden").getInt(1); i++)	//mithilfe des Statements wird die Anzahl von Gerichten in der Datenbank abgefragt
+			while(gerichte.size()!=10)
 			{
-				gerichte.put(stmt.executeQuery("SELECT name FROM gerichte WHERE id="+i).getString(1), stmt.executeQuery("SELECT preis FROM gerichte WHERE id="+i).getString(1));	//das Gericht mit dazugehörigem Preis wird abgefragt
+				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM BBQ").getInt(1)+1);
+				String name = stmt.executeQuery("SELECT name FROM BBQ WHERE id="+random).getString(1);	
+				String price = stmt.executeQuery("SELECT preis FROM BBQ WHERE id="+random).getString(1);
+				gerichte.put(name, price);	
 			}
-		} 
+			while(vegGerichte.size()!=5)
+			{
+				int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM Vegetarisch").getInt(1)+1);
+				String name = stmt.executeQuery("SELECT name FROM Vegetarisch WHERE id="+random).getString(1);	
+				String price = stmt.executeQuery("SELECT preis FROM Vegetarisch WHERE id="+random).getString(1);
+				vegGerichte.put(name, price);	
+			}
+
+		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
@@ -32,11 +45,14 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
-	//wenn jemand die Methode aufruft, bekommt er die Gerichte in einer Hashmap
+
+	//wenn jemand die Methode aufruft, bekommt er Login info
 	protected HashMap<String, String> getGerichte() {
+		System.out.println(gerichte);
+		System.out.println(vegGerichte);
+		//System.out.println(vegGerichte);
 		return gerichte;
 	}
-	
 	public static void create()  {
 		Connection conn = SqlConnector.dbConnector();
 		Statement stmt;
@@ -56,4 +72,5 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
+	} 
 }
