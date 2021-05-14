@@ -11,6 +11,7 @@ Ebenso kann der Benutzer seinen Benutzernamen und sein Passwort, ebenso wie den 
 
 Die Datenbank enthält hierbei nicht nur die Benutzerkonten, soondern auch Gerichte.
 
+
 *Ablauf des Programms*	
 
 Als ertes kommt das Login Fenster:
