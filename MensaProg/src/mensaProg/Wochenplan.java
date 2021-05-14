@@ -53,12 +53,4 @@ public class Wochenplan {
 		//System.out.println(vegGerichte);
 		return gerichte;
 	}
-	
-	public static void main(String[] args)
-	{
-		Wochenplan a = new Wochenplan();
-		a.getGerichte();
-	}
 }
-
-	
