@@ -40,6 +40,7 @@ public class Benutzerdaten implements ActionListener{
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -47,9 +48,7 @@ public class Benutzerdaten implements ActionListener{
 		if(e.getSource()==changePW) {
 			Customer customer = new Customer();
 			customer.editpw(username, password);
-			
 			//password = neues Passwort
-		
 		}
 	}
 }
