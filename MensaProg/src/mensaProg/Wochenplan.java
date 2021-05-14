@@ -5,6 +5,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
+/**
+ * @author Felix, [U1finator(Olaf) in der Code Review]
+ *
+ */
 public class Wochenplan {
 	
 	HashMap<String, String> gerichte = new HashMap<>();
@@ -12,6 +16,9 @@ public class Wochenplan {
 	Connection conn = SqlConnector.dbConnector();//eine Verbindung zur SQLite Datenbank wird hergestellt
 
 	
+	/**
+	 * Konstruktor des Wochenplanes
+	 */
 	Wochenplan(){
 		try 
 		{
@@ -45,32 +52,4 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	}
-
-	//wenn jemand die Methode aufruft, bekommt er Login info
-	protected HashMap<String, String> getGerichte() {
-		System.out.println(gerichte);
-		System.out.println(vegGerichte);
-		//System.out.println(vegGerichte);
-		return gerichte;
-	}
-	public static void create()  {
-		Connection conn = SqlConnector.dbConnector();
-		Statement stmt;
-		try {
-			stmt = conn.createStatement();
-			int random = (int) (Math.random()*stmt.executeQuery("SELECT MAX(id) FROM gerichte").toString().charAt(0));
-			System.out.println(random);
-			//System.out.println(stmt.executeQuery("SELECT name FROM gerichte").getString(random));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			conn.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	} 
-	
 }

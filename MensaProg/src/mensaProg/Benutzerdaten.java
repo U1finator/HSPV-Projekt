@@ -8,6 +8,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * @author Julia, [U1finator (Olaf) im Code Review]
+ *
+ */
 public class Benutzerdaten implements ActionListener
 {
 	
@@ -18,9 +22,18 @@ public class Benutzerdaten implements ActionListener
 	JLabel IDLabel = new JLabel("Benutzername");
 	JLabel PWLabel = new JLabel("Passwort");
 	JButton changePW = new JButton("Passwort ändern");
+	/**
+	 * Nutzername des Benutzers
+	 */
 	public String username;
+	/**
+	 * Passwort des Benutzers
+	 */
 	public String password;
 	
+	/**
+	 * @param kunde Objekt, dass wichtige Nutzerdaten zwischenspeichert
+	 */
 	Benutzerdaten(Kunde kunde) 
 		{
 			username = kunde.getUsername();
@@ -49,7 +62,7 @@ public class Benutzerdaten implements ActionListener
 		if(e.getSource()==changePW) 
 		{
 			Customer customer = new Customer();
-			customer.editpw(username, password);
+			customer.editPW(username, password);
 			//password = neues Passwort
 		}
 	}

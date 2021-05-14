@@ -33,6 +33,10 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.border.LineBorder;
 
+/**
+ * @author Felix
+ *
+ */
 public class MainGui2 {
 
 	private JFrame frame;
@@ -53,6 +57,8 @@ public class MainGui2 {
 	
 
 	/**
+	 * @param kunde Zwischenspeicherungsobjekt
+	 * 
 	 * Create the application.
 	 */
 	public MainGui2(Kunde kunde) {
@@ -61,7 +67,8 @@ public class MainGui2 {
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * @param kunde Zwischenspeicherungsobjekt
+	 * Initialisiere das Objekt
 	 */
 	private void initialize(Kunde kunde) {
 		frame = new JFrame();
@@ -889,6 +896,10 @@ public class MainGui2 {
 		mnNewMenu.add(mntmNewMenuItem_1);
 	}
 	
+	/**
+	 * @param date Datum
+	 * @return Array mit dem Aktuellen Datum
+	 */
 	public static LocalDate[] getWeekdays(LocalDate date) {
 	     LocalDate monday = date;
 	     if(date.getDayOfWeek().getValue() > 1) {
@@ -902,6 +913,9 @@ public class MainGui2 {
 	     return weekdays;
 	   }
 	
+	/**
+	 * @param textPane Textfeld
+	 */
 	public static void center (JTextPane textPane) {
 		StyledDocument doc = textPane.getStyledDocument();
 		SimpleAttributeSet center = new SimpleAttributeSet();
@@ -909,12 +923,19 @@ public class MainGui2 {
 		doc.setParagraphAttributes(0, doc.getLength(), center, false);
 	}
 	
+
+	/**
+	 *  Methode um die Gerichte mit Fleisch auszublenden
+	 */
 	public void FleischWeg() {
 		for(int i=0;i<=meat.length;i++) {
 			meat[i].setEnabled(false);
 		}
 	}
 	
+	/**
+	 * Methode um Gerichte mit Fleisch einzublenden
+	 */
 	public void FleischDa() {
 		for(int i=0;i<=meat.length;i++) {
 			meat[i].setEnabled(true);

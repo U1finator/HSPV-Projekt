@@ -3,9 +3,18 @@ package mensaProg;
 import java.sql.*;
 import javax.swing.*;
 
+/**
+ * @author U1finator (Olaf)
+ *
+ * Der Connector für die SQLite Datenbank
+ *
+ */
 public class SqlConnector 
 {
 	Connection con = null;	//Anlegung der Variable con als Connection Referenz
+	/**
+	 * @return con Rückgabe der Verbindung
+	 */
 	public static Connection dbConnector()
 	{
 		try

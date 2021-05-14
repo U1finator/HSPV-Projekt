@@ -8,6 +8,10 @@ import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
+/**
+ * @author Julia
+ *
+ */
 public class IDandPW {
 	
 	// stores key-value pairs, key = id, value = pw
@@ -35,7 +39,11 @@ public class IDandPW {
 			e.printStackTrace();
 		}
 	}
-	//wenn jemand die Methode aufruft, bekommt er Login info
+	/**
+	 * wenn jemand die Methode aufruft, bekommt er Login info
+	 * 
+	 * @return Hashmap mit den Logindaten
+	 */
 	protected HashMap<String, String> getLoginInfo() {
 		return logininfo;
 	}

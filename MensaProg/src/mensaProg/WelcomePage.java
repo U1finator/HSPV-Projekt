@@ -8,6 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
+/**
+ * @author Julia, [U1finator(Olaf) in der Code Review]
+ *
+ */
 public class WelcomePage {
 	
 	JFrame frame = new JFrame();
@@ -15,6 +19,11 @@ public class WelcomePage {
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
 	JLabel nutritionLabel = new JLabel("Ernährung");
 	
+	/**
+	 * @param kunde
+	 * 
+	 * Konstruktor der Benutzerdaen
+	 */
 	WelcomePage(Kunde kunde) {
 		Customer customer = new Customer();
 		
@@ -26,7 +35,7 @@ public class WelcomePage {
 		//Kontostand-Label + momentaner Kontostand
 		bankBalanceLabel.setBounds(50,100,200,35);
 		bankBalanceLabel.setFont(new Font(null,Font.PLAIN,16));
-		bankBalanceLabel.setText("Kontostand: "+ customer.getKontostand(kunde));
+		bankBalanceLabel.setText("Kontostand: "+ customer.getKontostand(kunde.getUsername()));
 		
 		//Ernährungs-Label
 		nutritionLabel.setBounds(50,120,200,35);
