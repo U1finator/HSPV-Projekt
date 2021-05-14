@@ -2,7 +2,7 @@
 
 Dieses Programm wurde von Julia Lampe, Felix Lodde und Olaf Werning entwickelt.
 
-##Allgemein
+##Allgemein	
 Es geht hierbei um ein Programm zur Darstellung des Essensplanes und zu Benuzern gehörige Nutzerkonten, welche in einer Datenbank hinterlegt sind.
 
 Die Benutzerkonten enthalten Vorname, Nachname, Kontostand, Passwort und einen Benutzernamen (bestehend aus vorname.nachme) des Benutzers.
@@ -11,6 +11,7 @@ Ebenso kann der Benutzer seinen Benutzernamen und sein Passwort, ebenso wie den 
 Die Datenbank enthält hierbei nicht nur die Benutzerkonten, soondern auch Gerichte.
 
 ##Ablauf des Programms
+
 Als ertes kommt das Login Fenster:
 Abgefragt werden Benutzername und Passwort.
 
