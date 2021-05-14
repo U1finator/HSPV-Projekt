@@ -39,7 +39,6 @@ hier sind Funktionen die noch in Planung sind
 	
 	
 **Wichtig:** 
-
 	- Die mitgelieferte Datei sqlite-jdbc-3.23.1.jar muss als externe Libary eingebunden werden.
 	- Die Datei Mensadaten.db sollte mit dem [DB Browser for SQLite](https://sqlitebrowser.org/) geöffnet werden.
 
