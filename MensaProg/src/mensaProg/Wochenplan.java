@@ -72,5 +72,5 @@ public class Wochenplan {
 			e.printStackTrace();
 		}
 	} 
-	}
+	
 }

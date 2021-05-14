@@ -921,4 +921,3 @@ public class MainGui2 {
 		}
 	}
 }
-}
