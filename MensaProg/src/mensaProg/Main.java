@@ -29,7 +29,7 @@ public class Main
 
 		log.info("Start");	//Am Anfang der Datei wird das Wort "Start" angefügt
 		try {
-			log.log(Level.INFO, "In {0} Sekunden geht's los");	//Anfangszeit des Programmes wird gespeichert 
+			log.log(Level.INFO, "");	//Anfangszeit des Programmes wird gespeichert 
 		} catch (Exception e) {
 			log.log(Level.SEVERE, "Fehler", e);	//bei einem Fehler wird wird der mit in die Logging Datei geschrieben
 		}
