@@ -57,7 +57,7 @@ public class MainGui2 {
 	
 
 	/**
-	 * @param kunde
+	 * @param kunde Zwischenspeicherungsobjekt
 	 * 
 	 * Create the application.
 	 */
@@ -67,7 +67,7 @@ public class MainGui2 {
 	}
 
 	/**
-	 * @param kunde
+	 * @param kunde Zwischenspeicherungsobjekt
 	 * Initialisiere das Objekt
 	 */
 	private void initialize(Kunde kunde) {

@@ -62,7 +62,7 @@ public class Benutzerdaten implements ActionListener
 		if(e.getSource()==changePW) 
 		{
 			Customer customer = new Customer();
-			customer.editpw(username, password);
+			customer.editPW(username, password);
 			//password = neues Passwort
 		}
 	}

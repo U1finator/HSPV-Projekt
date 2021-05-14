@@ -6,12 +6,9 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
-/*
- * Eine Klasse die über den SQL Connector die notwendigen Abfragen über den Nutzer macht
- */
 /**
+ * Eine Klasse die über den SQL Connector die notwendigen Abfragen über den Nutzer macht
  * @author U1finator (Olaf)
- *
  */
 public class Customer 
 {		
