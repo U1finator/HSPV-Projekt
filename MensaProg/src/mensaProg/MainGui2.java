@@ -83,7 +83,7 @@ public class MainGui2 {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_3, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"€");
+		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"â‚¬");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
@@ -132,7 +132,7 @@ public class MainGui2 {
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_6, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"€");
+		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"â‚¬");
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
 		
@@ -181,7 +181,7 @@ public class MainGui2 {
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_9, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"€");
+		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"â‚¬");
 		lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
 		
@@ -230,7 +230,7 @@ public class MainGui2 {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"€");
+		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"â‚¬");
 		lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
 		
@@ -279,7 +279,7 @@ public class MainGui2 {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"€");
+		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"â‚¬");
 		lblNewLabel_17.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
 		
@@ -328,7 +328,7 @@ public class MainGui2 {
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"€");
+		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"â‚¬");
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
 		
@@ -377,7 +377,7 @@ public class MainGui2 {
 		lblNewLabel_21.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_21, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"€");
+		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"â‚¬");
 		lblNewLabel_23.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
 		
@@ -426,7 +426,7 @@ public class MainGui2 {
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_24, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"€");
+		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"â‚¬");
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
 		
@@ -475,7 +475,7 @@ public class MainGui2 {
 		lblNewLabel_27.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_27, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"€");
+		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"â‚¬");
 		lblNewLabel_29.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
 		
@@ -524,7 +524,7 @@ public class MainGui2 {
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_30, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"€");
+		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"â‚¬");
 		lblNewLabel_32.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
 		
@@ -574,7 +574,7 @@ public class MainGui2 {
 		lblNewLabel_33.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_33, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"€");
+		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"â‚¬");
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
@@ -624,7 +624,7 @@ public class MainGui2 {
 		lblNewLabel_36.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_36, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"€");
+		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"â‚¬");
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
@@ -673,7 +673,7 @@ public class MainGui2 {
 		lblNewLabel_39.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_39, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"€");
+		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"â‚¬");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
@@ -722,7 +722,7 @@ public class MainGui2 {
 		lblNewLabel_42.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_42, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"€");
+		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"â‚¬");
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
@@ -771,7 +771,7 @@ public class MainGui2 {
 		lblNewLabel_45.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_45, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"€");
+		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"â‚¬");
 		lblNewLabel_47.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
@@ -920,5 +920,5 @@ public class MainGui2 {
 			meat[i].setEnabled(true);
 		}
 	}
-	
+}
 }
