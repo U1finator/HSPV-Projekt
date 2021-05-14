@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2021-05-14T05:57:40.279513200Z</date>
-  <millis>1620971860279</millis>
-  <nanos>513200</nanos>
+  <date>2021-05-14T06:16:29.518073Z</date>
+  <millis>1620972989518</millis>
+  <nanos>73000</nanos>
   <sequence>0</sequence>
   <logger>mensaProg.Main</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>Start</message>
 </record>
 <record>
-  <date>2021-05-14T05:57:40.339415400Z</date>
-  <millis>1620971860339</millis>
-  <nanos>415400</nanos>
+  <date>2021-05-14T06:16:29.581260100Z</date>
+  <millis>1620972989581</millis>
+  <nanos>260100</nanos>
   <sequence>1</sequence>
   <logger>mensaProg.Main</logger>
   <level>INFO</level>
@@ -26,9 +26,9 @@
   <message>In {0} Sekunden geht's los</message>
 </record>
 <record>
-  <date>2021-05-14T05:57:40.341417Z</date>
-  <millis>1620971860341</millis>
-  <nanos>417000</nanos>
+  <date>2021-05-14T06:16:29.582260900Z</date>
+  <millis>1620972989582</millis>
+  <nanos>260900</nanos>
   <sequence>2</sequence>
   <logger>mensaProg.Main</logger>
   <level>INFO</level>
