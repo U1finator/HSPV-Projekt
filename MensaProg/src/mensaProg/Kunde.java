@@ -1,9 +1,21 @@
 package mensaProg;
 
+/**
+ * @author U1finator (Olaf)
+ * 
+ * eine Klasse zum zwischenspeichern von Nutzername und Passwort des aktuellen Benutzers
+ *
+ */
 public class Kunde
 {
-  public String username;
-  public String passwort;
+  /**
+ * Nutzername des Benutzers
+ */
+public String username;
+  /**
+ * Passwort des Nutzers
+ */
+public String passwort;
 
   Kunde(String username, String passwort) //Konstruktor des Kunden
   {
@@ -13,28 +25,35 @@ public class Kunde
   
   Kunde(){} //leerer Konstruktor
   
-  public String getUsername() //Abfrage des Nutzernamens des Kunden
+  /**
+ * @return Nutzername der zwischengespeichert wurde
+ */
+public String getUsername() //Abfrage des Nutzernamens des Kunden
   {
     return this.username;
   }
   
-  public String getPW()  //Abfrage des Passwortes des Kunden
+  /**
+ * @return Passwort des Nutzers
+ */
+public String getPW()  //Abfrage des Passwortes des Kunden
   {
     return this.passwort;
   }
   
-  public void setUsername(String username)
+  /**
+ * @param username Zwischengespeicherter Nutzername
+ */
+public void setUsername(String username)
   {
     this.username = username;
   }
   
-  public void setPW(String pw)
+  /**
+ * @param pw Zwischengespeichertes Passwort
+ */
+public void setPW(String pw)
   {
     this.passwort = pw;
   }
-
-public Object getKonstostand() {
-	// TODO Auto-generated method stub
-	return null;
-}
 }

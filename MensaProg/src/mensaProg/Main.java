@@ -11,12 +11,17 @@ import java.util.logging.Logger;
 
 
 /**
- * @author Felix, Julia, Olaf
+ * @author Felix, Julia, U1finator (Olaf)
  *
  */
 public class Main 
 {
 	private static final Logger log = Logger.getLogger(Main.class.getName());	//ein Logger wird hinzugefügt
+	/**
+	 * @param args argumente
+	 * @throws SecurityException Sicherheitsmeldung
+	 * @throws IOException beim IO sind Fehler passiert
+	 */
 	public static void main(String[] args) throws SecurityException, IOException
 	{
 		Instant start = now();	//der Logger wird gestartet

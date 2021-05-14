@@ -8,6 +8,10 @@ import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
+/**
+ * @author Julia
+ *
+ */
 public class IDandPW {
 	
 	// stores key-value pairs, key = id, value = pw

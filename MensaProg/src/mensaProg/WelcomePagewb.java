@@ -8,12 +8,22 @@ import java.awt.BorderLayout;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
+/**
+ * @author Julia
+ *
+ */
 public class WelcomePagewb {
 
+	/**
+	 * frame
+	 */
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
+	 */
+	/**
+	 * @param args args
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

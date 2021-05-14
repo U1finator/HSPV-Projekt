@@ -8,17 +8,34 @@ import java.awt.RenderingHints;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JButton;
 
+/**
+ * @author Julia
+ *
+ */
 @SuppressWarnings("serial")
 public class RoundButton extends JButton {
     
+    /**
+     * 
+     */
     private int arc;
+    /**
+     * 
+     */
     private Color color;
     
+    /**
+     * @param arc keine Ahnung
+     */
     public RoundButton( int arc) {
         this.arc = arc;
         initComponents();
     }
     
+    /**
+     * @param text text
+     * @param arc arc
+     */
     public RoundButton(String text, int arc) {
         super(text);
         this.arc = arc;
@@ -26,6 +43,10 @@ public class RoundButton extends JButton {
         initComponents();
     }
     
+    /**
+     * @param arc arc
+     * @param color color
+     */
     public RoundButton(int arc, Color color) {
         super();
         this.arc = arc;
@@ -33,6 +54,11 @@ public class RoundButton extends JButton {
         initComponents();
     }
     
+    /**
+     * @param text text
+     * @param arc arc
+     * @param color color
+     */
     public RoundButton(String text, int arc, Color color) {
         super(text);
         this.arc = arc;
@@ -40,6 +66,9 @@ public class RoundButton extends JButton {
         initComponents();
     }
     
+    /**
+     * 
+     */
     private void initComponents() {
      
         final Dimension size = getPreferredSize();
@@ -54,6 +83,9 @@ public class RoundButton extends JButton {
  * Methoden aus dem Internet geklaut. Bin ein Rebell.
  */
     
+    /**
+     *
+     */
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -65,6 +97,9 @@ public class RoundButton extends JButton {
         super.paintComponent(g);
     }
 
+    /**
+     *
+     */
     @Override
     protected void paintBorder(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
