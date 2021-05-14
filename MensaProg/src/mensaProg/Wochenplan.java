@@ -71,6 +71,6 @@ public class Wochenplan {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	} 
 	}
-
 }
