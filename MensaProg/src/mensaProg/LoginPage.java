@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.HashMap;
 
 import javax.swing.JButton;
@@ -13,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class LoginPage implements ActionListener{
+public class LoginPage implements ActionListener, KeyListener{
 	public String username;
 	
 	JFrame frame = new JFrame();
@@ -40,6 +42,7 @@ public class LoginPage implements ActionListener{
 		
 		userIDField.setBounds(150,100,200,25);
 		userPasswordField.setBounds(150,150,200,25);
+		userPasswordField.addKeyListener(this);
 		
 		login.setBounds(150,200,100,25);
 		//loginButton.setFocusable(false);
@@ -71,44 +74,67 @@ public class LoginPage implements ActionListener{
 			userPasswordField.setText("");
 		}
 		
-		if(e.getSource()==login) {
-			
-			String userID = userIDField.getText();
-			String password = String.valueOf(userPasswordField.getPassword());
-			
-			//HashMap Zugriff
-			if(logininfo.containsKey(userID)) {
-				if(logininfo.get(userID).equals(password)) {
-					messageLabel.setForeground(Color.green);
-					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-					username = userID;
-					messageLabel.setText("Login erfolgreich");
-					Kunde kunde = new Kunde(userID, password);
-					frame.dispose(); //Schließen des Login Fensters
-					//WelcomePage welcomePage = new WelcomePage(userID);
-					
-					EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
-						public void run() {
-							try {
-								MainGui2 window = new MainGui2(kunde);
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
+		if(e.getSource()==login) {	//Wenn die Quelle für das ActionEvent der loginButton ist
+			login();	//die Methode login() wird aufgerufen
+		}
+	}
+
+	public void login() {
+		// TODO Auto-generated method stub
+		String userID = userIDField.getText();
+		String password = String.valueOf(userPasswordField.getPassword());
+		
+		//HashMap Zugriff
+		if(logininfo.containsKey(userID)) {
+			if(logininfo.get(userID).equals(password)) {
+				messageLabel.setForeground(Color.green);
+				messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+				username = userID;
+				messageLabel.setText("Login erfolgreich");
+				Kunde kunde = new Kunde(userID, password);
+				frame.dispose(); //Schließen des Login Fensters
+				//WelcomePage welcomePage = new WelcomePage(userID);
+				
+				EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
+					public void run() {
+						try {
+							MainGui2 window = new MainGui2(kunde);
+						} catch (Exception e) {
+							e.printStackTrace();
 						}
-					});
-				}
-				else {
-					messageLabel.setForeground(Color.red);
-					messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-					messageLabel.setText("Falsches Passwort");
-				}
+					}
+				});
 			}
 			else {
 				messageLabel.setForeground(Color.red);
 				messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-				messageLabel.setText("Falscher Benutzername");
+				messageLabel.setText("Falsches Passwort");
 			}
 		}
+		else {
+			messageLabel.setForeground(Color.red);
+			messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+			messageLabel.setText("Falscher Benutzername");
+		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {	//wenn in der Textzeile für das Passwort ein KeyEvent stattfindet
+		// TODO Auto-generated method stub
+		if(e.getKeyCode() == KeyEvent.VK_ENTER)	//Wenn das KeyEvent mit der ENTER Taste übereinstimmt
+		{
+			login();	//die login() Methode wird aufgerufen
+		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub	
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
 	}
 	
 }
