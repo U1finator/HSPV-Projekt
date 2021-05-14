@@ -11,7 +11,7 @@ public class Customer
 	{		
 		try {
 			Statement	stmt = conn.createStatement();	//erstelle ein neues SQLite Statement
-			stmt.execute("UPDATE Kunden SET Kontostand= Kontostand+'" + einzahlung + "' WHERE nutzername='" + name + "'");	//ein SQL Statement wird durchgefÃ¼hrt um den Kontostand zu erhÃ¶hen
+			stmt.execute("UPDATE Kunden SET Kontostand= Kontostand+'" + einzahlung + "' WHERE nutzername='" + name + "'");	//ein SQL Statement wird durchgefÃƒÂ¼hrt um den Kontostand zu erhÃƒÂ¶hen
 		
 		}
 		catch(SQLException e)
@@ -34,7 +34,7 @@ public class Customer
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("UPDATE Kunden SET Kontostand=Kontostand-'" + auszahlung + "' WHERE vorname='" + name + "'");	//ein SQL Statement wird durchgefÃ¼hrt um den Kontostand zu verringern
+			stmt.execute("UPDATE Kunden SET Kontostand=Kontostand-'" + auszahlung + "' WHERE vorname='" + name + "'");	//ein SQL Statement wird durchgefÃƒÂ¼hrt um den Kontostand zu verringern
 		
 		}
 		catch(SQLException e)
@@ -50,11 +50,11 @@ public class Customer
 		}	//die Verbindung soll geschlossen werden 
 	}
 	
-	public void add(String vorname, String nachname, String pwort)	//Methode um einen neuen Kunden hinzuzufügen
+	public void add(String vorname, String nachname, String pwort)	//Methode um einen neuen Kunden hinzuzufÃ¼gen
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("INSERT INTO kunden(vorname, nachname, pwort, username, kontostand) VALUES ('" + vorname + "','" + nachname +"','" + pwort + "','" + vorname +"."+ nachname +"','0' )");	//ein SQL Statement wird durchgeführt um einen neuen Kunden anzulegen
+			stmt.execute("INSERT INTO kunden(vorname, nachname, pwort, username, kontostand) VALUES ('" + vorname + "','" + nachname +"','" + pwort + "','" + vorname +"."+ nachname +"','0' )");	//ein SQL Statement wird durchgefÃ¼hrt um einen neuen Kunden anzulegen
 		
 		}
 		catch(SQLException e)
@@ -82,7 +82,7 @@ public class Customer
 		}
 	}
 	
-	public void editpw(String name, String pwort)	//Methode um das Passwort zu �ndern
+	public void editpw(String name, String pwort)	//Methode um das Passwort zu ändern
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
