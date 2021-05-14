@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-05-14T05:57:40.279513200Z</date>
+  <millis>1620971860279</millis>
+  <nanos>513200</nanos>
+  <sequence>0</sequence>
+  <logger>mensaProg.Main</logger>
+  <level>INFO</level>
+  <class>mensaProg.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Start</message>
+</record>
+<record>
+  <date>2021-05-14T05:57:40.339415400Z</date>
+  <millis>1620971860339</millis>
+  <nanos>415400</nanos>
+  <sequence>1</sequence>
+  <logger>mensaProg.Main</logger>
+  <level>INFO</level>
+  <class>mensaProg.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>In {0} Sekunden geht's los</message>
+</record>
+<record>
+  <date>2021-05-14T05:57:40.341417Z</date>
+  <millis>1620971860341</millis>
+  <nanos>417000</nanos>
+  <sequence>2</sequence>
+  <logger>mensaProg.Main</logger>
+  <level>INFO</level>
+  <class>mensaProg.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Laufzeit 70 ms</message>
+</record>
+</log>
