@@ -3,6 +3,7 @@
 Dieses Programm wurde von Julia Lampe, Felix Lodde und Olaf Werning entwickelt.
 
 *Allgemein*
+
 Es geht hierbei um ein Programm zur Darstellung des Essensplanes und zu Benuzern gehörige Nutzerkonten, welche in einer Datenbank hinterlegt sind.
 
 Die Benutzerkonten enthalten Vorname, Nachname, Kontostand, Passwort und einen Benutzernamen (bestehend aus vorname.nachme) des Benutzers.
@@ -11,6 +12,7 @@ Ebenso kann der Benutzer seinen Benutzernamen und sein Passwort, ebenso wie den 
 Die Datenbank enthält hierbei nicht nur die Benutzerkonten, soondern auch Gerichte.
 
 *Ablauf des Programms*
+
 Als ertes kommt das Login Fenster:
 Abgefragt werden Benutzername und Passwort.
 
@@ -21,12 +23,14 @@ Zum beenden des Programms einfach aus das X oben rechts in der Login Seite oder 
 
 
 *Noch nicht fertige Funktionen:*
+
 hier sind Funktionen aufgelistet, bei denen die Backendvorraussetzungen schon gegeben sind
 	- das generieren des Wochenplans einmal pro Woche
 	- das ändern des eigenen Passwortes durch den Benutzer
 	- das Erstellen eines neuen Nutzers
 
 *Für die Zukunft:*
+
 hier sind Funktionen die noch in Planung sind
 	- Bilder zu den Gerichten
 	- eine Spalte extra für Beilagen und Nachtische
@@ -35,6 +39,7 @@ hier sind Funktionen die noch in Planung sind
 	
 	
 **Wichtig:** 
+
 	- Die mitgelieferte Datei sqlite-jdbc-3.23.1.jar muss als externe Libary eingebunden werden.
 	- Die Datei Mensadaten.db sollte mit dem [DB Browser for SQLite](https://sqlitebrowser.org/) geöffnet werden.
 
