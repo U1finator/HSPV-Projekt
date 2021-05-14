@@ -13,10 +13,10 @@ public class Benutzerdaten implements ActionListener{
 	JFrame frame = new JFrame();
 	JLabel userDataLabel = new JLabel("Benutzerdaten");
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
-	JLabel nutritionLabel = new JLabel("Ern‰hrung");
+	JLabel nutritionLabel = new JLabel("Ern√§hrung");
 	JLabel IDLabel = new JLabel("Benutzername");
 	JLabel PWLabel = new JLabel("Passwort");
-	JButton changePW = new JButton("Passwort ‰ndern");
+	JButton changePW = new JButton("Passwort √§ndern");
 	public String username;
 	public String password;
 	
