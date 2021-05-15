@@ -42,6 +42,7 @@ public class WelcomePage	extends JPanel {
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
 		nutritionLabel.setText("Ernährung: ");
 		
+		//CheckBox, auswählen ob vegetarische Ernährung
 		checkBoxErnährung.setBounds(150,140,200,35);
 		checkBoxErnährung.addItemListener(new ItemListener() {
 		    @Override

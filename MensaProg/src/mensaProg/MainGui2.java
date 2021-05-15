@@ -7,6 +7,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -867,7 +868,7 @@ public class MainGui2 {
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new WelcomePage(kunde);
+				new WelcomePage(kunde, MainGui2.this);
 				
 			}
 		});
@@ -910,14 +911,48 @@ public class MainGui2 {
 	}
 	
 	public void FleischWeg() {
-		for(int i=0;i<=meat.length;i++) {
+		for(int i=0;i<meat.length;i++) {
 			meat[i].setEnabled(false);
+			this.revalidate();
+			
+			try 
+            {
+                TimeUnit.SECONDS.sleep(1);
+                System.out.println(i);
+            } 
+            catch (InterruptedException e1) 
+            {
+                e1.printStackTrace();
+            }
 		}
 	}
 	
+	private void revalidate() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public void FleischDa() {
-		for(int i=0;i<=meat.length;i++) {
+		for(int i=0;i<meat.length;i++) {
 			meat[i].setEnabled(true);
+			try 
+            {
+                TimeUnit.SECONDS.sleep(1);
+                System.out.println(i);
+            } 
+            catch (InterruptedException e1) 
+            {
+                e1.printStackTrace();
+            }
 		}
+	}
+	public static void checkVeg (JTextPane textPane) {
+        if(WelcomePage.getVeg()==true) {
+            textPane.setEnabled(false);
+           
+        }
+        /*else {
+            textPane.setEnabled(true);
+        }*/
 	}
 }
