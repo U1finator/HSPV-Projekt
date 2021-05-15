@@ -38,18 +38,17 @@ public class Benutzerdaten implements ActionListener
 			IDLabel.setFont(new Font(null,Font.PLAIN,16));
 			IDLabel.setText("Benutzername: "+kunde.getUsername());
 		
+			//Passwort Label wird erstellt + Anzeige des jeweiligen Passworts
 			PWLabel.setBounds(50,125,250,35);
 			PWLabel.setFont(new Font(null,Font.PLAIN,16));
 			PWLabel.setText("Passwort: "+kunde.getPW());
 		
+			// Passwort ändern Button wird erstellt
 			changePW.setBounds(100,200,200,35);
 			changePW.addActionListener(this);
 			changePW.setText("Passwort ändern");
 			
-			//newPW.setBounds(300,300,200,35);
-			//newPW.setVisible(false);
-			
-			//
+			// ok Button wird erstellt, erstmal nicht sichbar
 			ok.setBounds(150,310,100,35);
 			ok.addActionListener(this);
 			ok.setVisible(false);
@@ -61,14 +60,13 @@ public class Benutzerdaten implements ActionListener
 			frame.setSize(420,420);
 			frame.getContentPane().setLayout(null);
 			frame.setVisible(true);
-			
-		
+				
 		}
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
 		// TODO Auto-generated method stub
-		
+		// klick auf Button changePW macht neues textfield und ok button sichtbar
 		if(e.getSource()==changePW) 
 		{
 			newPW.setBounds(100,250,200,35);
@@ -77,7 +75,7 @@ public class Benutzerdaten implements ActionListener
 			frame.add(ok);
 			ok.setVisible(true);
 			
-			
+		// klick auf ok: neues pw wird erstellt, gespeichert & angezeigt	
 		}else if(e.getSource()==ok)
 		{
 			String newPassword = newPW.getText();
