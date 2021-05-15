@@ -22,7 +22,6 @@ public class WelcomePage	extends JPanel {
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
 	JLabel nutritionLabel = new JLabel("Ernährung");
 	JCheckBox checkBoxErnährung = new JCheckBox("vegetarisch");
-	public static boolean veg = false;
 	
 	WelcomePage(Kunde kunde, MainGui2 mg) {
 		Customer customer = new Customer();
@@ -42,21 +41,17 @@ public class WelcomePage	extends JPanel {
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
 		nutritionLabel.setText("Ernährung: ");
 		
-		//CheckBox, auswählen ob vegetarische Ernährung
+		//CheckBox, check ob vegetarische Ernährung, wenn ja: Aufruf Methode FleischWeg in MainGui2
 		checkBoxErnährung.setBounds(150,140,200,35);
 		checkBoxErnährung.addItemListener(new ItemListener() {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
                 if(checkBoxErnährung.isSelected()==true) {
-                    veg = true;
-                mg.FleischWeg();
+                    mg.FleischWeg();
                 }
                 else  {
-                    veg = false; 
                     mg.FleischDa();
                     }
-                	revalidate();
-                	repaint();
                 }}); 
 	
 		//Labels, Checkbox werden Panel hinzugefügt
@@ -70,8 +65,4 @@ public class WelcomePage	extends JPanel {
 		frame.setVisible(true);
 	}
 
-
-	public static boolean getVeg() {
-		return veg;
-	}
 }

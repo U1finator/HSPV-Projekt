@@ -47,7 +47,7 @@ public class MainGui2 {
     String datePattern = "dd.MM.yyyy";
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(datePattern);
     JTextPane[] meat = new JTextPane[10];
-
+    JLabel[] mprices = new JLabel[10];
 	/**
 	 * Launch the application.
 	 */
@@ -84,7 +84,8 @@ public class MainGui2 {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_3, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"â‚¬");
+		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"€");
+		mprices[0] = lblNewLabel_5;
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
@@ -120,6 +121,7 @@ public class MainGui2 {
 		meat[0] = txtpnA;
 		txtpnA.setBackground(Color.LIGHT_GRAY);
 		txtpnA.setSelectedTextColor(Color.BLACK);
+		txtpnA.setForeground(Color.BLACK);
 		txtpnA.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA.setText("\n"+ names[0].toString());
 		center(txtpnA);
@@ -133,7 +135,8 @@ public class MainGui2 {
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_6, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"â‚¬");
+		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"€");
+		mprices[1] = lblNewLabel_8;
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
 		
@@ -167,7 +170,6 @@ public class MainGui2 {
 		meat[1] = txtpnA_1;
 		txtpnA_1.setBackground(Color.LIGHT_GRAY);
 		txtpnA_1.setEditable(false);
-		txtpnA_1.setDisabledTextColor(Color.BLACK);
 		txtpnA_1.setForeground(Color.BLACK);
 		txtpnA_1.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_1.setText("\n"+ names[1].toString());
@@ -182,7 +184,8 @@ public class MainGui2 {
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_9, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"â‚¬");
+		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"€");
+		mprices[2] = lblNewLabel_11;
 		lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
 		
@@ -216,7 +219,6 @@ public class MainGui2 {
 		meat[2] = txtpnA_2;
 		txtpnA_2.setBackground(Color.LIGHT_GRAY);
 		txtpnA_2.setEditable(false);
-		txtpnA_2.setDisabledTextColor(Color.BLACK);
 		txtpnA_2.setForeground(Color.BLACK);
 		txtpnA_2.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_2.setText("\n"+ names[2].toString());
@@ -231,7 +233,8 @@ public class MainGui2 {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"â‚¬");
+		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"€");
+		mprices[3] = lblNewLabel_14;
 		lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
 		
@@ -265,7 +268,6 @@ public class MainGui2 {
 		meat[3] = txtpnA_3;
 		txtpnA_3.setBackground(Color.LIGHT_GRAY);
 		txtpnA_3.setEditable(false);
-		txtpnA_3.setDisabledTextColor(Color.BLACK);
 		txtpnA_3.setForeground(Color.BLACK);
 		txtpnA_3.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_3.setText("\n"+ names[3].toString());
@@ -280,7 +282,8 @@ public class MainGui2 {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"â‚¬");
+		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"€");
+		mprices[4] = lblNewLabel_17;
 		lblNewLabel_17.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
 		
@@ -314,7 +317,6 @@ public class MainGui2 {
 		meat[4] = txtpnA_4;
 		txtpnA_4.setBackground(Color.LIGHT_GRAY);
 		txtpnA_4.setEditable(false);
-		txtpnA_4.setDisabledTextColor(Color.BLACK);
 		txtpnA_4.setForeground(Color.BLACK);
 		txtpnA_4.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_4.setText("\n"+ names[4].toString());
@@ -329,7 +331,8 @@ public class MainGui2 {
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"â‚¬");
+		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"€");
+		mprices[5] = lblNewLabel_20;
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
 		
@@ -363,7 +366,6 @@ public class MainGui2 {
 		meat[5] = txtpnA_5;
 		txtpnA_5.setBackground(Color.LIGHT_GRAY);
 		txtpnA_5.setEditable(false);
-		txtpnA_5.setDisabledTextColor(Color.BLACK);
 		txtpnA_5.setForeground(Color.BLACK);
 		txtpnA_5.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_5.setText("\n"+ names[5].toString());
@@ -378,7 +380,8 @@ public class MainGui2 {
 		lblNewLabel_21.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_21, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"â‚¬");
+		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"€");
+		mprices[6] = lblNewLabel_23;
 		lblNewLabel_23.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
 		
@@ -412,7 +415,6 @@ public class MainGui2 {
 		meat[6] = txtpnA_6;
 		txtpnA_6.setBackground(Color.LIGHT_GRAY);
 		txtpnA_6.setEditable(false);
-		txtpnA_6.setDisabledTextColor(Color.BLACK);
 		txtpnA_6.setForeground(Color.BLACK);
 		txtpnA_6.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_6.setText("\n"+ names[6].toString());
@@ -427,7 +429,8 @@ public class MainGui2 {
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_24, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"â‚¬");
+		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"€");
+		mprices[7] = lblNewLabel_26;
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
 		
@@ -461,7 +464,6 @@ public class MainGui2 {
 		meat[7] = txtpnA_7;
 		txtpnA_7.setBackground(Color.LIGHT_GRAY);
 		txtpnA_7.setEditable(false);
-		txtpnA_7.setDisabledTextColor(Color.BLACK);
 		txtpnA_7.setForeground(Color.BLACK);
 		txtpnA_7.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_7.setText("\n"+ names[7].toString());
@@ -476,7 +478,8 @@ public class MainGui2 {
 		lblNewLabel_27.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_27, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"â‚¬");
+		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"€");
+		mprices[8] = lblNewLabel_29;
 		lblNewLabel_29.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
 		
@@ -510,7 +513,6 @@ public class MainGui2 {
 		meat[8] = txtpnA_8;
 		txtpnA_8.setBackground(Color.LIGHT_GRAY);
 		txtpnA_8.setEditable(false);
-		txtpnA_8.setDisabledTextColor(Color.BLACK);
 		txtpnA_8.setForeground(Color.BLACK);
 		txtpnA_8.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_8.setText("\n"+ names[8].toString());
@@ -525,7 +527,8 @@ public class MainGui2 {
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_30, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"â‚¬");
+		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"€");
+		mprices[9] = lblNewLabel_32;
 		lblNewLabel_32.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
 		
@@ -559,7 +562,6 @@ public class MainGui2 {
 		meat[9] = txtpnA_9;
 		txtpnA_9.setBackground(Color.LIGHT_GRAY);
 		txtpnA_9.setEditable(false);
-		txtpnA_9.setDisabledTextColor(Color.BLACK);
 		txtpnA_9.setForeground(Color.BLACK);
 		txtpnA_9.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		txtpnA_9.setText("\n"+ names[9].toString());
@@ -575,7 +577,7 @@ public class MainGui2 {
 		lblNewLabel_33.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_33, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"â‚¬");
+		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"€");
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
@@ -625,7 +627,7 @@ public class MainGui2 {
 		lblNewLabel_36.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_36, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"â‚¬");
+		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"€");
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
@@ -674,7 +676,7 @@ public class MainGui2 {
 		lblNewLabel_39.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_39, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"â‚¬");
+		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"€");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
@@ -723,7 +725,7 @@ public class MainGui2 {
 		lblNewLabel_42.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_42, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"â‚¬");
+		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"€");
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
@@ -772,7 +774,7 @@ public class MainGui2 {
 		lblNewLabel_45.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_45, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"â‚¬");
+		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"€");
 		lblNewLabel_47.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
@@ -913,46 +915,14 @@ public class MainGui2 {
 	public void FleischWeg() {
 		for(int i=0;i<meat.length;i++) {
 			meat[i].setEnabled(false);
-			this.revalidate();
-			
-			try 
-            {
-                TimeUnit.SECONDS.sleep(1);
-                System.out.println(i);
-            } 
-            catch (InterruptedException e1) 
-            {
-                e1.printStackTrace();
-            }
+			mprices[i].setVisible(false);
 		}
-	}
-	
-	private void revalidate() {
-		// TODO Auto-generated method stub
 		
 	}
-
 	public void FleischDa() {
 		for(int i=0;i<meat.length;i++) {
 			meat[i].setEnabled(true);
-			try 
-            {
-                TimeUnit.SECONDS.sleep(1);
-                System.out.println(i);
-            } 
-            catch (InterruptedException e1) 
-            {
-                e1.printStackTrace();
-            }
+			mprices[i].setVisible(true);
 		}
-	}
-	public static void checkVeg (JTextPane textPane) {
-        if(WelcomePage.getVeg()==true) {
-            textPane.setEnabled(false);
-           
-        }
-        /*else {
-            textPane.setEnabled(true);
-        }*/
 	}
 }
