@@ -1,16 +1,15 @@
 package mensaProg;
 
-import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.SwingConstants;
 
 public class WelcomePage	extends JPanel {
 							
@@ -23,9 +22,9 @@ public class WelcomePage	extends JPanel {
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
 	JLabel nutritionLabel = new JLabel("Ernährung");
 	JCheckBox checkBoxErnährung = new JCheckBox("vegetarisch");
-
+	public static boolean veg = false;
 	
-	WelcomePage(Kunde kunde) {
+	WelcomePage(Kunde kunde, MainGui2 mg) {
 		Customer customer = new Customer();
 		
 		/* Willkommen-Label wird erstellt
@@ -44,8 +43,22 @@ public class WelcomePage	extends JPanel {
 		nutritionLabel.setText("Ernährung: ");
 		
 		checkBoxErnährung.setBounds(150,140,200,35);
+		checkBoxErnährung.addItemListener(new ItemListener() {
+		    @Override
+		    public void itemStateChanged(ItemEvent e) {
+                if(checkBoxErnährung.isSelected()==true) {
+                    veg = true;
+                mg.FleischWeg();
+                }
+                else  {
+                    veg = false; 
+                    mg.FleischDa();
+                    }
+                	revalidate();
+                	repaint();
+                }}); 
 	
-		//Labels, CHeckbox werden Panel hinzugefügt
+		//Labels, Checkbox werden Panel hinzugefügt
 		//frame.getContentPane().add(welcomeLabel);
 		frame.getContentPane().add(bankBalanceLabel);
 		frame.getContentPane().add(nutritionLabel);
@@ -54,5 +67,10 @@ public class WelcomePage	extends JPanel {
 		frame.setSize(420,420);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
+	}
+
+
+	public static boolean getVeg() {
+		return veg;
 	}
 }

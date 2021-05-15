@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class Benutzerdaten implements ActionListener
 {
@@ -18,11 +19,19 @@ public class Benutzerdaten implements ActionListener
 	JLabel IDLabel = new JLabel("Benutzername");
 	JLabel PWLabel = new JLabel("Passwort");
 	JButton changePW = new JButton("Passwort ändern");
+	JButton ok = new JButton("Ok");
+	JTextField newPW = new JTextField();
 	public String username;
 	public String password;
+	Kunde kunde;
 	
+	/**
+	 * 
+	 * @param kunde 
+	 */
 	Benutzerdaten(Kunde kunde) 
 		{
+			this.kunde = kunde;
 			username = kunde.getUsername();
 			password = kunde.getPW();
 			IDLabel.setBounds(50,100,250,35);
@@ -36,6 +45,14 @@ public class Benutzerdaten implements ActionListener
 			changePW.setBounds(100,200,200,35);
 			changePW.addActionListener(this);
 			changePW.setText("Passwort ändern");
+			
+			//newPW.setBounds(300,300,200,35);
+			//newPW.setVisible(false);
+			
+			//
+			ok.setBounds(150,310,100,35);
+			ok.addActionListener(this);
+			ok.setVisible(false);
 		
 			frame.getContentPane().add(IDLabel);
 			frame.getContentPane().add(PWLabel);
@@ -44,6 +61,8 @@ public class Benutzerdaten implements ActionListener
 			frame.setSize(420,420);
 			frame.getContentPane().setLayout(null);
 			frame.setVisible(true);
+			
+		
 		}
 	@Override
 	public void actionPerformed(ActionEvent e) 
@@ -52,9 +71,21 @@ public class Benutzerdaten implements ActionListener
 		
 		if(e.getSource()==changePW) 
 		{
+			newPW.setBounds(100,250,200,35);
+			frame.add(newPW);
+			newPW.setVisible(true);
+			frame.add(ok);
+			ok.setVisible(true);
+			
+			
+		}else if(e.getSource()==ok)
+		{
+			String newPassword = newPW.getText();
+			kunde.setPW(newPassword);
 			Customer customer = new Customer();
-			customer.editpw(username, password);
-			//password = neues Passwort
+			username = kunde.getUsername();
+			customer.editpw(username, newPassword);
+			PWLabel.setText("Passwort: "+kunde.getPW());
 		}
 	}
 }
