@@ -45,16 +45,19 @@ public class LoginPage implements ActionListener, KeyListener{
 		
 		logininfo = loginInfoOriginal;
 		
+		//Labels erstellen
 		userIDLabel.setBounds(50,100,120,25);
-		userPasswordLabel.setBounds(50,150,120,25); //
+		userPasswordLabel.setBounds(50,150,120,25);
 		
 		messageLabel.setBounds(125,250,250,35); // Momentan leer
 		messageLabel.setFont(new Font(null,Font.ITALIC,25));
 		
+		//Benutzername + Password Fields erstellen
 		userIDField.setBounds(150,100,200,25);
 		userPasswordField.setBounds(150,150,200,25);
 		userPasswordField.addKeyListener(this);
 		
+		//login + reset Buttons + actionlistener
 		login.setBounds(150,200,100,25);
 		//loginButton.setFocusable(false);
 		login.addActionListener(this);
@@ -79,7 +82,7 @@ public class LoginPage implements ActionListener, KeyListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		//Reset Button resets fields
+		//Reset Button setzt fields zurück
 		if(e.getSource()==resetButton) {
 			userIDField.setText("");
 			userPasswordField.setText("");
@@ -100,7 +103,7 @@ public class LoginPage implements ActionListener, KeyListener{
 		
 		//HashMap Zugriff
 		if(logininfo.containsKey(userID)) {
-			if(logininfo.get(userID).equals(password)) {
+			if(logininfo.get(userID).equals(password)) { //wenn Login erfolgreich
 				messageLabel.setForeground(Color.green);
 				messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 				username = userID;
@@ -119,7 +122,7 @@ public class LoginPage implements ActionListener, KeyListener{
 					}
 				});
 			}
-			else {
+			else { // wenn Login nicht erfolgreich
 				messageLabel.setForeground(Color.red);
 				messageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 				messageLabel.setText("Falsches Passwort");
