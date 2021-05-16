@@ -94,9 +94,13 @@ public class Customer
 	 */
 	public double getKontostand(String username)
 	{
+		double kontostand;
 		try {
 			Statement stmt = conn.createStatement();
-			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = '" + username +"'").getDouble(1);
+			kontostand = stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = '" + username +"'").getDouble(1);
+			conn.close();	//schlieﬂe die Verbindung zur Datenbank
+			return kontostand;
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -134,12 +138,19 @@ public class Customer
 	public void editVeg(String username, int veg)	//Methode um den Status Vegetarisch in der Datenbank zu ‰ndern
 	{
 		try {
-			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
-			stmt.execute("UPDATE Kunden SET vegetrarisch='"+ veg +"'  WHERE username='" + username + "'");		
+			Statement stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
+			stmt.execute("UPDATE Kunden SET Vegetrarisch = '"+ veg +"'  WHERE Username='" + username + "'");		
 		}
 		catch(SQLException e)
 		{
 			System.out.println(e.getMessage());
+		}
+		
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
@@ -162,18 +173,18 @@ public class Customer
 			{
 				veg = false;
 			}
-			else
+			else	//bei einem Fehler erzeuge eine Fehlermeldung ohne die Lauff‰higkeit des Progammes zu ‰ndern
 			{
 				veg = false;
 				JOptionPane.showMessageDialog(null, result,  "Es gab einen Fehler bei der Abfrage in der Datenbank", 0);
 				
 			}
+			conn.close();	//schlieﬂe die Verbindung zur Datenbank wieder
 			return veg;
 		}
 		catch(SQLException e)
 		{
 			System.out.println(e.getMessage());
-			
 			return false;
 		}
 	}

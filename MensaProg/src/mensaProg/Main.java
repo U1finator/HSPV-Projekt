@@ -27,7 +27,7 @@ public class Main
 		Instant start = now();	//der Logger wird gestartet
 		log.addHandler(new FileHandler("log.txt"));	//neue Datei wird erzeugt
 
-		log.info("Start");	//Am Anfang der Datei wird das Wort "Start" angefügt
+		log.info("Start");	//Das Wort start wird auf der Console ausgegeben
 		try {
 			log.log(Level.INFO, "");	//Anfangszeit des Programmes wird gespeichert 
 		} catch (Exception e) {

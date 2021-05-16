@@ -40,7 +40,7 @@ public class Benutzerdaten implements ActionListener
 	
 	/**
 	 * 
-	 * @param kunde Objekt, dass wichtige Nutzerdaten zwischenspeichert
+	 * @param kunde Objekt, das wichtige Nutzerdaten zwischenspeichert
 	 */
 	Benutzerdaten(Kunde kunde) 
 		{
