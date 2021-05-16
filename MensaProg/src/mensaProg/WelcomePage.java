@@ -11,19 +11,29 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class WelcomePage	extends JPanel {
-							
+public class WelcomePage	extends JPanel {				
+/**
+ * @author Julia, [U1finator(Olaf) in der Code Review]
+ *
+ */
+public class WelcomePage {
 	
-	static String ern‰hrungsString = "Ern‰hrung";
+	static String ern√§hrungsString = "Ern√§hrung";
 	
 	//Frames, Labels, CheckBox werden erstellt
 	JFrame frame = new JFrame();
 	//JLabel welcomeLabel = new JLabel("Einstellungen");
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
-	JLabel nutritionLabel = new JLabel("Ern‰hrung");
-	JCheckBox checkBoxErn‰hrung = new JCheckBox("vegetarisch");
+	JLabel nutritionLabel = new JLabel("Ern√§hrung");
+	JCheckBox checkBoxErn√§hrung = new JCheckBox("vegetarisch");
 	
 	WelcomePage(Kunde kunde, MainGui2 mg) {
+	/**
+	 * @param kunde
+	 * 
+	 * Konstruktor der Benutzerdaen
+	 */
+	WelcomePage(Kunde kunde) {
 		Customer customer = new Customer();
 		
 		/* Willkommen-Label wird erstellt
@@ -34,19 +44,19 @@ public class WelcomePage	extends JPanel {
 		//Kontostand-Label + momentaner Kontostand
 		bankBalanceLabel.setBounds(50,100,200,35);
 		bankBalanceLabel.setFont(new Font(null,Font.PLAIN,16));
-		bankBalanceLabel.setText("Kontostand: "+ customer.getKontostand(kunde));
+		bankBalanceLabel.setText("Kontostand: "+ customer.getKontostand(kunde.getUsername()));
 		
-		//Ern‰hrungs-Label
+		//Ern√§hrungs-Label
 		nutritionLabel.setBounds(50,140,200,35);
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
-		nutritionLabel.setText("Ern‰hrung: ");
+		nutritionLabel.setText("Ern√§hrung: ");
 		
-		//CheckBox, check ob vegetarische Ern‰hrung, wenn ja: Aufruf Methode FleischWeg in MainGui2
-		checkBoxErn‰hrung.setBounds(150,140,200,35);
-		checkBoxErn‰hrung.addItemListener(new ItemListener() {
+		//CheckBox, check ob vegetarische Ern√§hrung, wenn ja: Aufruf Methode FleischWeg in MainGui2
+		checkBoxErn√§hrung.setBounds(150,140,200,35);
+		checkBoxErn√§hrung.addItemListener(new ItemListener() {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
-                if(checkBoxErn‰hrung.isSelected()==true) {
+                if(checkBoxErn√§hrung.isSelected()==true) {
                     mg.FleischWeg();
                 }
                 else  {
@@ -54,11 +64,11 @@ public class WelcomePage	extends JPanel {
                     }
                 }}); 
 	
-		//Labels, Checkbox werden Panel hinzugef¸gt
+		//Labels, Checkbox werden Panel hinzugef√ºgt
 		//frame.getContentPane().add(welcomeLabel);
 		frame.getContentPane().add(bankBalanceLabel);
 		frame.getContentPane().add(nutritionLabel);
-		frame.getContentPane().add(checkBoxErn‰hrung);
+		frame.getContentPane().add(checkBoxErn√§hrung);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setSize(420,420);
 		frame.getContentPane().setLayout(null);

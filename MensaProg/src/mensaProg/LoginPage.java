@@ -15,7 +15,14 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+/**
+ * @author Julia
+ *
+ */
 public class LoginPage implements ActionListener, KeyListener{
+	/**
+	 * Username des Benutzers
+	 */
 	public String username;
 	
 	JFrame frame = new JFrame();
@@ -29,6 +36,10 @@ public class LoginPage implements ActionListener, KeyListener{
 	HashMap<String,String> logininfo = new HashMap<String,String>();
 	
 	//constructor
+	/**
+	 * @param loginInfoOriginal	Hashmap in der die in der DB gespeicherten Usernamen und Passwörter stehen
+	 * @param kunde	Zwischenspeicherungsobjekt Kunde
+	 */
 	LoginPage(HashMap<String,String> loginInfoOriginal, Kunde kunde) {
 		
 		
@@ -82,6 +93,9 @@ public class LoginPage implements ActionListener, KeyListener{
 		}
 	}
 
+	/**
+	 * Methode, die das Loginverfahren durchführt
+	 */
 	public void login() {
 		// TODO Auto-generated method stub
 		String userID = userIDField.getText();
@@ -139,5 +153,4 @@ public class LoginPage implements ActionListener, KeyListener{
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 	}
-	
 }

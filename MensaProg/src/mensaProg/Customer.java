@@ -6,9 +6,17 @@ import java.sql.Statement;
 
 import javax.swing.JOptionPane;
 
+/**
+ * Eine Klasse die über den SQL Connector die notwendigen Abfragen über den Nutzer macht
+ * @author U1finator (Olaf)
+ */
 public class Customer 
 {		
 	Connection conn = SqlConnector.dbConnector();	//eine Verbindung zur SQLite Datenbank wird hergestellt
+	/**
+	 * @param einzahlung Höhe der Einzahlung
+	 * @param name Nutzername des Nutzers
+	 */
 	public void deposit(int einzahlung, String name)	//Methode um Geld einzuzahlen
 	{		
 		try {
@@ -32,6 +40,10 @@ public class Customer
 		}
 	}
 	
+	/**
+	 * @param auszahlung Höhe der Auszahlung/des Betrages der Abgebucht werden soll
+	 * @param name Nutzername des Nutzers
+	 */
 	public void withdraw (int auszahlung, String name)	//Methode um Geld auszuzahlen
 	{
 		try {
@@ -45,13 +57,18 @@ public class Customer
 		}
 		
 		try {
-			conn.close();
+			conn.close(); //die Verbindung soll geschlossen werden 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	//die Verbindung soll geschlossen werden 
+		}	
 	}
 	
+	/**
+	 * @param vorname Vorname des Benutzers
+	 * @param nachname Nachname des Benutzers
+	 * @param pwort Das Passwort das der Benutzer wählt
+	 */
 	public void add(String vorname, String nachname, String pwort)	//Methode um einen neuen Kunden hinzuzufÃ¼gen
 	{
 		try {
@@ -72,11 +89,15 @@ public class Customer
 		}	//die Verbindung soll geschlossen werden 
 	}
 	
-	public double getKontostand(Kunde kunde)
+	/**
+	 * @param username Nutzername des Benutzers
+	 * @return Kontostand des Nutzers
+	 */
+	public double getKontostand(String username)
 	{
 		try {
 			Statement stmt = conn.createStatement();
-			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = '" + kunde.getUsername()+"'").getDouble(1);
+			return stmt.executeQuery("SELECT kontostand FROM kunden WHERE username = '" + username +"'").getDouble(1);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,7 +105,11 @@ public class Customer
 		}
 	}
 	
-	public void editpw(String name, String pwort)	//Methode um das Passwort zu ändern
+	/**
+	 * @param name Nutzername des Benutzers
+	 * @param pwort	das neue Passwort des Benutzers
+	 */
+	public void editPW(String name, String pwort)	//Methode um das Passwort zu ändern
 	{
 		try {
 			Statement	stmt = conn.createStatement();	//ein neues SQL Statement wrid einstellt
@@ -103,6 +128,10 @@ public class Customer
 		}	//die Verbindung soll geschlossen werden 
 	}
 	
+	/**
+	 * @param username Nutzername des Benutzers
+	 * @param veg 1 für "is(s)t Vegetarisch", 0 für is(s)t nicht Vegetarisch
+	 */
 	public void editVeg(String username, int veg)	//Methode um den Status Vegetarisch in der Datenbank zu ändern
 	{
 		try {
@@ -115,6 +144,10 @@ public class Customer
 		}
 	}
 	
+	/**
+	 * @param username Nutzername des Benutzers
+	 * @return WHW ob der Benutzer vegetarierer ist(true) oder nicht (false)
+	 */
 	public boolean getVeg(String username)	//Methode zum Abfragen ob ein Nutzer Vegetarisch is(s)t oder nicht
 	{
 		try {
