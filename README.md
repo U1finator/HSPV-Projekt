@@ -9,7 +9,7 @@ Es geht hierbei um ein Programm zur Darstellung des Essensplanes und zu Benuzern
 Die Benutzerkonten enthalten Vorname, Nachname, Kontostand, Passwort und einen Benutzernamen (bestehend aus vorname.nachme) des Benutzers.
 Ebenso kann der Benutzer seinen Benutzernamen und sein Passwort, ebenso wie den Kundenstand in dem Programm einsehen.
 
-Die Datenbank enthält hierbei nicht nur die Benutzerkonten, soondern auch Gerichte.
+Die Datenbank enthält hierbei nicht nur die Benutzerkonten, sondern auch Gerichte.
 
 Ablauf des Programms
 -----------------------------
@@ -43,6 +43,7 @@ hier sind Funktionen die noch in Planung sind
 -----------------------------
 1. Die mitgelieferte Datei sqlite-jdbc-3.23.1.jar muss als externe Libary eingebunden werden.
 2. Die Datei Mensadaten.db sollte mit dem [DB Browser for SQLite](https://sqlitebrowser.org/) geöffnet werden.
+3. Falls mensaprogramm.jar nicht ausführbar ist, einmal die batchdatei runProgramm ausführen (hierbei öffnet sich leider der logger)
 
 
 Falls diese Software zu kommerziellen Zwecken genutzt werden soll, melden sie sich bitte bei dem Inhaber dieses Repositorys. 
