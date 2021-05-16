@@ -3,6 +3,8 @@ package mensaProg;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
- * @author Julia, [U1finator (Olaf) im Code Review]
+ * @author Julia, U1finator (Olaf) im Code Review
  *
  */
 public class Benutzerdaten implements ActionListener
@@ -37,7 +39,7 @@ public class Benutzerdaten implements ActionListener
 	Kunde kunde;
 	
 	/**
-	 * @param kunde 
+	 * 
 	 * @param kunde Objekt, dass wichtige Nutzerdaten zwischenspeichert
 	 */
 	Benutzerdaten(Kunde kunde) 
@@ -57,7 +59,7 @@ public class Benutzerdaten implements ActionListener
 			// Passwort ändern Button wird erstellt
 			changePW.setBounds(100,200,200,35);
 			changePW.addActionListener(this);
-			changePW.setText("Passwort ändern");
+			changePW.setText("Passwort �ndern");
 			
 			// ok Button wird erstellt, erstmal nicht sichbar
 			ok.setBounds(150,310,100,35);
@@ -93,7 +95,7 @@ public class Benutzerdaten implements ActionListener
 			kunde.setPW(newPassword);
 			Customer customer = new Customer();
 			username = kunde.getUsername();
-			customer.editpw(username, newPassword);
+			customer.editPW(username, newPassword);
 			PWLabel.setText("Passwort: "+kunde.getPW());
 			customer.editPW(username, password);
 			//password = neues Passwort

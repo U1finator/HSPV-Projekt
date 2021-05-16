@@ -1,14 +1,10 @@
 package mensaProg;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.TimeUnit;
-
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -23,67 +19,57 @@ import javax.swing.JSeparator;
 import javax.swing.ImageIcon;
 import java.awt.Cursor;
 import java.awt.Font;
-import java.awt.Component;
 import javax.swing.JTextPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import javax.swing.border.LineBorder;
 
 /**
- * @author Felix
+ * @author Felix, U1finator(Olaf) in der Code Review
  *
  */
-public class MainGui2 {
+public class MainGui2 { //die Klasse wurde mithilfe des WindowBuilders erstellt
 
 	private JFrame frame;
-	LocalDate today = LocalDate.now();
-    LocalDate[] weekdays = getWeekdays(today);
-    Wochenplan week = new Wochenplan();
-    Object[] names = week.gerichte.keySet().toArray();
-    Object[] prices = week.gerichte.values().toArray();
+	LocalDate today = LocalDate.now(); 
+    LocalDate[] weekdays = getWeekdays(today); //die aktuellen Wochentage werden mithilfe der Methode getWeekdays aufgerufen und in einem Array gespeichert
+    Wochenplan week = new Wochenplan(); //ein neuer Wochenplan wird erstellt
+    Object[] names = week.gerichte.keySet().toArray(); //die Fleischgerichte aus der HashMap werden in einem Objektarray gespeichert 
+    Object[] prices = week.gerichte.values().toArray(); // wie oben nur mit den Preisen
     Object[] vegNames = week.vegGerichte.keySet().toArray();
     Object[] vegPrices = week.vegGerichte.values().toArray();
     String datePattern = "dd.MM.yyyy";
-    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(datePattern);
-    JTextPane[] meat = new JTextPane[10];
-    JLabel[] mprices = new JLabel[10];
-	/**
-	 * Launch the application.
-	 */
-	
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(datePattern); //das Datumsformat wird geändert
+    JTextPane[] meat = new JTextPane[10]; //TextPanes werden in Array gepeichert, um diese später ausblenden zu können
+    JLabel[] mprices = new JLabel[10]; //Preise werden in Array gespeichert, um diese später ausblenden zu können
 
 	/**
-	 * @param kunde Zwischenspeicherungsobjekt
-	 * 
 	 * Create the application.
+	 * @param kunde zwischenspeicher Objekt
 	 */
-	public MainGui2(Kunde kunde) {
-		initialize(kunde);
-		frame.setVisible(true);
+	public MainGui2(Kunde kunde) { //die MainGui wird mit dem Attribut kunde erstellt (Konstruktor)
+		initialize(kunde); //initialize wird aufgerufen
 	}
 
 	/**
-	 * @param kunde Zwischenspeicherungsobjekt
-	 * Initialisiere das Objekt
+	 * Initialize the contents of the frame.
+	 * @param kunde zwischenspeicher Objekt
 	 */
-	private void initialize(Kunde kunde) {
+	private void initialize(Kunde kunde) { //das Frame wird mit einem Borderlayout erstellt
 		frame = new JFrame();
 		frame.setBounds(100, 100, 870, 478);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel(); //das Panel für den Speiseplan wird mit einem Gridlayout erstellt
 		panel.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		panel.setBackground(Color.BLACK);
 		frame.getContentPane().add(panel);
 		panel.setLayout(new GridLayout(3, 5, 1, 1));
 		
-		JPanel panel_6 = new JPanel();
+		JPanel panel_6 = new JPanel(); //das Panel für das erste Gericht am Montag wird mit einem BorderLayout erstellt
 		panel.add(panel_6);
 		panel_6.setLayout(new BorderLayout(0, 0));
 		
@@ -91,19 +77,18 @@ public class MainGui2 {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_3, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"ï¿½");
+		JLabel lblNewLabel_5 = new JLabel(prices[0].toString()+"€"); //der Preis des Gerichts wird dem Panel hinzugefügt
 		mprices[0] = lblNewLabel_5;
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_5, BorderLayout.SOUTH);
 		
-		JTextPane txtpnA = new JTextPane();
-		txtpnA.setEditable(false);
-		
-		txtpnA.addMouseListener(new MouseAdapter() {
-			boolean check = false;
+		JTextPane txtpnA = new JTextPane(); //das TextPane für die Bezeichnung des Gerichts wird erstellt
+		txtpnA.setEditable(false);	
+		txtpnA.addMouseListener(new MouseAdapter() { //ein MouseListener wird hinzugefügt, welcher das auswählen von Gerichten per Klick ermöglicht
+			boolean check = false;					//durch diesen Mouselistener kann später ein Bestellsystem deutlich leichter hinzugefügt werden
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				if(txtpnA.isEnabled()==true) {
+				if(txtpnA.isEnabled()==true) {  //es funktioniert nur, wenn das TextPane auch aktiviert ist
 				txtpnA.setBorder(new LineBorder(Color.RED, 1, true));
 				}
 			}
@@ -125,15 +110,15 @@ public class MainGui2 {
 				}
 			}
 		});
-		meat[0] = txtpnA;
+		meat[0] = txtpnA; 
 		txtpnA.setBackground(Color.LIGHT_GRAY);
 		txtpnA.setSelectedTextColor(Color.BLACK);
 		txtpnA.setForeground(Color.BLACK);
 		txtpnA.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-		txtpnA.setText("\n"+ names[0].toString());
-		center(txtpnA);
+		txtpnA.setText("\n"+ names[0].toString()); //Bezeichnung des Gerichts wird dem TextPane zugewiesen
+		center(txtpnA); //Methode wird aufgerufen, um Text zu zentrieren
 		panel_6.add(txtpnA, BorderLayout.CENTER);
-		
+		//ab hier selbes Vorgehen wie oben für alle anderen Gerichte
 		JPanel panel_7 = new JPanel();
 		panel.add(panel_7);
 		panel_7.setLayout(new BorderLayout(0, 0));
@@ -142,7 +127,7 @@ public class MainGui2 {
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_6, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"ï¿½");
+		JLabel lblNewLabel_8 = new JLabel(prices[1].toString()+"€");
 		mprices[1] = lblNewLabel_8;
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_7.add(lblNewLabel_8, BorderLayout.SOUTH);
@@ -191,7 +176,7 @@ public class MainGui2 {
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_9, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"ï¿½");
+		JLabel lblNewLabel_11 = new JLabel(prices[2].toString()+"€");
 		mprices[2] = lblNewLabel_11;
 		lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_3.add(lblNewLabel_11, BorderLayout.SOUTH);
@@ -240,7 +225,7 @@ public class MainGui2 {
 		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_12, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"ï¿½");
+		JLabel lblNewLabel_14 = new JLabel(prices[3].toString()+"€");
 		mprices[3] = lblNewLabel_14;
 		lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_14, BorderLayout.SOUTH);
@@ -289,7 +274,7 @@ public class MainGui2 {
 		lblNewLabel_15.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_15, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"ï¿½");
+		JLabel lblNewLabel_17 = new JLabel(prices[4].toString()+"€");
 		mprices[4] = lblNewLabel_17;
 		lblNewLabel_17.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_17, BorderLayout.SOUTH);
@@ -329,7 +314,7 @@ public class MainGui2 {
 		txtpnA_4.setText("\n"+ names[4].toString());
 		center(txtpnA_4);
 		panel_4.add(txtpnA_4, BorderLayout.CENTER);
-		
+		//ab hier zweite Reihe
 		JPanel panel_5 = new JPanel();
 		panel.add(panel_5);
 		panel_5.setLayout(new BorderLayout(0, 0));
@@ -338,7 +323,7 @@ public class MainGui2 {
 		lblNewLabel_18.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_18, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"ï¿½");
+		JLabel lblNewLabel_20 = new JLabel(prices[5].toString()+"€");
 		mprices[5] = lblNewLabel_20;
 		lblNewLabel_20.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_20, BorderLayout.SOUTH);
@@ -387,7 +372,7 @@ public class MainGui2 {
 		lblNewLabel_21.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_21, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"ï¿½");
+		JLabel lblNewLabel_23 = new JLabel(prices[6].toString()+"€");
 		mprices[6] = lblNewLabel_23;
 		lblNewLabel_23.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_23, BorderLayout.SOUTH);
@@ -436,7 +421,7 @@ public class MainGui2 {
 		lblNewLabel_24.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_24, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"ï¿½");
+		JLabel lblNewLabel_26 = new JLabel(prices[7].toString()+"€");
 		mprices[7] = lblNewLabel_26;
 		lblNewLabel_26.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_26, BorderLayout.SOUTH);
@@ -485,7 +470,7 @@ public class MainGui2 {
 		lblNewLabel_27.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_27, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"ï¿½");
+		JLabel lblNewLabel_29 = new JLabel(prices[8].toString()+"€");
 		mprices[8] = lblNewLabel_29;
 		lblNewLabel_29.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_10.add(lblNewLabel_29, BorderLayout.SOUTH);
@@ -534,7 +519,7 @@ public class MainGui2 {
 		lblNewLabel_30.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_30, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"ï¿½");
+		JLabel lblNewLabel_32 = new JLabel(prices[9].toString()+"€");
 		mprices[9] = lblNewLabel_32;
 		lblNewLabel_32.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_11.add(lblNewLabel_32, BorderLayout.SOUTH);
@@ -579,12 +564,12 @@ public class MainGui2 {
 		panel_12.setBackground(new Color(0, 204, 153));
 		panel.add(panel_12);
 		panel_12.setLayout(new BorderLayout(0, 0));
-		
+		//ab hier vegetarische Gericht --> erden nicht den Arrays zum ausblenden zugewiesen 
 		JLabel lblNewLabel_33 = new JLabel("Gericht 3");
 		lblNewLabel_33.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_33, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"ï¿½");
+		JLabel lblNewLabel_35 = new JLabel(vegPrices[0].toString()+"€");
 		lblNewLabel_35.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_12.add(lblNewLabel_35, BorderLayout.SOUTH);
 		
@@ -623,8 +608,6 @@ public class MainGui2 {
 		center(textPane);
 		panel_12.add(textPane, BorderLayout.CENTER);
 		
-		
-		
 		JPanel panel_13 = new JPanel();
 		panel_13.setBackground(new Color(0, 204, 153));
 		panel.add(panel_13);
@@ -634,7 +617,7 @@ public class MainGui2 {
 		lblNewLabel_36.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_36, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"ï¿½");
+		JLabel lblNewLabel_38 = new JLabel(vegPrices[1].toString()+"€");
 		lblNewLabel_38.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_13.add(lblNewLabel_38, BorderLayout.SOUTH);
 		
@@ -683,7 +666,7 @@ public class MainGui2 {
 		lblNewLabel_39.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_39, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"ï¿½");
+		JLabel lblNewLabel_41 = new JLabel(vegPrices[2].toString()+"€");
 		lblNewLabel_41.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_14.add(lblNewLabel_41, BorderLayout.SOUTH);
 		
@@ -732,7 +715,7 @@ public class MainGui2 {
 		lblNewLabel_42.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_42, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"ï¿½");
+		JLabel lblNewLabel_44 = new JLabel(vegPrices[3].toString()+"€");
 		lblNewLabel_44.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_15.add(lblNewLabel_44, BorderLayout.SOUTH);
 		
@@ -781,7 +764,7 @@ public class MainGui2 {
 		lblNewLabel_45.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_45, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"ï¿½");
+		JLabel lblNewLabel_47 = new JLabel(vegPrices[4].toString()+"€");
 		lblNewLabel_47.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_16.add(lblNewLabel_47, BorderLayout.SOUTH);
 		
@@ -821,12 +804,12 @@ public class MainGui2 {
 		center(txtpnA_12);
 		panel_16.add(txtpnA_12, BorderLayout.CENTER);
 		
-		JPanel panel_2 = new JPanel();
+		JPanel panel_2 = new JPanel(); //Panel für Wochentage und Daten wird mit GridLayout erstellt
 		panel_2.setBackground(Color.LIGHT_GRAY);
 		frame.getContentPane().add(panel_2, BorderLayout.NORTH);
 		panel_2.setLayout(new GridLayout(2, 5, 0, 0));
 		
-		JLabel lblNewLabel_2 = new JLabel("Montag");
+		JLabel lblNewLabel_2 = new JLabel("Montag"); //Wochentage werden als Label dem Layout hinzugefügt
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_2);
 		
@@ -846,7 +829,7 @@ public class MainGui2 {
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_51 = new JLabel(weekdays[0].format(dateFormatter));
+		JLabel lblNewLabel_51 = new JLabel(weekdays[0].format(dateFormatter)); //Daten werden als Label dem GridLayout hinzugefügt und ins richtige Format gebracht
 		lblNewLabel_51.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_51);
 		
@@ -866,69 +849,68 @@ public class MainGui2 {
 		lblNewLabel_54.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2.add(lblNewLabel_54);
 		
-		JMenuBar menuBar = new JMenuBar();
+		JMenuBar menuBar = new JMenuBar(); //eine MenuBar wird erstellt
 		frame.setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Men\u00FC");
+		JMenu mnNewMenu = new JMenu("Men\u00FC"); //ein menu wird mit einem Icon erstellt
 		mnNewMenu.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_menu_black_24dp.png")));
 		menuBar.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Einstellungen");
+		JMenuItem mntmNewMenuItem = new JMenuItem("Einstellungen"); //ein MenuItem wird mit einem Icon erstellt
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new WelcomePage(kunde, MainGui2.this);
-				
+				new WelcomePage(kunde, MainGui2.this); //wenn das MenuItem gedrückt wurde, wird eine neue WelcomePage erstellt
+													  //dieser werden als Attribute der Kunde und die MainGui selbst übergeben
 			}
 		});
 		mntmNewMenuItem.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_settings_black_24dp.png")));
 		mnNewMenu.add(mntmNewMenuItem);
 		
-		JSeparator separator = new JSeparator();
+		JSeparator separator = new JSeparator(); //ein Separator wird zwischen den MenuItems hinzugefügt
 		mnNewMenu.add(separator);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Benutzerdaten");
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Benutzerdaten(kunde);
-				
+				new Benutzerdaten(kunde); //wenn dieses MenuItem gedrückt wurde, dann wird das Fenster Benutzerdaten erstellt
+										 //als Attribut wird der Kunde übergeben
 			}
 		});
 		mntmNewMenuItem_1.setIcon(new ImageIcon(MainGui2.class.getResource("/mensaProg/outline_perm_identity_black_24dp.png")));
 		mnNewMenu.add(mntmNewMenuItem_1);
-	}
+	} //Ende von initialize
 	
 	/**
-	 * @param date Datum
-	 * @return Array mit dem Aktuellen Datum
+	 * @param date das aktuelle Datum
+	 * @return	Array mit Wochentagen
 	 */
-	public static LocalDate[] getWeekdays(LocalDate date) {
-	     LocalDate monday = date;
-	     if(date.getDayOfWeek().getValue() > 1) {
-	       monday = date.minusDays(date.getDayOfWeek().getValue() - 1);
+	public static LocalDate[] getWeekdays(LocalDate date) { //Methode um die Wochentage zu berechnen
+	     LocalDate monday = date; //das übergebene Datum, also in diesem Fall das heutige Datum, wird als Montag gesetzt
+	     if(date.getDayOfWeek().getValue() > 1) { //wenn heute nicht Montag ist
+	       monday = date.minusDays(date.getDayOfWeek().getValue() - 1); //dann wird hier bis zum Montag heruntergerechnet
 	     }
-	     LocalDate[] weekdays = new LocalDate[5];
-	     weekdays[0] = monday;
+	     LocalDate[] weekdays = new LocalDate[5]; //ein neues Array wird erstellt
+	     weekdays[0] = monday; //Montag ist natürlich der erste Tag
 	     for(int i = 1; i <= 4; i++) {
-	       weekdays[i] = monday.plusDays(i);
+	       weekdays[i] = monday.plusDays(i); //die restlichen Tage werden in das Array gefüllt
 	     }
-	     return weekdays;
+	     return weekdays; //das Array wird zurückgegeben
 	   }
 	
 	/**
-	 * @param textPane Textfeld
+	 * @param textPane das Textfeld, welches zentriert werden soll
 	 */
-	public static void center (JTextPane textPane) {
+	public static void center (JTextPane textPane) { //Methode um den Text im TextPane zu zentrieren (von StackOverflow geklaut)
 		StyledDocument doc = textPane.getStyledDocument();
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		doc.setParagraphAttributes(0, doc.getLength(), center, false);
 	}
 	
-
 	/**
-	 *  Methode um die Gerichte mit Fleisch auszublenden
+	 * Methode um alle Fleischgerichte zu deaktivieren (wird für den Vegetarisch-Button in der WelcomePage benutzt)
 	 */
 	public void FleischWeg() {
 		for(int i=0;i<meat.length;i++) {
@@ -937,11 +919,10 @@ public class MainGui2 {
 		}
 		
 	}
-  
 	/**
-	 * Methode um Gerichte mit Fleisch einzublenden
+	 * Methode um alle Fleischgerichte wieder sichtbar zu machen
 	 */
-	public void FleischDa() {
+	public void FleischDa() { 
 		for(int i=0;i<meat.length;i++) {
 			meat[i].setEnabled(true);
 			mprices[i].setVisible(true);
