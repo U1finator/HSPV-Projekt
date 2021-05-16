@@ -1,39 +1,33 @@
 package mensaProg;
 
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-public class WelcomePage	extends JPanel {				
+			
 /**
  * @author Julia, [U1finator(Olaf) in der Code Review]
  *
  */
-public class WelcomePage {
+public class WelcomePage extends JPanel{
 	
-	static String ernährungsString = "Ernährung";
+	static String ernaehrungsString = "Ern�hrung";
 	
 	//Frames, Labels, CheckBox werden erstellt
 	JFrame frame = new JFrame();
 	//JLabel welcomeLabel = new JLabel("Einstellungen");
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
-	JLabel nutritionLabel = new JLabel("Ernährung");
-	JCheckBox checkBoxErnährung = new JCheckBox("vegetarisch");
+	JLabel nutritionLabel = new JLabel("Ern�hrung");
+	JCheckBox checkBoxErnaehrung = new JCheckBox("vegetarisch");
 	
-	WelcomePage(Kunde kunde, MainGui2 mg) {
 	/**
-	 * @param kunde
-	 * 
-	 * Konstruktor der Benutzerdaen
+	 * @param kunde	Kundenobjekt zur Zwischenspeicherung
+	 * @param mg	Daten der MainGUI
 	 */
-	WelcomePage(Kunde kunde) {
+	WelcomePage(Kunde kunde, MainGui2 mg) {
 		Customer customer = new Customer();
 		
 		/* Willkommen-Label wird erstellt
@@ -49,14 +43,14 @@ public class WelcomePage {
 		//Ernährungs-Label
 		nutritionLabel.setBounds(50,140,200,35);
 		nutritionLabel.setFont(new Font(null,Font.PLAIN,16));
-		nutritionLabel.setText("Ernährung: ");
+		nutritionLabel.setText("Ern�hrung: ");
 		
-		//CheckBox, check ob vegetarische Ernährung, wenn ja: Aufruf Methode FleischWeg in MainGui2
-		checkBoxErnährung.setBounds(150,140,200,35);
-		checkBoxErnährung.addItemListener(new ItemListener() {
+		//CheckBox, check ob vegetarische Ern�hrung, wenn ja: Aufruf Methode FleischWeg in MainGui2
+		checkBoxErnaehrung.setBounds(150,140,200,35);
+		checkBoxErnaehrung.addItemListener(new ItemListener() {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
-                if(checkBoxErnährung.isSelected()==true) {
+                if(checkBoxErnaehrung.isSelected()==true) {
                     mg.FleischWeg();
                 }
                 else  {
@@ -64,11 +58,11 @@ public class WelcomePage {
                     }
                 }}); 
 	
-		//Labels, Checkbox werden Panel hinzugefügt
+		//Labels, Checkbox werden Panel hinzugef�gt
 		//frame.getContentPane().add(welcomeLabel);
 		frame.getContentPane().add(bankBalanceLabel);
 		frame.getContentPane().add(nutritionLabel);
-		frame.getContentPane().add(checkBoxErnährung);
+		frame.getContentPane().add(checkBoxErnaehrung);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setSize(420,420);
 		frame.getContentPane().setLayout(null);
