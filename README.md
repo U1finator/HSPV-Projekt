@@ -48,6 +48,7 @@ Für die Zukunft:
 1. Die mitgelieferte Datei sqlite-jdbc-3.23.1.jar muss als externe Libary eingebunden werden.
 2. Die Datei Mensadaten.db sollte mit dem [DB Browser for SQLite](https://sqlitebrowser.org/) geöffnet werden.
 3. Falls mensaprogramm.jar nicht ausführbar ist, einmal die batchdatei runProgramm ausführen (hierbei öffnet sich leider der logger)
+4. Zum Ausführen des Programmes ist das [JDK 16.0.1](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html) oder neuer erforderlich
 
 
 Falls diese Software zu kommerziellen Zwecken genutzt werden soll, melden sie sich bitte bei dem Inhaber dieses Repositorys. 
