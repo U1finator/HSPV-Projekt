@@ -35,11 +35,11 @@ hier sind Funktionen aufgelistet, bei denen die Backendvorraussetzungen schon ge
 
 Für die Zukunft:
 --------------------------------
-	- Bilder zu den Gerichten
-	- eine Spalte extra für Beilagen und Nachtische
-	- Bestellsystem
-	- eine Übersicht für die Verwaltung, wie viel Einnahmen gemacht wurden
-	- mehr Einstellungsmöglichkeiten für den Benutzer
+- Bilder zu den Gerichten
+- eine Spalte extra für Beilagen und Nachtische
+- Bestellsystem
+- eine Übersicht für die Verwaltung, wie viel Einnahmen gemacht wurden
+- mehr Einstellungsmöglichkeiten für den Benutzer
 	
 	
 	
