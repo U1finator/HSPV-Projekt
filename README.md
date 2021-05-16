@@ -13,7 +13,7 @@ Die Datenbank enthält hierbei nicht nur die Benutzerkonten, sondern auch Gerich
 
 Ablauf des Programms
 -----------------------------
-Als ertes kommt das Login Fenster:
+Als erstes kommt das Login Fenster:
 Abgefragt werden Benutzername und Passwort, welche der Benutzer vorher von der Mensa in einer Mail erhalten hat.
 
 Nach erfolgreichem Login:
