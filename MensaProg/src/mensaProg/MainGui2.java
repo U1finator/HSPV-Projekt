@@ -51,6 +51,7 @@ public class MainGui2 { //die Klasse wurde mithilfe des WindowBuilders erstellt
 	 */
 	public MainGui2(Kunde kunde) { //die MainGui wird mit dem Attribut kunde erstellt (Konstruktor)
 		initialize(kunde); //initialize wird aufgerufen
+		frame.setVisible(true);
 	}
 
 	/**

@@ -17,10 +17,22 @@ public class WelcomePage extends JPanel{
 	static String ernaehrungsString = "Ernährung";
 	
 	//Frames, Labels, CheckBox werden erstellt
+	/**
+	 * der generelle Frame
+	 */
 	JFrame frame = new JFrame();
 	//JLabel welcomeLabel = new JLabel("Einstellungen");
+	/**
+	 * Label für den Kontostand
+	 */
 	JLabel bankBalanceLabel = new JLabel("Kontostand");
+	/**
+	 * Label für die Ernährungsauswahl
+	 */
 	JLabel nutritionLabel = new JLabel("Ernährung");
+	/**
+	 * Checkbox um die nicht vegetarischen Gerischte ein- bzw. auszublenden
+	 */
 	JCheckBox checkBoxErnaehrung = new JCheckBox("vegetarisch");
 	
 	/**

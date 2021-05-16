@@ -110,7 +110,6 @@ public class LoginPage implements ActionListener, KeyListener{
 				Kunde kunde = new Kunde(userID, password);
 				frame.dispose(); //Schlieﬂen des Login Fensters
 				//WelcomePage welcomePage = new WelcomePage(userID);
-				
 				EventQueue.invokeLater(new Runnable() {		//nach erfolgreichem einloggen, wird die hauptseite aufgerufen
 					public void run() {
 						try {

@@ -1,10 +1,8 @@
 package mensaProg;
 
 /**
- * @author U1finator (Olaf)
- * 
  * eine Klasse zum zwischenspeichern von Nutzername und Passwort des aktuellen Benutzers
- *
+ * @author U1finator (Olaf)
  */
 public class Kunde
 {
