@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Ein Mensaprogramm
+## das leider nicht so gut ist wie erhofft
 
-You can use the [editor on GitHub](https://github.com/U1finator/HSPV-Projekt/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Allgemein
+Dieses Programm ist keine reine Eigenleistung. [Ich](https://github.com/U1finator) hatte dabei Hilfe von zwei Kommilitonen.
+Zum einen von [Shreki182](https://github.com/Shreki182) und von [Felodd](https://github.com/Felodd).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Dieses Programm ist sehr simpel in seiner Darstellung und seinen Funktionen.
+Es erstellt bei Aufruf einen Mensaplan, also welche Gerichte es für die Woche gibt. 
+Desweiteren hat es eine Anmeldefunktion. Diese wird durch eine SQLite Datenbank im Hintergrund realisiert.
+Die Datenbank enthält dabei nicht nur die Nutzer mit den dazugehörigen Daten (Nutzername, Vor- und Nachname, Passwort, Kontostand und Ernähungsart), sondern auch Vegetarische und nicht Vegetarische Gerichte.
 
-### Markdown
+### Ablauf des Programms
+Als erstes kommt das Login Fenster:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ Abgefragt werden Benutzername und Passwort, welche der Benutzer vorher der Mensa in einer Mail erhalten hat.
+ 
+Nach erfolgreichem Login: 
 
-```markdown
-Syntax highlighted code block
+Ein Wochenplan wird, mithilfe der Datenbank, automatisch generiert und angezeigt. Somit hat man eine Übersicht über die Gerichte und die dazugehörigen Preise. Pro Tag gibt es immer zwei Fleischgerichte und ein vegetarisches Gericht, welches auch farblich gekennzeichnet ist. Man kann mit der Maus über die Gerichte gehen und diese werden dann kurz ausgewählt. 
+Wenn man auf die Gerichte mit der Maus klickt, werden diese dauerhaft ausgewählt und erst nach erneutem klicken wieder nicht ausgewählt. Diese Funktion ermöglicht in der Zukunft eine einfachere Einbindung eines Bestellsystems. Über ein Menu in der oberen linken Ecke kann man dann zunächst auf Einstellungen klicken und es öffnet sich ein neues Fenster, wo der Benutzer seinen aktuellen Kontostand sehen kann (auch für ein zukünftiges Bestellsystem relevant). 
+Außerdem kann der Benutzer seine Ernährungsform einstellen, aktuell gibt es nur die Ernährungsform vegetarisch und wenn der Benutzer diese auswählt, wird seine Ernährung in der Datenbank geändert und alle Fleischgerichte werden ausgeblendet und sind auch nicht mehr auswählbar. Desweiteren gibt noch einen zweiten Menupunkt namens Benutzerdaten. 
+Hier kann der Benutzer seinen Benutzernamen und sein Passwort sehen. Außerdem gibt es einen Button, mit dem der Benutzer sein Passwort ändern kann. 
 
-# Header 1
-## Header 2
-### Header 3
+Zum Beenden des Programms kann der Benutzer einfach auf das X oben rechts in der Login Seite oder dem Wochenplan drücken.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/U1finator/HSPV-Projekt/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Wichtig
+  - Bitte vor Programmstart die Punkte Wichtig in der [REAME.MD](https://github.com/U1finator/HSPV-Projekt/blob/main/README.md) durchlesen
+  - bei Verwendung des Codes oder Auszügen davon für kommerzielle Zwecke oder die Weiterentwicklung in anderen Projekten melden Sie sich bitte bei mir über GitHub
