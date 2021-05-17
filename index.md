@@ -1,5 +1,4 @@
 # Ein Mensaprogramm
-## das leider nicht so gut ist wie erhofft
 
 ### Allgemein
 Dieses Programm ist keine reine Eigenleistung. [Ich (U1finator)](https://github.com/U1finator) hatte dabei Hilfe von zwei Kommilitonen.
