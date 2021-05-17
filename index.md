@@ -12,7 +12,7 @@ Die Datenbank enthält dabei nicht nur die Nutzer mit den dazugehörigen Daten (
 ### Ablauf des Programms
 Als erstes kommt das Login Fenster:
 
- Abgefragt werden Benutzername und Passwort, welche der Benutzer vorher der Mensa in einer Mail erhalten hat.
+Abgefragt werden Benutzername und Passwort, welche der Benutzer vorher der Mensa in einer Mail erhalten hat.
  
 Nach erfolgreichem Login: 
 
