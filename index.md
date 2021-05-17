@@ -2,7 +2,7 @@
 ## das leider nicht so gut ist wie erhofft
 
 ### Allgemein
-Dieses Programm ist keine reine Eigenleistung. [Ich](https://github.com/U1finator) hatte dabei Hilfe von zwei Kommilitonen.
+Dieses Programm ist keine reine Eigenleistung. [Ich (U1finator)](https://github.com/U1finator) hatte dabei Hilfe von zwei Kommilitonen.
 Zum einen von [Shreki182](https://github.com/Shreki182) und von [Felodd](https://github.com/Felodd).
 
 Dieses Programm ist sehr simpel in seiner Darstellung und seinen Funktionen.
